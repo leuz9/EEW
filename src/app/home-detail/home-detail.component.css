@@ -778,7 +778,8 @@ input:checked + label{
 
 /*2nd-level*/
 #accordion li li > a, #accordion li li > div {
-    padding-top:18px;padding-bottom:18px;
+    padding-top:18px;
+    padding-bottom:18px;
 }
 
 /*3rd-level*/
