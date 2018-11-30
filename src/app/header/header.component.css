@@ -10,9 +10,6 @@
     -ms-flex-align: center;
     align-items: center;
     background-color: #ffffff;
-    -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
-    -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
-    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
     position: fixed;
     top: 0;
     right: 0;
@@ -74,7 +71,9 @@
     margin-left: 30px;
 }
 
-
+.active {
+    font-weight: 700;
+}
 .linka {
     text-decoration: none;
   text-transform: uppercase;
@@ -308,7 +307,13 @@
 }
 @media (max-width: 621px) {
     .w3-right{
-        margin-left: 37% !important;
+        margin-left: 40% !important;
+        
+    }
+}
+@media (max-width: 445px) {
+    .w3-right{
+        margin-left: 30% !important;
         
     }
 }

@@ -9,7 +9,6 @@
     left: 0;
     position: relative;
     z-index: 2;
-    padding-top: 0;
 }
 
 .centerm {
@@ -754,7 +753,7 @@ input:checked + label{
 /* Accordion Menu by www.menucool.com/vertical/accordion-menu*/
 
 #accordion {
-    visibility:hidden;
+    visibility: hidden;
 }
 
 /* root UL */

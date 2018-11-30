@@ -8,17 +8,30 @@ import { HomeDetailComponent } from './home-detail/home-detail.component';
 
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
+import { HomeComponent } from './home/home.component';
+import { GalleryComponent } from './gallery/gallery.component';
+import { Routes, RouterModule } from '@angular/router';
+
+const appRoutes: Routes = [
+ { path : 'home' , component: HomeComponent },
+ { path : 'home-detail' , component: HomeDetailComponent},
+ { path : 'gallery' , component: GalleryComponent },
+ { path : '' , component: HomeComponent }
+]
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    HomeDetailComponent
+    HomeDetailComponent,
+    HomeComponent,
+    GalleryComponent
   ],
   imports: [
     BrowserModule,
-    AngularFireModule.initializeApp(environment.firebase)
+    AngularFireModule.initializeApp(environment.firebase),
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]

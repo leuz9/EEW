@@ -1,0 +1,118 @@
+.flex-container2 {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: left;
+    flex-direction: row;
+    width: 100%
+}
+
+.flex-container2 > div {
+    width: 100%;
+    margin: 2%;
+    text-align: center;
+    font-size: 30px;
+}
+
+.flex-container3 {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 4%;
+}
+
+.flex-container3 > div {
+    width: 100%;
+    text-align: left;
+    font-size: 30px;
+}
+.flex-container4 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    flex-direction: column;
+    width: 100%
+}
+
+.flex-container4 > div {
+    width: 100%;
+    text-align: center;
+}
+
+#combined-shape {
+    background-image: url("../../assets/images/icon/back.png");
+    background-size: cover;
+	height: 20px;
+    width: 14px;
+    margin: auto
+}
+
+.back {
+	color: #D8D8D8;
+	font-family: "Proxima Nova";
+    font-size: 28px;
+    text-align: left;
+    margin: auto
+}
+
+.design {
+	color: #000000;
+	font-family: "Proxima Nova";
+	font-size: 48px;
+	font-weight: 600;
+    line-height: 60px;
+    text-align: left;
+}
+
+#img-9931-edit {
+    background-image: url("../../assets/images/Bitmap/IMG_9931-Edit.png");
+    background-size: cover;
+	height: 670px;
+	width: 100%;
+}
+@media (max-width: 991px) {
+    #img-9931-edit {
+       height: 300px;
+    }
+}
+
+.small-date {
+	color: #717171;
+	font-family: "Proxima Nova";
+	font-size: 14px;
+    text-align: left;
+    margin-left: 20px;
+}
+
+.lorem-ipsum-dolor-si1 {
+	color: #9B9B9B;
+	font-family: "Proxima Nova";
+    font-size: 24px;
+    text-align: left;
+    margin-bottom: 10%;
+}
+
+#small-calendar {
+    background-image: url("../../assets/images/icon/small-calendar@2x.png");
+    background-size: cover;
+	height: 21px;
+	width: 22px;
+}
+
+.flex-container1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+    align-content: center;
+}
+
+
+#rectangle-14 {
+    background-image: url("../../assets/images/Bitmap/IMG_0396-Edit.png");
+    background-size: cover;
+	height: 294px;
+    width: 428px;
+    margin-top: 10%
+}
