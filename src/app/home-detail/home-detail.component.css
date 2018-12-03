@@ -750,119 +750,6 @@ input:checked + label{
     background: #ffffff;
 }
 
-/* Accordion Menu by www.menucool.com/vertical/accordion-menu*/
-
-#accordion {
-    visibility: hidden;
-}
-
-/* root UL */
-#accordion ul {
-    list-style:none;
-    padding: 0px;
-}
-
-/* sub UL */
-#accordion ul ul {
-    padding:2px 0;
-}
-
-/*---------- Indents ------*/
-
-/*top-level*/
-#accordion .top > a, #accordion .top > div { 
-    padding-left:16px;
-    padding-top:12px;padding-bottom:12px;
-    font-size:large;
-}
-
-/*2nd-level*/
-#accordion li li > a, #accordion li li > div {
-    padding-top:18px;
-    padding-bottom:18px;
-}
-
-/*3rd-level*/
-#accordion li li li > a, #accordion li li li > div { padding-left:50px; }
-
-
-/*---------- Other styles ------*/
-
-/* headings */
-#accordion .active > div{
-    color:#ddd;
-}
-
-#accordion li {
-    font-family:"Proxima Nova";
-    font-size:23px;
-    word-wrap: break-word;
-    margin-left:3px;
-    margin: auto;
-    overflow:hidden;
-}
-@media (max-width: 491px) {
-    #accordion li {
-        font-size: 14px;
-    }
-}
-
-/* Add borders to the top LIs */
-#accordion .top {
-	border-top: 1px solid #ffffff;
-    border-bottom: 1px solid #ffffff;
-}
-
-
-/* carets */
-#accordion div.caret {
-    color:inherit;
-    margin-top:45px;
-    /*To place the caret on the right, set: float:right;margin-top:0;*/
-    width: 100px;
-    height: 100px;
-    float:right;
-	cursor: pointer;
-}
-
-@media (max-width: 791px) {
-    #accordion div.caret{
-        margin-right: -5%;
-        margin-top:60px;
-    }
-}
-
-#accordion div.caret:after {
-    content: '\002B';
-    font-size: 40px;
-    color: black;
-    font-weight: bold;
-    width:20px;
-    height:20px;
-}
-@media (max-width: 991px) {
-    #accordion div.caret:after {
-        font-size: 35px;
-    }
-}
-@media (max-width: 791px) {
-    #accordion div.caret:after {
-        font-size: 25px;
-    }
-}
-
-#accordion div.caret.active:after {
-    content: "\2212";
-    font-size: 40px;
-}
-
-#accordion li {
-    -ms-user-select:none;
-    -mos-user-select:none;
-    -webkit-user-select:none;
-    -o-user-select:none;
-    user-select:none;
-}
 
 .rectangle-3 {
     height: 180px;
@@ -874,89 +761,6 @@ input:checked + label{
     margin: auto;
     width: 100%;
     text-align: left;
-}
-.day-1 {
-    height: 40px;
-    width: 100%;
-    color: #000000;
-    font-family: "Proxima Nova";
-    font-size: 40px;
-    font-weight: 600;
-    line-height: 40px;
-    word-wrap: break-word;
-    margin-top: 40px;
-    margin-left: 40px;
-}
-
-@media (max-width: 991px) {
-    .day-1 {
-        margin-top: 30px;
-        font-size: 25px;
-        width: 500px;
-        line-height: 40px;
-        
-    }
-}
-
-@media (max-width: 450px) {
-    .day-1 {
-        margin-top: 30px;
-        font-size: 20px;
-        width: 350px;
-        line-height: 20px;
-    }
-}
-@media (max-width: 300px) {
-    .day-1 {
-        margin-top: 10px;
-    }
-}
-
-.date1 {
-    height: 30px;
-    width: 268px;
-    color: #000000;
-    font-family: "Proxima Nova";
-    font-size: 24px;
-    font-weight: 300;
-    line-height: 40px;
-    margin-left: 40px;
-}
-@media (max-width: 991px) {
-    .date1 {
-        padding-top: 30px;
-        font-size: 18px;
-    }
-}
-@media (max-width: 491px) {
-    .date1 {
-        padding-top: 40px;
-        font-size: 15px;
-        line-height: 20px;
-    }
-}
-@media (max-width: 301px) {
-    .date1 {
-        padding-top: 60px;
-    }
-}
-.date12 {
-    display: flex;
-    height: 60px;
-    width: 900px;
-    color: #000000;
-    font-family: "Proxima Nova";
-    font-size: 24px;
-    line-height: normal;
-    word-wrap: break-word;
-    z-index: 3;
-    background-color: #FFF2CA;
-    border: 1px solid rgb(255, 255, 255);
-}
-@media (max-width: 991px) {
-    .date12 {
-        line-height: 25px;
-    }
 }
 @media (max-width: 791px) {
     .date12 {
@@ -988,4 +792,133 @@ input:checked + label{
     font-weight: 600;
     text-align: center;
     
+}
+
+/* Accordion Menu by www.menucool.com/vertical/accordion-menu*/
+
+.accordion {
+	margin: auto;
+}
+.accordion input {
+	display: none;
+}
+.day-1 {
+    cursor: pointer;
+    width: 100%;
+    height: 180px;
+    line-height: 400%;
+    padding-left: 7%;
+    margin: auto;
+}
+.day-b {
+    color: #000000;
+    font-family: "Proxima Nova";
+    font-size: 40px;
+    font-weight: 600;
+}
+.date1 {
+    color: #000000;
+    font-family: "Proxima Nova";
+    font-size: 24px;
+    font-weight: 300;
+}
+.date12 {
+    width: 100%;
+    color: #000000;
+    font-family: "Proxima Nova";
+    font-size: 24px;
+    line-height: 45px;
+    z-index: 3;
+    background-color: #FFF2CA;
+}
+.flex-container2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+    border: 2px solid #ffffff;
+}
+
+.flex-container2 > div {
+    margin: 2%;
+    text-align: left;
+    font-size: 30px;
+}
+@media (max-width: 621px) {
+    .flex-container2 > div{
+        font-size: 14px;
+    }
+}
+.box {
+	position: relative;
+    transition: all .15s ease-in-out;
+    border: 1px solid #FFCC00;
+    margin: auto;
+    width: 90%;
+    margin-top: 15px
+}
+.box::before {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    box-shadow: 0 -1px 0 #e5e5e5,0 0 2px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.24);
+}
+header.box {
+    height: 180px;
+	background: #00BCD4;
+	z-index: 100;
+	cursor: initial;
+}
+header .box-title {
+	margin: 0;
+	font-weight: normal;
+	font-size: 16pt;
+	color: white;
+	cursor: initial;
+}
+.box-content {
+	width: 100%;
+	display: none;
+}
+.box-close {
+	position: absolute;
+	height: 180px;
+	width: 100%;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+	display: none;
+}
+input:checked + .box {
+	height: auto;
+    box-shadow: 0 0 6px rgba(0,0,0,.16),0 6px 12px rgba(0,0,0,.32);
+}
+input:checked + .box .box-title {
+	border-bottom: 1px solid rgba(0,0,0,.18);
+}
+input:checked + .box .box-content,
+input:checked + .box .box-close {
+	display: inline-block;
+}
+.arrows section .box-title {
+	padding-left: 44px;
+	width: calc(100% - 64px);
+}
+.arrows section .box-title:before {
+	position: absolute;
+	display: block;
+	content: '\203a';
+	font-size: 18pt;
+	left: 20px;
+	top: -2px;
+	transition: transform .15s ease-in-out;
+	color: rgba(0,0,0,.54);
+}
+input:checked + section.box .box-title:before {
+	transform: rotate(90deg);
 }

@@ -40,8 +40,8 @@
 <div class="w3-sidebar w3-bar-block w3-card w3-animate-right" style="display:none;right:0;" id="rightMenu">
     <button onclick="closeRightMenu()" class="w3-bar-item w3-button w3-large text-center" style="margin-left: -60px;background: #ffffff !important">&times;</button>
     <ul class="navbar-mobile__list list-unstyled">
-        <li class="has-sub" routerLinkActive="active">
-            <a class="speakers" style="margin-left: 35px" routerLink="home">
+        <li class="has-sub">
+            <a class="speakers" style="margin-left: 35px" routerLink="/home"  routerLinkActive="active">
                 ABOUT</a>
         </li>
         <li class="has-sub">
@@ -66,7 +66,7 @@
 
 <div class="w3-teal">
     <div class="row">
-        <a class="w-edacy" href="home.html">
+        <a class="w-edacy" routerLink="/home">
             <img src="../../assets/images/icon/logo.svg" alt="EDACY" />
         </a>
         <button style="margin-right: 1%" class="w3-button w3-xlarge w3-right" onclick="openRightMenu()">&#9776;</button>
