@@ -1,3 +1,26 @@
+.gallery-back{
+    margin-bottom: 2%
+}
+@media (max-width: 991px) {
+    .gallery-back{
+        margin-top:10% ;
+    }
+}
+@media (max-width: 591px) {
+    .gallery-back{
+        margin-top:30% ;
+    }
+}
+@media (max-width: 391px) {
+    .gallery-back{
+        margin-top:50% ;
+    }
+}
+@media (max-width: 251px) {
+    .gallery-back{
+        margin-top:70% ;
+    }
+}
 .flex-container2 {
     display: flex;
     flex-wrap: nowrap;

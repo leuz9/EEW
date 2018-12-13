@@ -23,7 +23,7 @@
       <div class="rectangle-5">
         <div class="content">
           <p class="attend-the-next-edac">
-            Attend the next
+            Attend the {{event.chrono}}
             EDACY Event
           </p>
           <p class="lorem-ipsum-dolor-si">
@@ -41,8 +41,11 @@
 </div>
 
 
-<div style="width: 70%; margin: auto">
-
+<div style="width: 80%; margin: auto">
+  <div class="key-events">
+    <p>KEY EVENTS
+    </p>
+  </div>
   <div class="line"></div>
   <div class="flex-container3">
     <div class="container" style=" margin-bottom: 32px" *ngFor="let event of events; let i=index">

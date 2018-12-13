@@ -570,11 +570,16 @@
     text-align: center;
 }
 
+.centrer{
+    width: 100% ;
+    margin: auto;
+    text-align: center
+}
 .conteneur {
     position: relative; /* Pour que l'aperçu se positionne correctement par rapport à son contenur */
     display: inline-block; /* Pour que le conteneur fasse bien la taille de son contenu et pas plus */
     margin: auto;
-    width: 100%;
+    width: auto;
 }
 
 /* On affiche l'aperçu au survol et click du conteneur */
@@ -584,7 +589,6 @@
 
 /* Petit design vite fait du contenu */
 .contenu {
-    width: 400px;
     height: 327px;
     background: rgb(255, 255, 255);
 }
@@ -593,30 +597,12 @@
 .apercu {
     position: absolute;
     top: 0px;
-    left: 60px;
     display: none;
-    width: 320px;
     height: 327px;
     background: #FAFAFA;
     padding: 30px;
     margin: auto;
 }
-@media (max-width: 991px) {
-    .apercu {
-        left: 92px;
-    }
-}
-@media (max-width: 491px) {
-    .apercu {
-        left: 30px;
-    }
-}
-@media (max-width: 343px) {
-    .apercu {
-        left: 5px;
-    }
-}
-
 
 label {
     transition: 0.25s ease;

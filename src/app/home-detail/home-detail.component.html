@@ -149,11 +149,11 @@
       <div class="statistic">
         <div class="container">
           <div class="row">
-            <div class="col-md-6" style="margin: auto !important;width: 100% !important">
-              <div class="statistic__item statistic__item--white" style="padding-top: 0px">
+            <div class="col-md-6" style="margin-bottom: 10% !important;width: 100% !important">
+              <div class="centrer">
                 <div class="conteneur">
                   <div class="d20">
-                    <img src="{{facilitator.img1}}" alt="" width="70%" height="100%">
+                    <img src="{{facilitator.img1}}" alt="" width="auto" height="100%">
                   </div>
                   <div class="apercu">
                     <p class="text-left" style="font-size: 17px;">
@@ -173,10 +173,10 @@
               </div>
             </div>
             <div class="col-md-6" *ngIf="event.nbrfacilitator > '1'">
-              <div class="statistic__item statistic__item--white" style="padding-top: 0px">
+              <div class="centrer">
                 <div class="conteneur">
                   <div class="d21">
-                    <img src="{{facilitator.img2}}" alt="" width="70%" height="100%">
+                    <img src="{{facilitator.img2}}" alt="" width="auto" height="100%">
                   </div>
                   <div class="apercu">
                     <p class="text-left" style="font-size: 17px;">
@@ -247,19 +247,19 @@
       <div class="our-partners text-center">
         <p>Our Partners</p>
       </div>
-        <div class="flex-container3">
-          <div *ngFor="let partner of event.partner">
-            <a class="slideimg" href="{{partner.website}}" target="_blank">
-              <img src="{{partner.img}}" alt="partner" width="100%" height="auto" />
-            </a>
-          </div>
+      <div class="flex-container3">
+        <div *ngFor="let partner of event.partner">
+          <a class="slideimg" href="{{partner.website}}" target="_blank">
+            <img src="{{partner.img}}" alt="partner" width="100%" height="auto" />
+          </a>
         </div>
+      </div>
     </section>
-      <a href="https://www.edacy.com/partner/register" target="blank">
-        <div class="perso11">
-          <button class="send">BE A PARTNER</button>
-        </div>
-      </a>
+    <a href="https://www.edacy.com/partner/register" target="blank">
+      <div class="perso11">
+        <button class="send">BE A PARTNER</button>
+      </div>
+    </a>
     <!-- END PARTNERS-->
 
 

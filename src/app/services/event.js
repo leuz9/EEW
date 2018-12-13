@@ -1,6 +1,7 @@
 export const EVENTS = [
     {
         etat: '1',
+        chrono: 'last',
         img: 'https://i.ibb.co/TRGKyBw/Event.jpg',
         title: 'meetup artificial intelligence',
         description:
@@ -125,6 +126,162 @@ export const EVENTS = [
     },
     {
         etat: '0',
+        img: 'https://i.ibb.co/FqK1xrh/android.jpg',
+        title: 'ANDROID MEETUP',
+        description:
+        {
+            short: 'Vous voulez exceller en Android et créer les applications mobiles du futur?',
+            long: 'La communauté Tech et #ANDROID du Senegal est invitée ainsi que ceux intéressés par le sujet. Réservez gratuitement dès à présent et partagez l’invitation! Edaciennement vôtre !',
+        },
+        date: '24th , Nov 2018',
+        lieu: 'EDACY , Senegal',
+        nbrfacilitator: '4',
+        facilitator: [
+            {
+                img1: 'https://i.ibb.co/4MzL2vh/ibrahima-2.jpg',
+                name1: 'Ibrahima Ciss',
+                job1: 'Lead iOS Engineer',
+                feel1: 'I love trying new things and sharing my knowledges.',
+                lkd1: 'https://www.linkedin.com/in/ibrahima-ciss-3b416165/detail/contact-info/',
+                twt1: 'https://twitter.com/bionik6',
+                img2: 'https://i.ibb.co/6HcHMx9/souleymane-2.jpg',
+                name2: ' Souleymane Sidibé',
+                lkd2: 'https://www.linkedin.com/in/souleymane-sidibe-277a05a1/',
+                twt2: '',
+                job2: 'Lead Developer',
+                feel2: 'First of all, I am a developer who is passionate about mobile and new technologies.'
+            },
+            {
+                img1: 'https://i.ibb.co/BGdGdY3/martial-2.jpg',
+                name1: 'Martial Konvi',
+                job1: 'Head of Product',
+                feel1: 'Because it"s trying to "reproduce" human intelligence and that"s fascinating',
+                lkd1: 'https://www.linkedin.com/in/martial-konvi-13741ba0/',
+                img2: 'https://i.ibb.co/2swgRRF/jimmy-2.jpg',
+                name2: 'Kuassi Jimmy Kumako',
+                job2: 'Consultant',
+                feel2: 'Those who know me know how much I am an anti-buzz, anti all the narrative about startups. ',
+                lkd2: 'https://www.linkedin.com/in/jkumako/'
+            },
+        ],
+        evenbride: '',
+        schedule: [
+            {
+                id: 'cb1',
+                name: ' ANDROID MEETUP',
+                date: '24th , Nov 2018',
+                program: [
+                    {
+                        hour: '08H45',
+                        text: 'REGISTRATIONS'
+                    },
+                    {
+                        hour: '09H25',
+                        text: 'WELCOMING SPEECHES'
+                    },
+                    {
+                        hour: '09H30',
+                        text: 'MVC done Right - Ibrahima Ciss'
+                    },
+                    {
+                        hour: '10H15',
+                        text: 'QUESTIONS / ANSWERS'
+                    },
+                    {
+                        hour: '10H30',
+                        text: 'Android App Bundle - Souleymane Sidibé'
+                    },
+                    {
+                        hour: '11H15',
+                        text: 'QUESTIONS / ANSWERS'
+                    },
+                    {
+                        hour: '11H30',
+                        text: 'Pause'
+                    },
+                    {
+                        hour: '11H45',
+                        text: 'Android CI with Jenkins - Martial Konvi'
+                    },
+                    {
+                        hour: '12H30',
+                        text: ' Questions / Réponses'
+                    },
+                    {
+                        hour: '12H45',
+                        text: '  Google ML Kit - Kuassi Jimmy Kumako'
+                    },
+                    {
+                        hour: '13H30',
+                        text: ' Questions / Réponses'
+                    },
+                    {
+                        hour: '13H45',
+                        text: 'Mots de clôture'
+                    }
+                ],
+            }
+        ],
+        partner: [
+            {
+                website: '',
+                img: 'https://i.ibb.co/5Yrbmc6/galsenai.jpg'
+            },
+            {
+                website: 'https://www.unicef.org/fr',
+                img: 'https://i.ibb.co/D8QgD8s/unicef.png'
+            },
+            {
+                website: 'http://www.expressotelecom.sn/',
+                img: 'https://i.ibb.co/mGdxjZy/expresso-logo.png'
+            },
+            {
+                website: 'https://www.gainde2000.com/',
+                img: 'https://i.ibb.co/xhBJvXM/gainde-logo.png'
+            },
+            {
+                website: 'http://www.cofinasenegal.com/',
+                img: 'https://i.ibb.co/3zRzPVL/cofina.png'
+            },
+            {
+                website: 'https://www.childfund.org/Senegal/',
+                img: 'https://i.ibb.co/9ZrTqLF/child.jpg'
+            },
+            {
+                website: 'http://www.asprh.com/',
+                img: 'https://i.ibb.co/z2GrtN6/asprh.jpg'
+            },
+            {
+                website: 'https://www.edacy.com',
+                img: 'https://i.ibb.co/P6XfghV/dto.jpg'
+            },
+            {
+                website: 'https://www.supinfo.sn/',
+                img: 'https://i.ibb.co/XWjV8Cb/sup.jpg'
+            },
+            {
+                website: 'https://www.auchan.sn/fr',
+                img: 'https://i.ibb.co/CMXZcWL/auchan.png'
+            }
+        ],
+        gallery: [
+            {
+                img: 'https://i.ibb.co/sQwkdb9/1.jpg'
+            },
+            {
+                img: 'https://i.ibb.co/233cdX5/4.jpg'
+            },
+            {
+                img: 'https://i.ibb.co/NK5TfZq/2.jpg'
+            },
+            {
+                img: 'https://i.ibb.co/BBrr1ZS/3.jpg'
+            },
+        ]
+
+    },
+    {
+        etat: '0',
         img: 'https://i.ibb.co/19yMpm4/168.png',
         title: 'demo day',
         description:
@@ -134,7 +291,7 @@ export const EVENTS = [
         },
         date: '8th , Nov 2018',
         lieu: 'EDACY , Senegal',
-        nbrfacilitator: '1',
+        nbrfacilitator: '2',
         facilitator: [
             {
                 img1: 'https://i.ibb.co/hX1Bc0c/Rectangle2.png',
@@ -143,7 +300,14 @@ export const EVENTS = [
                 feel1: 'Our vision is powerful, we create value by bringing value to the world. Through EDACY I can be and help shaping the change I want to see in Africa.',
                 twt1: 'https://twitter.com/CarinaDjey',
                 lkd1: 'https://www.linkedin.com/in/carinevavasseur/',
-                fcb1: 'https://www.facebook.com/EbeneTouch'
+                fcb1: 'https://www.facebook.com/EbeneTouch',
+                img2: 'https://i.ibb.co/sH9hNBG/djigo.png',
+                name2: 'Mamadou DJIGO',
+                job2: 'Country Director',
+                feel2: 'EDACY is a real opportunity for me to build African Innovators. It"s the right place to share my experience and to change the rules of the game.',
+                twt2: 'https://twitter.com/MamadDjigo',
+                lkd2: 'https://www.linkedin.com/in/mamaddjigo/',
+                fcb2: 'https://web.facebook.com/MamadDjigo',
             }
         ],
         evenbride: '',
