@@ -16,6 +16,18 @@
        margin-top: 30%
     }
 }
+@media (max-width: 388px) {
+    .bootcamp {
+       font-size: 34px;
+       margin-top: 50%
+    }
+}
+@media (max-width: 251px) {
+    .bootcamp {
+       font-size: 24px;
+       margin-top: 80%
+    }
+}
 .a-3-days-event-where {
 	max-width: 814px;
 	color: #4A4A4A;
@@ -107,17 +119,6 @@
     margin-top: 10%
 }
 
-#img-9931-edit {
-    background-image: url("../../assets/images/Bitmap/IMG_9931-Edit.png");
-    background-size: cover;
-	height: 678.8px;
-	widows: 100%;
-}
-@media (max-width: 621px) {
-    #img-9931-edit{
-        height: 300px;
-    }
-}
 
 .design-thinking-olym {
 	color: #4A4A4A;
@@ -193,7 +194,7 @@
 
 .flex-container3 {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: center;
     flex-direction: row;
     width: 100%
@@ -219,9 +220,8 @@
 }
 
 #rectangle-14 {
-    background-image: url("../../assets/images/Bitmap/IMG_0396-Edit.png");
+    background-color: #FFCC00;
     background-size: cover;
-	height: 239px;
 }
 
 .edacy-bootcamp-desi {

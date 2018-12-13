@@ -65,17 +65,6 @@
     text-align: left;
 }
 
-#img-9931-edit {
-    background-image: url("../../assets/images/Bitmap/IMG_9931-Edit.png");
-    background-size: cover;
-	height: 670px;
-	width: 100%;
-}
-@media (max-width: 991px) {
-    #img-9931-edit {
-       height: 300px;
-    }
-}
 
 .small-date {
 	color: #717171;
@@ -110,9 +99,6 @@
 
 
 #rectangle-14 {
-    background-image: url("../../assets/images/Bitmap/IMG_0396-Edit.png");
     background-size: cover;
-	height: 294px;
-    width: 428px;
     margin-top: 10%
 }

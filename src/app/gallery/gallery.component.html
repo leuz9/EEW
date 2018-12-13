@@ -13,75 +13,33 @@
     </a>
     <div>
       <p class="design">
-        Design Thinking Olympics + Bootcamp
+        {{event.title | uppercase}}
       </p>
     </div>
-    <div id="img-9931-edit">
+    <div>
+      <img src="{{event.img}}" alt="{{event.title}}" width="100%">
     </div>
     <div class="flex-container3">
       <div id="small-calendar">
       </div>
       <div>
         <p class="small-date">
-          4th June, 2018
+          {{event.date}}
         </p>
       </div>
     </div>
     <div>
       <p class="lorem-ipsum-dolor-si1">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud anter
-        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        {{event.description.long}}
       </p>
     </div>
-    <div class="flex-container1">
-      <div id="rectangle-14">
-      </div>
-      <div id="rectangle-14">
-      </div>
-    </div>
-    <div class="flex-container1">
-      <div id="rectangle-14">
-      </div>
-      <div id="rectangle-14">
+    <div *ngFor="let gallery of event.gallery">
+      <div class="flex-container1">
+        <div id="rectangle-14">
+            <img src="{{gallery.img}}" alt="{{event.title}}" width="100%">
+        </div>
       </div>
     </div>
-    <div class="flex-container1">
-      <div id="rectangle-14">
-      </div>
-      <div id="rectangle-14">
-      </div>
-    </div>
-    <div class="flex-container1">
-      <div id="rectangle-14">
-      </div>
-      <div id="rectangle-14">
-      </div>
-    </div>
-    <div class="flex-container1">
-      <div id="rectangle-14">
-      </div>
-      <div id="rectangle-14">
-      </div>
-    </div>
-    <div class="flex-container1">
-      <div id="rectangle-14">
-      </div>
-      <div id="rectangle-14">
-      </div>
-    </div>
-    <div class="flex-container1">
-      <div id="rectangle-14">
-      </div>
-      <div id="rectangle-14">
-      </div>
-    </div>
-    <div class="flex-container1">
-      <div id="rectangle-14">
-      </div>
-      <div id="rectangle-14">
-      </div>
-    </div>
+
   </div>
 </div>

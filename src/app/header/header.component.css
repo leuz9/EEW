@@ -70,6 +70,23 @@
     margin-top: 44px;
     margin-left: 30px;
 }
+@media (max-width:300px){
+    .w-edacy {
+        width: 150px
+    }
+}
+@media (max-width:250px){
+    .w-edacy {
+        width: 80px
+    }
+}
+@media (max-width:170px){
+    .w-edacy {
+        width: 40px
+    }
+}
+
+
 
 .active {
     font-weight: 700;

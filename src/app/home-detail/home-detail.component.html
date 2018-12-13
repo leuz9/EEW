@@ -1,606 +1,270 @@
-<!-- BREADCRUMB-->
-<section class="text-center" id="img-0433-edit">
-  <div class="centerm">
-    <div class="design-thinking-olym">
-      <p>BOOTCAMP #5</p>
+<div class="page-wrapper">
+  <!-- BREADCRUMB-->
+  <div class="flex-containeri">
+    <div>
+      <img src="{{event.img}}" alt="Event" width="100%">
     </div>
-    <div class="Subdes">
-      <p>Applying Design Thinking to solve real-life challenges</p>
-    </div>
-  </div>
-</section>
-<!-- END BREADCRUMB-->
-
-<!-- PAGE CONTENT-->
-
-
-<!--BAR-->
-<section class="magie">
-  <div class="page-content--bgf7b">
-    <div class="row">
-      <div class="col-4">
-        <div class="row">
-          <div class="col-3" style="margin: auto">
-            <div id="perso">
-            </div>
-          </div>
-          <div class="col-8" style="margin: auto;">
-            <div class=" date">6th-8th November, 2018
-            </div>
-          </div>
-          <div class="separation" style="margin-left: 7%"></div>
+    <!--  <div class="centerm">
+        <div class="design-thinking-olym ">
+            <p>BOOTCAMP #5</p>
         </div>
-      </div>
-      <div class="col-4">
-        <div class="row" style="height: 100% !important">
-          <div class="col-3" style="margin: auto">
-            <a href="#map">
-              <div id="perso-map" style="margin-left: 77%;">
+        <div class="Subdes">
+            <p>Applying Design Thinking to solve real-life challenges</p>
+        </div>
+    </div>-->
+
+  </div>
+  <!-- END BREADCRUMB-->
+
+  <!-- PAGE CONTENT-->
+
+
+  <!--BAR-->
+  <section class="magie">
+    <div class="page-content--bgf7b">
+      <div class="row">
+        <div class="col-4">
+          <div class="row">
+            <div class="col-3" style="margin: auto">
+              <div id="perso">
               </div>
-            </a>
+            </div>
+            <div class="col-8" style="margin: auto;">
+              <div class=" date">{{event.date}}
+              </div>
+            </div>
+            <div class="separation" style="margin-left: 7%"></div>
           </div>
-          <div class="col-8" style="margin: auto">
-            <a href="#map" class="date" style="margin-left: 17%; height: 100%;">EDACY, SENEGAL</a>
+        </div>
+        <div class="col-4">
+          <div class="row" style="height: 100% !important">
+            <div class="col-3" style="margin: auto">
+              <a href="#map">
+                <div id="perso-map" style="margin-left: 77%;">
+                </div>
+              </a>
+            </div>
+            <div class="col-8" style="margin: auto">
+              <a href="#map" class="date" style="margin-left: 17%; height: 100%;">{{ event.lieu }}</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="row">
+            <div class="col-3">
+              <div class="separation"></div>
+            </div>
+            <div class="col-9 centerf" id="About">
+              <a href="{{ event.evenbride }}" target="_blank">
+                <button class="register-now1">REGISTER NOW</button>
+              </a>
+            </div>
           </div>
         </div>
       </div>
-      <div class="col-4">
-        <div class="row">
-          <div class="col-3">
-            <div class="separation"></div>
-          </div>
-          <div class="col-9 centerf" id="About">
-            <a href="https://www.eventbrite.co.uk/e/edacy-bootcamp-5-tickets-50174314726" target="_blank">
-              <button class="register-now1">REGISTER NOW</button>
-            </a>
-          </div>
+    </div>
+  </section>
+
+  <div class="flex-container">
+    <div></div>
+    <div></div>
+    <div class="row">
+      <div class="col-3" style="padding: auto">
+        <div id="persom">
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
-<div class="flex-container">
-  <div></div>
-  <div></div>
-  <div class="row">
-    <div class="col-3" style="padding: auto">
-      <div id="persom">
+      <div class="col-4 ext-end">
+        <a class="datem">
+          {{event.date}}
+        </a>
       </div>
     </div>
-    <div class="col-4 ext-end">
-      <a class="datem">
-        6th-8th November, 2018
-      </a>
-    </div>
-  </div>
-  <div></div>
-  <div></div>
-  <div>
-    <div class="separationm">
-    </div>
-  </div>
-  <div></div>
-  <div></div>
-  <div class="row">
-    <div class="col-3">
-      <a href="#map">
-        <div id="persom-map">
-        </div>
-      </a>
-    </div>
-    <div class="col-4 ext-end">
-      <a href="map" class="datem">EDACY, Senegal</a>
-    </div>
-  </div>
-  <div></div>
-  <div></div>
-  <div>
-    <div class="separationm"></div>
-  </div>
-  <div></div>
-  <div></div>
-  <div>
-    <div class="register-now1m">
-      <a style="color:black" href="https://www.eventbrite.co.uk/e/edacy-bootcamp-5-tickets-50174314726" target="_blank">
-        REGISTER NOW
-      </a>
-    </div>
-  </div>
-  <div></div>
-  <div id="About"></div>
-</div>
-<!--END BAR-->
-
-<div class="page-content--bgf7" style="margin-top: 6%">
-
-  <!-- TEXT-->
-  <div class="container-fluid">
-    <a routerLink="/home">
-      <div class="about-this-event">
-        <p>About the event</p>
+    <div></div>
+    <div></div>
+    <div>
+      <div class="separationm">
       </div>
-    </a>
+    </div>
+    <div></div>
+    <div></div>
+    <div class="row">
+      <div class="col-3">
+        <a href="#map">
+          <div id="persom-map">
+          </div>
+        </a>
+      </div>
+      <div class="col-4 ext-end">
+        <a href="map" class="datem">{{event.lieu}}</a>
+      </div>
+    </div>
+    <div></div>
+    <div></div>
+    <div>
+      <div class="separationm"></div>
+    </div>
+    <div></div>
+    <div></div>
+    <div>
+      <div class="register-now1m">
+        <a style="color:black" href="{{event.evenbride}}" target="_blank">
+          REGISTER NOW
+        </a>
+      </div>
+    </div>
+    <div></div>
+    <div id="About"></div>
+  </div>
+  <!--END BAR-->
+
+  <div class="page-content--bgf7" style="margin-top: 6%">
 
     <!-- TEXT-->
-    <div class="days-of-quality">
-      <p>3 days of design thinking, prototyping and exciting product innovation. </p>
+    <div class="container-fluid">
+      <a routerLink="/home">
+        <div class="about-this-event">
+          <p>About the event</p>
+        </div>
+      </a>
+
+      <!-- TEXT-->
+      <div class="days-of-quality">
+        <p>{{ event.description.short }} </p>
+      </div>
+      <!-- END TEXT-->
+
+      <div class="sed-ut-perspiciatis">
+        <p>{{ event.description.long }}
+        </p>
+      </div>
     </div>
     <!-- END TEXT-->
 
-    <div class="sed-ut-perspiciatis">
-      <p>A 3 days event where experts in Design Thinking/UX Design,
-        and software development team up with local mentors and guide teams of
-        talents to solve problems and evolve innovative solutions.
-      </p>
+    <!-- FACILITATORS-->
+
+    <div *ngIf="event.nbrfacilitator >= '1'" id="Facil" class="facilitators tex-center" style="margin-top: 10%">
+      <p>Facilitators</p>
     </div>
-  </div>
-  <!-- END TEXT-->
-
-  <!-- FACILITATORS-->
-
-  <div id="Facil" class="facilitators tex-center" style="margin-top: 10%">
-    <p>Facilitators</p>
-  </div>
-  <section class="statistic">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6" style="margin: auto !important;width: 100% !important">
-          <div class="statistic__item statistic__item--white" style="padding-top: 0px">
-            <div class="conteneur">
-              <div class="d20"></div>
-              <div class="apercu">
-                <p class="text-left" style="font-size: 17px;">Our vision is powerful, we create
-                  value by bringing value to the world.
-                  Through EDACY I can be and help shaping the change I want to see in Africa.
-                </p>
-                <a id="social2" style="float: left ;" href="https://twitter.com/CarinaDjey"></a>
-                <a id="social3" style="float: left;" href="https://www.linkedin.com/in/carinevavasseur/"></a>
-                <a id="social5" style="float: left ;" href="https://www.facebook.com/EbeneTouch"></a>
+    <div *ngFor="let facilitator of event.facilitator; let j=index">
+      <div class="statistic">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6" style="margin: auto !important;width: 100% !important">
+              <div class="statistic__item statistic__item--white" style="padding-top: 0px">
+                <div class="conteneur">
+                  <div class="d20">
+                    <img src="{{facilitator.img1}}" alt="" width="70%" height="100%">
+                  </div>
+                  <div class="apercu">
+                    <p class="text-left" style="font-size: 17px;">
+                      {{ facilitator.feel1 }}
+                    </p>
+                    <a id="social2" style="float: left ;" href="{{facilitator.twt1}}"></a>
+                    <a id="social3" style="float: left;" href="{{facilitator.lkn1}}"></a>
+                    <a id="social5" style="float: left ;" href="{{facilitator.fcb1}}"></a>
+                  </div>
+                  <div class="text-center">
+                    <a style="font-size: 22px;">{{facilitator.name1 }}</a>
+                  </div>
+                  <div class="text-center">
+                    <a>{{facilitator.job1}}</a>
+                  </div>
+                </div>
               </div>
-              <div class="text-center">
-                <a style="font-size: 22px;">Carine VAVASSEUR</a>
-              </div>
-              <div class="text-center">
-                <a>Head of Career Services</a>
+            </div>
+            <div class="col-md-6" *ngIf="event.nbrfacilitator > '1'">
+              <div class="statistic__item statistic__item--white" style="padding-top: 0px">
+                <div class="conteneur">
+                  <div class="d21">
+                    <img src="{{facilitator.img2}}" alt="" width="70%" height="100%">
+                  </div>
+                  <div class="apercu">
+                    <p class="text-left" style="font-size: 17px;">
+                      {{facilitator.feel2}}
+                    </p>
+                    <a id="social2" style="float: left;" href="{{facilitator.twt2}}"></a>
+                    <a id="social3" style="float: left;" href="{{facilitator.lkn2}}"></a>
+                    <a id="social5" style="float: left;" href="{{facilitator.fcb2}}"></a>
+                  </div>
+                  <div class="text-center">
+                    <a style="font-size: 22px;">{{facilitator.name2}}
+                    </a>
+                  </div>
+                  <div class="text-center">
+                    <a>{{facilitator.job2}}</a>
+                  </div>
+                </div>
+                <div>
+
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="statistic__item statistic__item--white" style="padding-top: 0px">
-            <div class="conteneur">
-              <div class="d21"></div>
-              <div class="apercu">
-                <p class="text-left" style="font-size: 17px;">For me, EDACY is all about
-                  empowerment,
-                  impact, and growth - arming African youths with the right skillsets,
-                  and positioning them to take advantage of the digital skill gap in global
-                  innovation.
-                </p>
-                <a id="social2" style="float: left;" href="https://twitter.com/iamayomidotun"></a>
-                <a id="social3" style="float: left;" href="https://www.linkedin.com/in/ayomidotun/"></a>
-                <a id="social5" style="float: left;" href="https://www.facebook.com/ayomidotun"></a>
-              </div>
-              <div class="text-center">
-                <a style="font-size: 22px;">Ayomidotun Freeborn
+      </div>
+    </div>
+    <!-- END FACILITATORS-->
+
+    <div class="container-fluid">
+      <div class="facilitators">
+        <p>Event Schedule</p>
+      </div>
+    </div>
+    <nav class="accordion arrows">
+      <div *ngFor="let schedule of event.schedule">
+        <input type="radio" name="accordion" id="{{schedule.id}}" />
+        <section class="box">
+          <label class="day-1" for="{{schedule.id}}">
+            <p class="day-b"> {{schedule.name}}</p>
+            <p class="date1 text-left">{{schedule.date}}</p>
+          </label>
+
+          <label class="box-close" for="acc-close"></label>
+          <div class="box-content">
+            <div class="date12">
+              <div *ngFor="let program of schedule.program">
+                <a style="color: #9B9B9B; width: 100%">
+                  <div class="flex-container2">
+                    <div>
+                      {{program.hour}}
+                    </div>
+                    <div>
+                      {{program.text | uppercase}}
+                    </div>
+                  </div>
                 </a>
               </div>
-              <div class="text-center">
-                <a>Product Design Lead</a>
-              </div>
-            </div>
-            <div>
-
             </div>
           </div>
-        </div>
+        </section>
       </div>
-    </div>
-  </section>
-  <!-- END FACILITATORS-->
 
-  <div class="container-fluid">
-    <div class="facilitators">
-      <p>Event Schedule</p>
-    </div>
+      <input type="radio" name="accordion" id="acc-close" />
+    </nav>
+
+    <!-- PARTNERS-->
+    <section class=" rectanglep" style="background-color: #ffffff;margin-bottom: 15%">
+      <div class="our-partners text-center">
+        <p>Our Partners</p>
+      </div>
+        <div class="flex-container3">
+          <div *ngFor="let partner of event.partner">
+            <a class="slideimg" href="{{partner.website}}" target="_blank">
+              <img src="{{partner.img}}" alt="partner" width="100%" height="auto" />
+            </a>
+          </div>
+        </div>
+    </section>
+      <a href="https://www.edacy.com/partner/register" target="blank">
+        <div class="perso11">
+          <button class="send">BE A PARTNER</button>
+        </div>
+      </a>
+    <!-- END PARTNERS-->
+
+
+    <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.0240778093594!2d-17.46619438570871!3d14.711230478301257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec1736251547ac9%3A0x75f4a7c6a11c67ff!2sEDACY+SENEGAL!5e0!3m2!1sfr!2ssn!4v1532989044629"
+      width="100%" height="450" frameborder="0" allowfullscreen></iframe>
+
   </div>
-
-  <nav class="accordion arrows">
-    <input type="radio" name="accordion" id="cb1" />
-    <section class="box">
-      <label class="day-1" for="cb1">
-        <p class="day-b"> Day 1: Empathy & Ideation</p>
-        <p class="date1 text-left">6th Nov, 2018</p>
-      </label>
-
-      <label class="box-close" for="acc-close"></label>
-      <div class="box-content">
-        <div class="date12">
-          <a style="color: #9B9B9B; width: 100%">
-            <div class="flex-container2">
-              <div>
-                08H00
-              </div>
-              <div>
-                CHECK-IN
-              </div>
-            </div>
-          </a>
-          <a style="color: #9B9B9B; width: 100%">
-            <div class="flex-container2">
-              <div>
-                08H30
-              </div>
-              <div>
-                WELCOME AND OVERVIEW
-              </div>
-            </div>
-          </a>
-          <a style="color: #9B9B9B; width: 100%">
-            <div class="flex-container2">
-              <div>
-                09H15
-              </div>
-              <div>
-                INTRODUCTION
-              </div>
-            </div>
-          </a>
-          <a style="color: #9B9B9B; width: 100%">
-            <div class="flex-container2">
-              <div>
-                09H45
-              </div>
-              <div>
-                CHALLENGE
-              </div>
-            </div>
-          </a>
-          <a style="color: #9B9B9B; width: 100%">
-            <div class="flex-container2">
-              <div>
-                10H15
-              </div>
-              <div>
-                IN-DEPHT DISCUSSION
-              </div>
-            </div>
-          </a>
-          <a style="color: #9B9B9B; width: 100%">
-            <div class="flex-container2">
-              <div>
-                11H15
-              </div>
-              <div>
-                Q&A SESSION WITH CLIENTS
-              </div>
-            </div>
-          </a>
-          <a style="color: #9B9B9B; width: 100%">
-            <div class="flex-container2">
-              <div>
-                12H00
-              </div>
-              <div>
-                LUNCH+BREAK
-              </div>
-            </div>
-          </a>
-          <a style="color: #9B9B9B; width: 100%">
-            <div class="flex-container2">
-              <div>
-                13H00
-              </div>
-              <div>
-                FRAMING THE PROBLEM
-              </div>
-            </div>
-          </a>
-          <a style="color: #9B9B9B; width: 100%">
-            <div class="flex-container2">
-              <div>
-                13H30
-              </div>
-              <div>
-                HOW: UX DESIGN PROCESS
-              </div>
-            </div>
-          </a>
-          <a style="color: #9B9B9B; width: 100%">
-            <div class="flex-container2">
-              <div>
-                14H00
-              </div>
-              <div>
-                USER RESEARCH (activity)
-              </div>
-            </div>
-          </a>
-          <a style="color: #9B9B9B; width: 100%">
-            <div class="flex-container2">
-              <div>
-                15H30
-              </div>
-              <div>
-                IDEATION + INNOVATION
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-    <input type="radio" name="accordion" id="cb2" />
-    <section class="box">
-      <label class="day-1" for="cb2">
-        <p class="day-b">Day 2: Prototype & Development</p>
-        <p class="date1 text-left">7th Nov, 2018</p>
-      </label>
-
-      <label class="box-close" for="acc-close"></label>
-      <div class="box-content">
-        <div class="date12">
-          <a style="color: #9B9B9B; width: 100%">
-            <div class="flex-container2">
-              <div>
-                08H30
-              </div>
-              <div>
-                CHECK-IN
-              </div>
-            </div>
-          </a>
-          <a style="color: #9B9B9B; width: 100%">
-            <div class="flex-container2">
-              <div>
-                09H00
-              </div>
-              <div>
-                PROTOTYPING
-              </div>
-            </div>
-          </a>
-          <a style="color: #9B9B9B; width: 100%">
-            <div class="flex-container2">
-              <div>
-                10H00
-              </div>
-              <div>
-                FIELD WORK
-              </div>
-            </div>
-          </a>
-          <a style="color: #9B9B9B; width: 100%">
-            <div class="flex-container2">
-              <div>
-                11H30
-              </div>
-              <div>
-                ITERATION PROCESS
-              </div>
-            </div>
-          </a>
-          <a style="color: #9B9B9B; width: 100%">
-            <div class="flex-container2">
-              <div>
-                12H00
-              </div>
-              <div>
-                LUNCH+BREAK
-              </div>
-            </div>
-          </a>
-          <a style="color: #9B9B9B; width: 100%">
-            <div class="flex-container2">
-              <div>
-                13H00
-              </div>
-              <div>
-                PROTOTYPE
-              </div>
-            </div>
-          </a>
-          <a style="color: #9B9B9B; width: 100%">
-            <div class="flex-container2">
-              <div>
-                14H00
-              </div>
-              <div>
-                DEVELOPMENT
-              </div>
-            </div>
-          </a>
-          <a style="color: #9B9B9B; width: 100%">
-            <div class="flex-container2">
-              <div>
-                17H30
-              </div>
-              <div>
-                STORYTELLING
-              </div>
-            </div>
-          </a>
-          <a style="color: #9B9B9B; width: 100%">
-            <div class="flex-container2">
-              <div>
-                18H30
-              </div>
-              <div>
-                PITCH
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-    <input type="radio" name="accordion" id="cb3" />
-    <section class="box">
-      <label class="day-1" for="cb3">
-        <p class="day-b">Day 3: Demo Day</p>
-        <p class="date1 text-left">8th Nov, 2018</p>
-      </label>
-
-
-      <label class="box-close" for="acc-close"></label>
-      <div class="box-content">
-        <div class="date12">
-          <a style="color: #9B9B9B; width: 100%">
-            <div class="flex-container2">
-              <div>
-                08H30
-              </div>
-              <div>
-                CHECK-IN
-              </div>
-            </div>
-          </a>
-          <a style="color: #9B9B9B; width: 100%">
-            <div class="flex-container2">
-              <div>
-                09H00
-              </div>
-              <div>
-                DEVELOPPMENT
-              </div>
-            </div>
-          </a>
-          <a style="color: #9B9B9B; width: 100%">
-            <div class="flex-container2">
-              <div>
-                12H00
-              </div>
-              <div>
-                LUNCH+BREA
-              </div>
-            </div>
-          </a>
-          <a style="color: #9B9B9B; width: 100%">
-            <div class="flex-container2">
-              <div>
-                13H00
-              </div>
-              <div>
-                PITCH MOTIVATION
-              </div>
-            </div>
-          </a>
-          <a style="color: #9B9B9B; width: 100%">
-            <div class="flex-container2">
-              <div>
-                15H30
-              </div>
-              <div>
-                PRESENTATIONS COLLECTION
-              </div>
-            </div>
-          </a>
-          <a style="color: #9B9B9B; width: 100%">
-            <div class="flex-container2">
-              <div>
-                16H00
-              </div>
-              <div>
-                TEAM PRESENTATION
-              </div>
-            </div>
-          </a>
-          <a style="color: #9B9B9B; width: 100%">
-            <div class="flex-container2">
-              <div>
-                18H00
-              </div>
-              <div>
-                END OF BOOTCAMP
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <input type="radio" name="accordion" id="acc-close" />
-  </nav>
-
-  <!-- PARTNERS-->
-  <section class=" text-center rectanglep" style="background-color: #ffffff;margin-bottom: 15%">
-    <div class="our-partners text-center">
-      <p>Our Partners</p>
-    </div>
-    <marquee direction="left" scrollamount="6">
-      <a class="slideimg" href="http://www.cofinasenegal.com/" target="_blank">
-        <img src="../../assets/images/partners/cofina.png" alt="COFINA" border="0" />
-      </a>
-      <a class="slideimg" href="http://web.expressotelecom.sn/fr/" target="_blank">
-        <img src="../../assets/images/partners/expresso-logo.png" alt="EXPRESSO" border="0" />
-      </a>
-      <a class="slideimg" href="https://www.gainde2000.com/" target="_blank">
-        <img src="../../assets/images/partners/gainde-logo.png" alt="GAINDE" border="0" />
-      </a>
-      <a class="slideimg" href="https://www.unicef.org/fr" target="_blank">
-        <img src="../../assets/images/partners/unicef.png" alt="UNICEF" border="0" />
-      </a>
-      <a class="slideimg" href="http://www.cofinasenegal.com/" target="_blank">
-        <img src="../../assets/images/partners/cofina.png" alt="COFINA" border="0" />
-      </a>
-      <a class="slideimg" href="http://web.expressotelecom.sn/fr/" target="_blank">
-        <img src="../../assets/images/partners/expresso-logo.png" alt="EXPRESSO" border="0" />
-      </a>
-      <a class="slideimg" href="https://www.gainde2000.com/" target="_blank">
-        <img src="../../assets/images/partners/gainde-logo.png" alt="GAINDE" border="0" />
-      </a>
-      <a class="slideimg" href="https://www.unicef.org/fr" target="_blank">
-        <img src="../../assets/images/partners/unicef.png" alt="UNICEF" border="0" />
-      </a>
-      <a class="slideimg" href="http://www.cofinasenegal.com/" target="_blank">
-        <img src="../../assets/images/partners/cofina.png" alt="COFINA" border="0" />
-      </a>
-      <a class="slideimg" href="http://web.expressotelecom.sn/fr/" target="_blank">
-        <img src="../../assets/images/partners/expresso-logo.png" alt="EXPRESSO" border="0" />
-      </a>
-      <a class="slideimg" href="https://www.gainde2000.com/" target="_blank">
-        <img src="../../assets/images/partners/gainde-logo.png" alt="GAINDE" border="0" />
-      </a>
-      <a class="slideimg" href="https://www.unicef.org/fr" target="_blank">
-        <img src="../../assets/images/partners/unicef.png" alt="UNICEF" border="0" />
-      </a>
-      <a class="slideimg" href="http://www.cofinasenegal.com/" target="_blank">
-        <img src="../../assets/images/partners/cofina.png" alt="COFINA" border="0" />
-      </a>
-      <a class="slideimg" href="http://web.expressotelecom.sn/fr/" target="_blank">
-        <img src="../../assets/images/partners/expresso-logo.png" alt="EXPRESSO" border="0" />
-      </a>
-      <a class="slideimg" href="https://www.gainde2000.com/" target="_blank">
-        <img src="../../assets/images/partners/gainde-logo.png" alt="GAINDE" border="0" />
-      </a>
-      <a class="slideimg" href="https://www.unicef.org/fr" target="_blank">
-        <img src="../../assets/images/partners/unicef.png" alt="UNICEF" border="0" />
-      </a>
-      <a class="slideimg" href="http://www.cofinasenegal.com/" target="_blank">
-        <img src="../../assets/images/partners/cofina.png" alt="COFINA" border="0" />
-      </a>
-      <a class="slideimg" href="http://web.expressotelecom.sn/fr/" target="_blank">
-        <img src="../../assets/images/partners/expresso-logo.png" alt="EXPRESSO" border="0" />
-      </a>
-      <a class="slideimg" href="https://www.gainde2000.com/" target="_blank">
-        <img src="../../assets/images/partners/gainde-logo.png" alt="GAINDE" border="0" />
-      </a>
-      <a class="slideimg" href="https://www.unicef.org/fr" target="_blank">
-        <img src="../../assets/images/partners/unicef.png" alt="UNICEF" border="0" />
-      </a>
-
-
-    </marquee>
-    <a href="https://www.edacy.com/partner/register" target="blank">
-      <div class="perso11">
-        <button class="send">BE A PARTNER</button>
-      </div>
-    </a>
-
-  </section>
-  <!-- END PARTNERS-->
-
-
-  <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.0240778093594!2d-17.46619438570871!3d14.711230478301257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec1736251547ac9%3A0x75f4a7c6a11c67ff!2sEDACY+SENEGAL!5e0!3m2!1sfr!2ssn!4v1532989044629"
-    width="100%" height="450" frameborder="0" allowfullscreen></iframe>
-
 </div>

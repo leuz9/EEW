@@ -8,11 +8,12 @@ import { isPlatformBrowser } from '@angular/common';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
   constructor(
     @Inject(PLATFORM_ID) private platformId: Object,
     @Inject(APP_ID) private appId: string
-  ) {}
- 
+  ) { }
+
   onActivate(event: any) {
     if (isPlatformBrowser(this.platformId)) {
       let scrollToTop = window.setInterval(() => {
