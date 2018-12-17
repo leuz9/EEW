@@ -34,6 +34,11 @@
               <p class="view-details"> VIEW DETAILS</p>
             </div>
           </a>
+          <a routerLink="/gallery" [queryParams]="{'index': i}">
+            <div class="rectangle-9">
+              <p class="view-details"> VIEW GALLERY</p>
+            </div>
+          </a>
         </div>
       </div>
     </div>
@@ -48,7 +53,7 @@
   </div>
   <div class="line"></div>
   <div class="flex-container3">
-    <div class="container" style=" margin-bottom: 32px" *ngFor="let event of events; let i=index">
+    <div class="container" *ngFor="let event of events; let i=index">
       <div *ngIf="event.etat ==='0'">
         <div class="flex-container4">
           <div id="rectangle-14">

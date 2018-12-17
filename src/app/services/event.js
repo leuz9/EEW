@@ -2,6 +2,113 @@ export const EVENTS = [
     {
         etat: '1',
         chrono: 'last',
+        img: 'https://i.ibb.co/ydnnW6f/20181212-181522-PANO.jpg',
+        title: 'team building',
+        description:
+        {
+            short: 'Team building, strengthening the team spirit',
+            long: 'The reinforcement is the ultimate goal of team-building. This activity, which takes place outside the workplace, will enable employees to get to know each other better and to work together to achieve common goals.',
+        },
+        date: '12th , Dec 2018',
+        lieu: 'EDACY , Senegal',
+        nbrfacilitator: '2',
+        facilitator: [
+            {
+                img1: 'https://i.ibb.co/hX1Bc0c/Rectangle2.png',
+                name1: 'Carine VAVASSEUR',
+                job1: 'Head of Career Services',
+                feel1: 'Our vision is powerful, we create value by bringing value to the world. Through EDACY I can be and help shaping the change I want to see in Africa.',
+                twt1: 'https://twitter.com/CarinaDjey',
+                lkd1: 'https://www.linkedin.com/in/carinevavasseur/',
+                fcb1: 'https://www.facebook.com/EbeneTouch',
+                img2: 'https://i.ibb.co/sH9hNBG/djigo.png',
+                name2: 'Mamadou DJIGO',
+                job2: 'Country Director',
+                feel2: 'EDACY is a real opportunity for me to build African Innovators. It"s the right place to share my experience and to change the rules of the game.',
+                twt2: 'https://twitter.com/MamadDjigo',
+                lkd2: 'https://www.linkedin.com/in/mamaddjigo/',
+                fcb2: 'https://web.facebook.com/MamadDjigo',
+            }
+        ],
+        evenbride: 'https://www.eventbrite.co.uk/e/edacy-bootcamp-5-tickets-50174314726',
+        schedule: [
+            {
+                id: 'cb1',
+                name: 'Team Building',
+                date: '12th Dec, 2018',
+                program: [
+                    {
+                        hour: '17H10',
+                        text: 'start'
+                    },
+                   
+                    {
+                        hour: '19H15',
+                        text: 'END OF A DAY'
+                    }
+                ],
+            }
+        ],
+        partner: [
+            {
+                website: '',
+                img: 'https://i.ibb.co/5Yrbmc6/galsenai.jpg'
+            },
+            {
+                website: 'https://www.unicef.org/fr',
+                img: 'https://i.ibb.co/D8QgD8s/unicef.png'
+            },
+            {
+                website: 'http://www.expressotelecom.sn/',
+                img: 'https://i.ibb.co/mGdxjZy/expresso-logo.png'
+            },
+            {
+                website: 'https://www.gainde2000.com/',
+                img: 'https://i.ibb.co/xhBJvXM/gainde-logo.png'
+            },
+            {
+                website: 'http://www.cofinasenegal.com/',
+                img: 'https://i.ibb.co/3zRzPVL/cofina.png'
+            },
+            {
+                website: 'https://www.childfund.org/Senegal/',
+                img: 'https://i.ibb.co/9ZrTqLF/child.jpg'
+            },
+            {
+                website: 'http://www.asprh.com/',
+                img: 'https://i.ibb.co/z2GrtN6/asprh.jpg'
+            },
+            {
+                website: 'https://www.edacy.com',
+                img: 'https://i.ibb.co/P6XfghV/dto.jpg'
+            },
+            {
+                website: 'https://www.supinfo.sn/',
+                img: 'https://i.ibb.co/XWjV8Cb/sup.jpg'
+            },
+            {
+                website: 'https://www.auchan.sn/fr',
+                img: 'https://i.ibb.co/CMXZcWL/auchan.png'
+            }
+        ],
+        gallery: [
+            {
+                img: 'https://i.ibb.co/BLjyy63/IMG-20181212-WA0011.jpg'
+            },
+            {
+                img: 'https://i.ibb.co/2Wz4YgL/IMG-20181212-WA0013.jpg'
+            },
+            {
+                img: 'https://i.ibb.co/FKbtS9n/IMG-20181212-WA0017.jpg'
+            },
+            {
+                img: 'https://i.ibb.co/3vf2WKT/IMG-20181212-WA0004.jpg'
+            },
+        ]
+
+    },
+    {
+        etat: '0',
         img: 'https://i.ibb.co/TRGKyBw/Event.jpg',
         title: 'meetup artificial intelligence',
         description:
@@ -908,5 +1015,371 @@ export const EVENTS = [
                 img: 'https://i.ibb.co/hcsVXQW/43420340192-e35da282f4-k.jpg',
             }
         ]
-    }
+    },
+    {
+        etat: '0',
+        img: 'https://i.ibb.co/BqPmjZX/IMG-1233-Edit.jpg',
+        title: 'EDACY BOOTCAMP',
+        description:
+        {
+            short: 'The Bootcamp is a three-day event that runs from 13/04/2018 to 15/04/2018. The objective is to challenge our Specialized Talents in Web, Mobile or Big Data Development for 72 hours',
+            long: 'A 3 days event where experts in Design Thinking/UX Design, and software development team up with local mentors and guide teams of talents to solve problems and evolve innovative solutions.',
+        },
+        date: '15th , Apr 2018',
+        lieu: 'SUP"INFO',
+        nbrfacilitator: '2',
+        facilitator: [
+            {
+                img1: 'https://i.ibb.co/hX1Bc0c/Rectangle2.png',
+                name1: 'Carine VAVASSEUR',
+                job1: 'Head of Career Services',
+                feel1: 'Our vision is powerful, we create value by bringing value to the world. Through EDACY I can be and help shaping the change I want to see in Africa.',
+                twt1: 'https://twitter.com/CarinaDjey',
+                lkd1: 'https://www.linkedin.com/in/carinevavasseur/',
+                fcb1: 'https://www.facebook.com/EbeneTouch',
+
+                img2: 'https://i.ibb.co/L82xw4G/ayo.jpg',
+                name2: 'Ayomidotun Freeborn',
+                job2: 'Product Design Lead',
+                feel2: 'For me, EDACY is all about empowerment, impact, and growth - arming African youths with the right skillsets, and positioning them to take advantage of the digital skill gap in global innovation.',
+                twt2: 'https://twitter.com/iamayomidotun',
+                lkd2: 'https://www.linkedin.com/in/ayomidotun/',
+                fcb2: 'https://www.facebook.com/ayomidotun'
+            }
+        ],
+        evenbride: '',
+        schedule: [
+            {
+                id: '1',
+                name: 'Day 1: Empathy & Ideation',
+                date: '13th , Apr 2018',
+                program: [
+                    {
+                        hour: '08H45',
+                        text: 'REGISTRATIONS'
+                    },
+                    {
+                        hour: '09H25',
+                        text: 'WELCOMING SPEECHES'
+                    },
+                    {
+                        hour: '09H30',
+                        text: 'introduction'
+                    },
+                    {
+                        hour: '10H00',
+                        text: 'challenge'
+                    },
+                    {
+                        hour: '10H30',
+                        text: 'IN-DEPHT DISCUSSION '
+                    },
+                    {
+                        hour: '10H45',
+                        text: 'Q&A SESSION WITH CLIENTS'
+                    },
+                    {
+                        hour: '12H00',
+                        text: 'LUNCH+BREAK'
+                    },
+                    {
+                        hour: '13H00',
+                        text: 'FRAMING THE PROBLEM'
+                    },
+                    {
+                        hour: '13H30',
+                        text: ' HOW: UX DESIGN PROCESS'
+                    },
+                    {
+                        hour: '14H00',
+                        text: 'USER RESEARCH (activity)'
+                    },
+                    {
+                        hour: '15H30',
+                        text: 'IDEATION + INNOVATION'
+                    }
+                ],
+            },
+            {
+                id: '2',
+                name: 'Day 2: Prototype & Development',
+                date: '14th , Apr 2018',
+                program: [
+                    {
+                        hour: '08H45',
+                        text: 'REGISTRATIONS'
+                    },
+                    {
+                        hour: '09H00',
+                        text: 'PROTOTYPING'
+                    },
+                    {
+                        hour: '10H00',
+                        text: 'FIELD WORK'
+                    },
+                    {
+                        hour: '11H30',
+                        text: 'ITERATION PROCESS'
+                    },
+                    {
+                        hour: '12H00',
+                        text: 'LUNCH+BREAK '
+                    },
+                    {
+                        hour: '13H00',
+                        text: 'PROTOTYPE'
+                    },
+                    {
+                        hour: '14H00',
+                        text: 'DEVELOPMENT'
+                    },
+                    {
+                        hour: '17H30',
+                        text: 'STORYTELLING'
+                    },
+                    {
+                        hour: '17H30',
+                        text: 'PITCH'
+                    }
+                ],
+            },
+            {
+                id: '3',
+                name: 'Day 3: Demo Day',
+                date: '15th , Apr 2018',
+                program: [
+                    {
+                        hour: '08H45',
+                        text: 'REGISTRATIONS'
+                    },
+                    {
+                        hour: '09H00',
+                        text: 'DEVELOPPMENT'
+                    },
+                    {
+                        hour: '12H00',
+                        text: 'LUNCH+BREAK'
+                    },
+                    {
+                        hour: '13H00',
+                        text: 'PITCH MOTIVATION'
+                    },
+                    {
+                        hour: '15H30',
+                        text: 'PRESENTATIONS COLLECTION '
+                    },
+                    {
+                        hour: '16H00',
+                        text: 'TEAM PRESENTATION'
+                    },
+                    {
+                        hour: '18H00',
+                        text: ' END OF BOOTCAMP'
+                    }
+                ],
+            }
+
+        ],
+        partner: [
+            {
+                website: '',
+                img: 'https://i.ibb.co/5Yrbmc6/galsenai.jpg'
+            },
+            {
+                website: 'https://www.unicef.org/fr',
+                img: 'https://i.ibb.co/D8QgD8s/unicef.png'
+            },
+            {
+                website: 'http://www.expressotelecom.sn/',
+                img: 'https://i.ibb.co/mGdxjZy/expresso-logo.png'
+            },
+            {
+                website: 'https://www.gainde2000.com/',
+                img: 'https://i.ibb.co/xhBJvXM/gainde-logo.png'
+            },
+            {
+                website: 'http://www.cofinasenegal.com/',
+                img: 'https://i.ibb.co/3zRzPVL/cofina.png'
+            },
+            {
+                website: 'https://www.childfund.org/Senegal/',
+                img: 'https://i.ibb.co/9ZrTqLF/child.jpg'
+            },
+            {
+                website: 'http://www.asprh.com/',
+                img: 'https://i.ibb.co/z2GrtN6/asprh.jpg'
+            },
+            {
+                website: 'https://www.edacy.com',
+                img: 'https://i.ibb.co/P6XfghV/dto.jpg'
+            },
+            {
+                website: 'https://www.supinfo.sn/',
+                img: 'https://i.ibb.co/XWjV8Cb/sup.jpg'
+            },
+            {
+                website: 'https://www.auchan.sn/fr',
+                img: 'https://i.ibb.co/CMXZcWL/auchan.png'
+            }
+        ],
+        gallery: [
+            {
+                img: 'https://i.ibb.co/Jmrz6ZF/IMG-0556-Edit.jpg'
+            },
+            {
+                img: 'https://i.ibb.co/PYwfWxh/IMG-0595-Edit.jpg'
+            },
+            {
+                img: 'https://i.ibb.co/ZNQGKcK/IMG-0654-Edit.jpg'
+            },
+            {
+                img: 'https://i.ibb.co/8Y5zFKM/IMG-0683-Edit.jpg'
+            },
+            {
+                img: 'https://i.ibb.co/MkBtFcW/IMG-0693-Edit.jpg'
+            },
+            {
+                img: 'https://i.ibb.co/0YvQRHL/IMG-0710-Edit.jpg'
+            },
+            {
+                img: 'https://i.ibb.co/x8W6Ymj/IMG-0877-Edit.jpg'
+            },
+            {
+                img: 'https://i.ibb.co/kGmQsXn/IMG-1014-Edit.jpg'
+            }
+        ]
+    },
+    {
+        etat: '0',
+        chrono: '',
+        img: 'https://i.ibb.co/rxCPhvB/blockchain.jpg',
+        title: 'AFTERWORK BLOCKCHAIN EDACY',
+        description:
+        {
+            short: 'The objective is to learn and understand the Blockchain, also to measure its impact in digital transformation!',
+            long: 'Blockchain experts will share their expertise and practical knowledge in this field. So, if you are a professional and want to master the concept of the Blockchain, we invite you to participate and exchange over a good coffee ;) .',
+        },
+        date: '9th , Feb 2018',
+        lieu: 'EDACY , Senegal',
+        nbrfacilitator: '2',
+        facilitator: [
+            {
+                img1: 'https://i.ibb.co/hX1Bc0c/Rectangle2.png',
+                name1: 'Carine VAVASSEUR',
+                job1: 'Head of Career Services',
+                feel1: 'Our vision is powerful, we create value by bringing value to the world. Through EDACY I can be and help shaping the change I want to see in Africa.',
+                twt1: 'https://twitter.com/CarinaDjey',
+                lkd1: 'https://www.linkedin.com/in/carinevavasseur/',
+                fcb1: 'https://www.facebook.com/EbeneTouch',
+
+                img2: 'https://i.ibb.co/0QkNDP0/thierno.jpg',
+                name2: 'Thierno THIAM',
+                job2: 'Fullstack Engineer',
+                feel2: 'Hi, I"m Thierno Thiam also known as @localhost. I"m a Software Engineer and a Full Stack Developer & Blockchain Advocate',
+                twt2: 'https://twitter.com/localhost_droid',
+                lkd2: 'https://www.linkedin.com/in/thierno-thiam-9753489b/',
+                fcb2: ''
+            },
+        ],
+        evenbride: '',
+        schedule: [
+            {
+                id: 'cb1',
+                name: 'AFTERWORK BLOCKCHAIN',
+                date: '9th Feb, 2018',
+                program: [
+                    {
+                        hour: '10H10',
+                        text: 'REGISTRATIONS'
+                    },
+                    {
+                        hour: '10H25',
+                        text: 'WELCOMING SPEECHES'
+                    },
+                    {
+                        hour: '10H30',
+                        text: '"Tame the blockchain and create yours with NodeJS"'
+                    },
+                    {
+                        hour: '11H30',
+                        text: 'QUESTIONS / ANSWERS'
+                    },
+                    {
+                        hour: '11H45',
+                        text: 'PAUSE'
+                    },
+                    {
+                        hour: '12H00',
+                        text: 'crypto 2.0 smart contracts'
+                    },
+                    {
+                        hour: '13H00',
+                        text: 'QUESTIONS / ANSWERS'
+                    },
+                    {
+                        hour: '13H15',
+                        text: 'END OF A DAY IN blockchain'
+                    }
+                ],
+            }
+        ],
+        partner: [
+            {
+                website: '',
+                img: 'https://i.ibb.co/5Yrbmc6/galsenai.jpg'
+            },
+            {
+                website: 'https://www.unicef.org/fr',
+                img: 'https://i.ibb.co/D8QgD8s/unicef.png'
+            },
+            {
+                website: 'http://www.expressotelecom.sn/',
+                img: 'https://i.ibb.co/mGdxjZy/expresso-logo.png'
+            },
+            {
+                website: 'https://www.gainde2000.com/',
+                img: 'https://i.ibb.co/xhBJvXM/gainde-logo.png'
+            },
+            {
+                website: 'http://www.cofinasenegal.com/',
+                img: 'https://i.ibb.co/3zRzPVL/cofina.png'
+            },
+            {
+                website: 'https://www.childfund.org/Senegal/',
+                img: 'https://i.ibb.co/9ZrTqLF/child.jpg'
+            },
+            {
+                website: 'http://www.asprh.com/',
+                img: 'https://i.ibb.co/z2GrtN6/asprh.jpg'
+            },
+            {
+                website: 'https://www.edacy.com',
+                img: 'https://i.ibb.co/P6XfghV/dto.jpg'
+            },
+            {
+                website: 'https://www.supinfo.sn/',
+                img: 'https://i.ibb.co/XWjV8Cb/sup.jpg'
+            },
+            {
+                website: 'https://www.auchan.sn/fr',
+                img: 'https://i.ibb.co/CMXZcWL/auchan.png'
+            }
+        ],
+        gallery: [
+            {
+                img: 'https://i.ibb.co/Rv7BbrX/20181208-112541.jpg'
+            },
+            {
+                img: 'https://i.ibb.co/QrcQRJZ/20181208-112314.jpg'
+            },
+            {
+                img: 'https://i.ibb.co/2P8GQ0y/20181208-112724.jpg'
+            },
+            {
+                img: 'https://i.ibb.co/h8Bx1GD/20181208-112857.jpg'
+            },
+        ]
+
+    },
+
 ];

@@ -214,7 +214,7 @@
 
 .flex-container3 > div {
     width: 100%;
-    margin: 6%;
+    margin-bottom: 6%;
     text-align: center;
     font-size: 30px;
 }
