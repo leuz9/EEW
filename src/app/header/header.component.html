@@ -1,75 +1,54 @@
-<!-- HEADER DESKTOP-->
-<header class="header-desktop3 d-none d-lg-block">
-    <div class="section__content section__content--p35">
-        <nav class="navbar navbar-expand-lg navbar-light" id="ma-nav-perso">
-            <div class="row" style="margin: auto; width: 100%">
-                <div class="edacy">
-                    <a routerLink="/home">
-                        <img src="../../assets/images/icon/logo.svg" />
-                    </a>
-                </div>
-                <div class="collapse navbar-collapse" style="width: 100px">
-                    <ul class="navbar-nav">
-                        <li class="nav-item" style="margin: auto">
-                            <a routerLink="home" routerLinkActive="active" class="linka">EVENTS</a>
-                        </li>
-                        <li class="nav-item" style="margin: auto">
-                            <a href="https://www.edacy.com/programs" class="links">PROGRAMS</a>
-                        </li>
-                        <li class="nav-item" style="margin: auto">
-                            <a href="https://www.edacy.com/students" class="linke">STUDENTS</a>
-                        </li>
-                        <li class="nav-item" style="margin: auto">
-                            <a href="https://www.edacy.com/enterprises" class="linke">ENTERPRISES</a>
-                        </li>
-                        <li>
-                            <div class="rectangle-2 text-center">
-                                <a class="register-now " href="https://appv2.edacy.com/users/signin" target="_blank">JOIN
-                                    NOW</a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+<div class="nav-lg">
+    <div class="ed-container-fluid menu">
+      <div class="menu-lg">
+        <div class="logo">
+          <a routerLink="/">
+            <img src="../../assets/images/icon/edacylogo.png" alt="Edacy">
+          </a>
+        </div>
+        <div class="links">
+          <a class="link" href="https://www.edacy.com/programs" >PROGRAMS</a>
+          <a class="link" href="https://www.edacy.com/students" >STUDENTS</a>
+          <a class="link" href="https://www.edacy.com/enterprises" >ENTERPRISE</a>
+          <div class="static-btn static-btn-signup">
+            <a class="link link-btn" href="https://www.edacy.com/programs?modal=modal" >SIGN UP</a>
+          </div>
+          <div class="static-btn static-btn-login">
+            <a class="link link-btn" href="https://appv2.edacy.com/users/signin">LOGIN</a>
+          </div>
+        </div>
+      </div>
     </div>
-</header>
-<!-- END HEADER DESKTOP-->
+  </div>
 
-<!-- HEADER MOBILE-->
-<div class="w3-sidebar w3-bar-block w3-card w3-animate-right" style="display:none;right:0;" id="rightMenu">
-    <button onclick="closeRightMenu()" class="w3-bar-item w3-button w3-large text-center" style="margin-left: -60px;background: #ffffff !important">&times;</button>
-    <ul class="navbar-mobile__list list-unstyled">
-        <li class="has-sub">
-            <a class="speakers" style="margin-left: 35px" routerLink="/home"  routerLinkActive="active">
-                EVENTS</a>
-        </li>
-        <li class="has-sub">
-            <a class="speakers" style="margin-left: 35px" href="https://www.edacy.com/programs">
-                PROGRAMS</a>
-        </li>
-        <li>
-            <a class="speakers" style="margin-left: 35px" href="https://www.edacy.com/students">
-                STUDENTS</a>
-        </li>
-        <li>
-            <a class=" speakers" style="margin-left: 35px" href="https://www.edacy.com/enterprises">
-                ENTERPRISES</a>
-        </li>
-        <li>
-            <div class="rectangle-2 text-center" style="margin-left: 31px; margin-top: 10px">
-                <a class="register-now " href="https://appv2.edacy.com/users/signin" target="_blank">JOIN NOW</a>
-            </div>
-        </li>
-    </ul>
-</div>
-
-<div class="w3-teal">
-    <div class="row">
-        <a class="w-edacy" routerLink="/home">
-            <img src="../../assets/images/icon/logo.svg" width="100%" alt="EDACY" />
+  <div class="nav-small">
+    <div class="ed-container-fluid header">
+      <div class="logo">
+        <a routerLink="/" (click)="toggler = false">
+          <img src="../../assets/images/icon/edacylogo.png" alt="Edacy">
         </a>
-        <button style="margin-right: 1%" class="w3-button w3-xlarge w3-right" onclick="openRightMenu()">&#9776;</button>
+      </div>
+
+      <div class="toggler">
+
+        <div class="toggle-btn">
+          <a (click)="toggler = !toggler">
+            <img src="../../assets/images/icon/menu.svg">
+          </a>
+        </div>
+      </div>
     </div>
-</div>
-<!-- END HEADER MOBILE -->
+    <div class="ed-container-fluid body" *ngIf="toggler" >
+      <div class="wrapper-link">
+        <a class="link" routerLink="/programs/" routerLinkActive="active" (click)="toggler = !toggler">PROGRAMS</a>
+        <a class="link" routerLink="/students/" routerLinkActive="active" (click)="toggler = !toggler">STUDENTS</a>
+        <a class="link" routerLink="/enterprises/" routerLinkActive="active" (click)="toggler = !toggler">ENTERPRISE</a>
+      </div>
+      <div class="static-btn static-btn-signup">
+        <a class="static-btn-link" (click)="toggler = !toggler" routerLink="/programs/" >SIGN UP</a>
+      </div>
+      <div class="static-btn static-btn-login">
+        <a class="static-btn-link" href="https://appv2.edacy.com/users/signin">LOGIN</a>
+      </div>
+    </div>
+  </div>

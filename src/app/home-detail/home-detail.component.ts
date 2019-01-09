@@ -7,19 +7,18 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './home-detail.component.html',
   styleUrls: ['./home-detail.component.css']
 })
-export class HomeDetailComponent {
+export class HomeDetailComponent  implements OnInit {
   public events = EVENTS;
   public event;
   constructor(private route: ActivatedRoute) {
    }
 
   ngOnInit() {
-    this.route.queryParams.subscribe(params => {
-      console.log(params);
-      let index = params['index'];
+    this.route.paramMap.subscribe(params => {
+      const index = params.get('id');
       this.event = this.events[index];
       console.log(this.event);
-    })
+    });
   }
 
 }

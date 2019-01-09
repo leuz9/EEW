@@ -15,12 +15,14 @@ export class GalleryComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.route.queryParams.subscribe(params => {
+    this.route.queryParams.subscribe(
+      params => {
       console.log(params);
-      let index = params['index'];
+      const index = params['index'];
       this.event = this.events[index];
       console.log(this.event);
-    })
+    }
+    )
   }
 }
 

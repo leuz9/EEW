@@ -1,45 +1,41 @@
+<div class="flex-containeri">
+  <div><img src="{{ event.img }}" alt="Event" width="100%" /></div>
+  <!--  <div class="centerm">
+        <div class="design-thinking-olym ">
+            <p>BOOTCAMP #5</p>
+        </div>
+        <div class="Subdes">
+            <p>Applying Design Thinking to solve real-life challenges</p>
+        </div>
+    </div>-->
+</div>
+
 <div style="width: 70%; margin: auto">
   <div class="flex-container4">
     <a routerLink="/home" class="gallery-back">
       <div class="flex-container2" style="margin-bottom: 5px">
-        <div id="combined-shape">
-        </div>
-        <div>
-          <p class="back">
-            BACK
-          </p>
-        </div>
+        <div id="combined-shape"></div>
+        <div><p class="back">BACK</p></div>
       </div>
     </a>
     <div>
-      <p class="design">
-        {{event.title | uppercase}}
-      </p>
-    </div>
-    <div>
-      <img src="{{event.img}}" alt="{{event.title}}" width="100%">
+      <p class="design">{{ event.title | uppercase }}</p>
     </div>
     <div class="flex-container3">
-      <div id="small-calendar">
-      </div>
+      <div id="small-calendar"></div>
       <div>
-        <p class="small-date">
-          {{event.date}}
-        </p>
+        <p class="small-date">{{ event.date }}</p>
       </div>
     </div>
     <div>
-      <p class="lorem-ipsum-dolor-si1">
-        {{event.description.long}}
-      </p>
+      <p class="lorem-ipsum-dolor-si1">{{ event.description.long }}</p>
     </div>
-    <div *ngFor="let gallery of event.gallery">
-      <div class="flex-container1">
+    <div class="flex-container1">
+      <div *ngFor="let gallery of event.gallery">
         <div id="rectangle-14">
-            <img src="{{gallery.img}}" alt="{{event.title}}" width="100%">
+          <img src="{{ gallery.img }}" alt="{{ event.title }}" width="100%" />
         </div>
       </div>
     </div>
-
   </div>
 </div>

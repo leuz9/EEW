@@ -14,10 +14,13 @@ import { Routes, RouterModule } from '@angular/router';
 
 const appRoutes: Routes = [
  { path : 'home' , component: HomeComponent },
- { path : 'home-detail' , component: HomeDetailComponent},
+ { path : 'home-detail/:id' , component: HomeDetailComponent},
  { path : 'gallery' , component: GalleryComponent },
- { path : '' , component: HomeComponent }
-]
+ { path : '' ,
+    redirectTo: '/home',
+    pathMatch: 'full'
+  },
+ { path : '**' , component: HomeComponent } ]
 
 @NgModule({
   declarations: [
