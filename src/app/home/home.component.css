@@ -60,6 +60,26 @@
   flex-direction: row;
   width: 100%;
 }
+@media (max-width: 990px) {
+  .flex-container1 {
+    margin-top: 20%;
+  }
+}
+@media (max-width: 420px) {
+  .flex-container1 {
+    margin-top: 30%;
+  }
+}
+@media (max-width: 320px) {
+  .flex-container1 {
+    margin-top: 40%;
+  }
+}
+@media (max-width: 250px) {
+  .flex-container1 {
+    margin-top: 50%;
+  }
+}
 
 .flex-container1 > div {
   width: 100%;
@@ -69,7 +89,7 @@
 }
 
 #gauche {
-  background-image: url("https://i.ibb.co/pbN2GR6/ai2.jpg");
+  top: 0;
   background-size: cover;
 }
 @media (max-width: 990px) {
