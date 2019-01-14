@@ -44,51 +44,55 @@ export const EVENTS = [
         program: [
           {
             hour: "14H30",
-            text: "REGISTRATIONS"
+            text: "Check-in"
           },
           {
             hour: "15H00",
-            text: "WELCOMING SPEECHES"
+            text: "Mots de bienvenue"
           },
           {
             hour: "15H05",
-            text: "WorkLearning and Industry 4.0"
+            text: "Le WorkLearning et l’industrie 4.0 - Mamadou Djigo, Directeur Pays EDACY Sénégal"
+          },
+          {
+            hour: "15H05",
+            text: "Les Soft Skills, atout clé de nos Talents - Carine Vavasseur, Head of Business Development à EDACY"
           },
           {
             hour: "15H25",
-            text: "QUESTIONS / ANSWERS"
+            text: "QUESTIONS / REPONSES"
           },
           {
             hour: "15H40",
-            text: "1st compagny SHARES ITS EXPERIENCEN"
+            text: "1er retour d’expérience d’entreprise partenaire"
           },
           {
             hour: "15H45",
-            text: "2nd compagny SHARES ITS EXPERIENCE"
+            text: "2ème retour d’expérience d’entreprise partenaire"
           },
           {
             hour: "15H50",
-            text: "3rd compagny SHARES ITS EXPERIENCE"
+            text: "3ème retour d’expérience d’entreprise partenaire"
           },
           {
             hour: "15H55",
-            text: "Presentation of 3 practical cases handled by the Talents "
+            text: "Présentation de 3 cas pratiques traités par les Talents (du problème à la solution)"
           },
           {
             hour: "16H25",
-            text: "QUESTIONS / ANSWERS"
+            text: "QUESTIONS / REPONSES"
           },
           {
             hour: "16H40",
-            text: 'Presentation of the Design Thinking Tour'
+            text: 'Présentation du Design Thinking Tour - Mountaga Diallo, WorkLearner Success Coordinator à EDACY - Roland Niokhor Faye, Front-End Developer à EDACY'
           },
           {
             hour: "16H45",
-            text: "Pitchs of the C6 (x5 projects) + Q/R "
+            text: "Pitchs de la Cohorte 6 (x5 projets) + Q/R"
           },
           {
             hour: "18H00",
-            text: "Special announcements "
+            text: "Annonces spéciales"
           },
           {
             hour: "18H15",
