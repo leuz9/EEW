@@ -29,7 +29,7 @@ export const EVENTS = [
         name2: "Mamadou DJIGO",
         job2: "Country Director",
         feel2:
-          'EDACY is a real opportunity for me to build African Innovators. It"s the right place to share my experience and to change the rules of the game.',
+          "EDACY is a real opportunity for me to build African Innovators. It's the right place to share my experience and to change the rules of the game.",
         twt2: "https://twitter.com/MamadDjigo",
         lkd2: "https://www.linkedin.com/in/mamaddjigo/",
         fcb2: "https://web.facebook.com/MamadDjigo"
