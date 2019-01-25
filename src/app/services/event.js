@@ -1,72 +1,102 @@
 export const EVENTS = [
   {
     etat: "1",
-    img: "https://i.ibb.co/hDFcBwN/Event-Web-Poster-3-001.jpg",
-    title: "meetup artificial intelligence",
-    titleshort: "AI meetup",
+    img: "https://i.ibb.co/K0MP2Qw/EVENT-BRITE-Demo-Day-001.jpg",
+    title: "demo day",
+    titleshort: "demo day",
     description: {
-      short: "A day in artificial intelligence mode",
-      long:
-        "Whether you are chatting via a chatbot, using a virtual personal assistant or interested in autonomous cars, you are gradually getting used to working with machines powered by artificial intelligence (AI). Used since the 1960s, its fields of application have been exploding since 2010. It is controversial and raises many questions, some of which are existential.",
+      short:
+        "Come and see innovative solutions developed by our WorkLearners in collaboration with leading organizations such as EXPRESSO, UNICEF, ALPAGES...",
       short1:
-        "Whether you are chatting via a chatbot, using a virtual personal assistant or interested in autonomous cars..."
+        "Discover in exclusivity the achievements of our latest promotion and the solutions put on the market by our previous cohorts....",
+      long:
+        "It is with great pleasure that we invite professionals to the Demo Day of our sixth cohort of Digital Talent (WorkLearners), which will take place on Thursday, February 14, 2019 at 2:30 pm."
     },
-    date: "12th , Jan 2019",
+    date: "14th , Feb 2019",
     lieu: "EDACY , Senegal",
     nbrfacilitator: "2",
     facilitator: [
       {
-        img1: "https://i.ibb.co/stz9R6H/os.jpg",
-        name1: "Ousmane SARR",
-        job1: "CEO de SIKA",
+        img1: "https://i.ibb.co/hX1Bc0c/Rectangle2.png",
+        name1: "Carine VAVASSEUR",
+        job1: "Head of Career Services",
         feel1:
-          'Because it"s trying to "reproduce" human intelligence and that"s fascinating',
-        img2: "https://i.ibb.co/PrHy087/phd.jpg",
-        name2: "Ahmadou H.DICKO",
-        job2: "Statistical Consultant",
+          "Our vision is powerful, we create value by bringing value to the world. Through EDACY I can be and help shaping the change I want to see in Africa.",
+        twt1: "https://twitter.com/CarinaDjey",
+        lkd1: "https://www.linkedin.com/in/carinevavasseur/",
+        fcb1: "https://www.facebook.com/EbeneTouch",
+        img2: "https://i.ibb.co/sH9hNBG/djigo.png",
+        name2: "Mamadou DJIGO",
+        job2: "Country Director",
         feel2:
-          "The transfer of knowledge to a machine is one of the things that fascinates me about artificial intelligence."
+          "EDACY is a real opportunity for me to build African Innovators. It's the right place to share my experience and to change the rules of the game.",
+        twt2: "https://twitter.com/MamadDjigo",
+        lkd2: "https://www.linkedin.com/in/mamaddjigo/",
+        fcb2: "https://web.facebook.com/MamadDjigo"
       }
     ],
-    evenbride:
-      "https://www.eventbrite.fr/e/billets-meetup-n4-intelligence-artificielle-54579547897?utm-medium=discovery&utm-campaign=social&utm-content=attendeeshare&aff=escb&utm-source=cp&utm-term=listing",
+    evenbride: "https://www.eventbrite.fr/e/billets-demo-day-des-talents-edacy-mvps-de-solutions-numeriques-54523631650?utm-medium=discovery&utm-campaign=social&utm-content=attendeeshare&aff=escb&utm-source=cp&utm-term=listing",
     schedule: [
       {
-        id: "cb1",
-        name: " Meetup Intelligence Artificielle",
-        date: "12th Jan, 2019",
+        id: "1",
+        name: " Demo Day",
+        date: "14th Feb, 2019",
         program: [
           {
-            hour: "09H00",
-            text: "REGISTRATIONS"
+            hour: "14H30",
+            text: "Check-in"
           },
           {
-            hour: "09H25",
-            text: "WELCOMING SPEECHES"
+            hour: "15H00",
+            text: "Mots de bienvenue"
           },
           {
-            hour: "09H30",
-            text: "IOT :,challenge and opportunities ?"
+            hour: "15H05",
+            text: "Le WorkLearning et l’industrie 4.0 - Mamadou Djigo, Directeur Pays EDACY Sénégal"
           },
           {
-            hour: "11H00",
-            text: "QUESTIONS / ANSWERS"
+            hour: "15H05",
+            text: "Les Soft Skills, atout clé de nos Talents - Carine Vavasseur, Head of Business Development à EDACY"
           },
           {
-            hour: "11H15",
-            text: "PAUSE"
+            hour: "15H25",
+            text: "QUESTIONS / REPONSES"
           },
           {
-            hour: "11H30",
-            text: " learning using gaussian process"
+            hour: "15H40",
+            text: "1er retour d’expérience d’entreprise partenaire"
           },
           {
-            hour: "12H45",
-            text: "QUESTIONS / ANSWERS"
+            hour: "15H45",
+            text: "2ème retour d’expérience d’entreprise partenaire"
           },
           {
-            hour: "13H00",
-            text: "END OF A DAY IN AI"
+            hour: "15H50",
+            text: "3ème retour d’expérience d’entreprise partenaire"
+          },
+          {
+            hour: "15H55",
+            text: "Présentation de 3 cas pratiques traités par les Talents (du problème à la solution)"
+          },
+          {
+            hour: "16H25",
+            text: "QUESTIONS / REPONSES"
+          },
+          {
+            hour: "16H40",
+            text: 'Présentation du Design Thinking Tour - Mountaga Diallo, WorkLearner Success Coordinator à EDACY - Roland Niokhor Faye, Front-End Developer à EDACY'
+          },
+          {
+            hour: "16H45",
+            text: "Pitchs de la Cohorte 6 (x5 projets) + Q/R"
+          },
+          {
+            hour: "18H00",
+            text: "Annonces spéciales"
+          },
+          {
+            hour: "18H15",
+            text: "Cocktail"
           }
         ]
       }
@@ -115,16 +145,22 @@ export const EVENTS = [
     ],
     gallery: [
       {
-        img: "https://i.ibb.co/Rv7BbrX/20181208-112541.jpg"
+        img: "https://i.ibb.co/XYYBQVb/178.jpg"
       },
       {
-        img: "https://i.ibb.co/QrcQRJZ/20181208-112314.jpg"
+        img: "https://i.ibb.co/m9sSH4x/64.jpg"
       },
       {
-        img: "https://i.ibb.co/2P8GQ0y/20181208-112724.jpg"
+        img: "https://i.ibb.co/VQx3GNX/13.jpg"
       },
       {
-        img: "https://i.ibb.co/h8Bx1GD/20181208-112857.jpg"
+        img: "https://i.ibb.co/74Nxthp/164.jpg"
+      },
+      {
+        img: "https://i.ibb.co/zrY6nyJ/103.jpg"
+      },
+      {
+        img: "https://i.ibb.co/bFw3sHF/108.jpg"
       }
     ]
   },
@@ -353,6 +389,135 @@ export const EVENTS = [
           },
           {
             hour: "13H15",
+            text: "END OF A DAY IN AI"
+          }
+        ]
+      }
+    ],
+    partner: [
+      {
+        website: "",
+        img: "https://i.ibb.co/5Yrbmc6/galsenai.jpg"
+      },
+      {
+        website: "https://www.unicef.org/fr",
+        img: "https://i.ibb.co/D8QgD8s/unicef.png"
+      },
+      {
+        website: "http://www.expressotelecom.sn/",
+        img: "https://i.ibb.co/mGdxjZy/expresso-logo.png"
+      },
+      {
+        website: "https://www.gainde2000.com/",
+        img: "https://i.ibb.co/xhBJvXM/gainde-logo.png"
+      },
+      {
+        website: "http://www.cofinasenegal.com/",
+        img: "https://i.ibb.co/3zRzPVL/cofina.png"
+      },
+      {
+        website: "https://www.childfund.org/Senegal/",
+        img: "https://i.ibb.co/9ZrTqLF/child.jpg"
+      },
+      {
+        website: "http://www.asprh.com/",
+        img: "https://i.ibb.co/z2GrtN6/asprh.jpg"
+      },
+      {
+        website: "https://www.edacy.com",
+        img: "https://i.ibb.co/P6XfghV/dto.jpg"
+      },
+      {
+        website: "https://www.supinfo.sn/",
+        img: "https://i.ibb.co/XWjV8Cb/sup.jpg"
+      },
+      {
+        website: "https://www.auchan.sn/fr",
+        img: "https://i.ibb.co/CMXZcWL/auchan.png"
+      }
+    ],
+    gallery: [
+      {
+        img: "https://i.ibb.co/Rv7BbrX/20181208-112541.jpg"
+      },
+      {
+        img: "https://i.ibb.co/QrcQRJZ/20181208-112314.jpg"
+      },
+      {
+        img: "https://i.ibb.co/2P8GQ0y/20181208-112724.jpg"
+      },
+      {
+        img: "https://i.ibb.co/h8Bx1GD/20181208-112857.jpg"
+      }
+    ]
+  },
+  {
+    etat: "0",
+    img: "https://i.ibb.co/hDFcBwN/Event-Web-Poster-3-001.jpg",
+    title: "meetup artificial intelligence",
+    titleshort: "AI meetup",
+    description: {
+      short: "A day in artificial intelligence mode",
+      long:
+        "Whether you are chatting via a chatbot, using a virtual personal assistant or interested in autonomous cars, you are gradually getting used to working with machines powered by artificial intelligence (AI). Used since the 1960s, its fields of application have been exploding since 2010. It is controversial and raises many questions, some of which are existential.",
+      short1:
+        "Whether you are chatting via a chatbot, using a virtual personal assistant or interested in autonomous cars..."
+    },
+    date: "12th , Jan 2019",
+    lieu: "EDACY , Senegal",
+    nbrfacilitator: "2",
+    facilitator: [
+      {
+        img1: "https://i.ibb.co/stz9R6H/os.jpg",
+        name1: "Ousmane SARR",
+        job1: "CEO de SIKA",
+        feel1:
+          'Because it"s trying to "reproduce" human intelligence and that"s fascinating',
+        img2: "https://i.ibb.co/PrHy087/phd.jpg",
+        name2: "Ahmadou H.DICKO",
+        job2: "Statistical Consultant",
+        feel2:
+          "The transfer of knowledge to a machine is one of the things that fascinates me about artificial intelligence."
+      }
+    ],
+    evenbride:
+      "https://www.eventbrite.fr/e/billets-meetup-n4-intelligence-artificielle-54579547897?utm-medium=discovery&utm-campaign=social&utm-content=attendeeshare&aff=escb&utm-source=cp&utm-term=listing",
+    schedule: [
+      {
+        id: "cb1",
+        name: " Meetup Intelligence Artificielle",
+        date: "12th Jan, 2019",
+        program: [
+          {
+            hour: "09H00",
+            text: "REGISTRATIONS"
+          },
+          {
+            hour: "09H25",
+            text: "WELCOMING SPEECHES"
+          },
+          {
+            hour: "09H30",
+            text: "IOT :,challenge and opportunities ?"
+          },
+          {
+            hour: "11H00",
+            text: "QUESTIONS / ANSWERS"
+          },
+          {
+            hour: "11H15",
+            text: "PAUSE"
+          },
+          {
+            hour: "11H30",
+            text: " learning using gaussian process"
+          },
+          {
+            hour: "12H45",
+            text: "QUESTIONS / ANSWERS"
+          },
+          {
+            hour: "13H00",
             text: "END OF A DAY IN AI"
           }
         ]
