@@ -1,0 +1,38 @@
+<div class="card">
+  <div class="card-body">
+    <form [formGroup]="angForm" novalidate>
+      <div class="form-group">
+        <label class="col-md-4">event Name</label>
+        <input type="text" class="form-control" formControlName="event_name" #event_name [(ngModel)] = "event.event_name" />
+      </div>
+      <div *ngIf="angForm.controls['event_name'].invalid && (angForm.controls['event_name'].dirty || angForm.controls['event_name'].touched)" class="alert alert-danger">
+        <div *ngIf="angForm.controls['event_name'].errors.required">
+          event Name is required.
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-4">Event descripltion </label>
+        <input type="text" class="form-control" formControlName="event_desc" #event_desc [(ngModel)] = "event.event_desc" />
+      </div>
+      <div *ngIf="angForm.controls['event_desc'].invalid && (angForm.controls['event_desc'].dirty || angForm.controls['event_desc'].touched)" class="alert alert-danger">
+        <div *ngIf="angForm.controls['event_desc'].errors.required">
+          Event description is required.
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-4">Event GST Number </label>
+        <input type="text" class="form-control" formControlName="event_gst_number" #event_gst_number [(ngModel)] = "event.event_gst_number" />
+      </div>
+      <div *ngIf="angForm.controls['event_gst_number'].invalid && (angForm.controls['event_gst_number'].dirty || angForm.controls['event_gst_number'].touched)" class="alert alert-danger">
+        <div *ngIf="angForm.controls['event_gst_number'].errors.required">
+          Event GST Number is required.
+        </div>
+      </div>
+      <div class="form-group">
+        <button [routerLink]="['/admin']" (click)="updateEvent(event_name.value, event_desc.value, event_gst_number.value)"
+        [disabled]="angForm.invalid"
+        class="btn btn-primary">Update Event</button>
+      </div>
+    </form>
+  </div>
+</div>
