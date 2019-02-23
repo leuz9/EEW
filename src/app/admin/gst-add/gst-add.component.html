@@ -69,12 +69,34 @@
           </div>
         </div>
         <div class="form-group">
+          <label class="col-md-4">Event Date </label>
+          <input
+            type="date"
+            class="form-control"
+            formControlName="event_gst_date"
+            #event_gst_date
+          />
+        </div>
+        <div
+          *ngIf="
+            angForm.controls['event_gst_date'].invalid &&
+            (angForm.controls['event_gst_date'].dirty ||
+              angForm.controls['event_gst_date'].touched)
+          "
+          class="alert alert-danger"
+        >
+          <div *ngIf="angForm.controls['event_gst_date'].errors.required">
+            Event date is required.
+          </div>
+        </div>
+        <div class="form-group">
           <button
             (click)="
               addEvent(
                 event_name.value,
                 event_desc.value,
-                event_gst_number.value
+                event_gst_number.value,
+                event_gst_date.value
               )
             "
             [disabled]="angForm.pristine || angForm.invalid"

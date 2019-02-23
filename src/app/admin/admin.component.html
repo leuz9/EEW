@@ -9,8 +9,7 @@
     <thead class="thead-dark">
       <tr>
         <td>Event Name</td>
-        <td>Event Description</td>
-        <td>Event GST Number</td>
+        <td>Date</td>
         <td colspan="2">Actions</td>
       </tr>
     </thead>
@@ -18,8 +17,7 @@
     <tbody>
       <tr *ngFor="let event of events">
         <td class="link" [routerLink]="['/event', event._id]">{{ event.event_name }}</td>
-        <td>{{ event.event_desc }}</td>
-        <td>{{ event.event_gst_number }}</td>
+        <td>{{ event.event_gst_date | date:'fullDate' | uppercase}}</td>
         <td>
           <a [routerLink]="['/edit', event._id]" class="link"
             ><img src="../../assets/images/icon/edit.png" alt="edit"

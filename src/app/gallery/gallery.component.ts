@@ -11,19 +11,14 @@ export class GalleryComponent implements OnInit {
   public events = EVENTS;
   public event;
 
-  constructor(private route: ActivatedRoute) {
-  }
+  constructor(private route: ActivatedRoute) {}
 
   ngOnInit() {
-    this.route.queryParams.subscribe(
-      params => {
+    this.route.queryParams.subscribe(params => {
       console.log(params);
       const index = params['index'];
       this.event = this.events[index];
       console.log(this.event);
-    }
-    )
+    });
   }
 }
-
-

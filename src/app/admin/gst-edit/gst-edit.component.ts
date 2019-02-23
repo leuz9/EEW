@@ -26,12 +26,13 @@ export class GstEditComponent implements OnInit {
     this.angForm = this.fb.group({
         event_name: ['', Validators.required ],
         event_desc: ['', Validators.required ],
-        event_gst_number: ['', Validators.required ]
+        event_gst_number: ['', Validators.required ],
+        event_gst_date: ['', Validators.required ]
       });
     }
-    updateEvent(event_name, event_desc, event_gst_number) {
+    updateEvent(event_name, event_desc, event_gst_number, event_gst_date) {
       this.route.params.subscribe(params => {
-         this.bs.updateEvent(event_name, event_desc, event_gst_number, params['id']);
+         this.bs.updateEvent(event_name, event_desc, event_gst_number, event_gst_date, params['id']);
          this.router.navigate(['admin']);
    });
   }
