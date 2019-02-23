@@ -1,0 +1,16 @@
+.contain {
+  width: 90%;
+  margin: auto;
+  overflow: auto;
+}
+
+@media (max-width: 990px) {
+  .contain  {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    width: 100%
+  }
+}
+.space {
+  float: right;
+}

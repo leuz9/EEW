@@ -1,0 +1,36 @@
+.thead-dark {
+  background-color: #787878
+}
+.contain {
+  width: 90%;
+  margin: auto;
+  overflow: auto;
+}
+
+@media (max-width: 990px) {
+  .contain  {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    width: 100%
+  }
+}
+
+.space {
+  margin-right: 20px
+}
+
+.btn-warning {
+  color: #212529;
+  background-color: #ffcc00 !important;
+  border-color: #ffc107;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+.btn-danger {
+  color: #212529;
+  background-color: #61BFAD !important;
+  border-color: rgb(37, 201, 171);
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+

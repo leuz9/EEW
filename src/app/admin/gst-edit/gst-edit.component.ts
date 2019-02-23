@@ -32,7 +32,7 @@ export class GstEditComponent implements OnInit {
     updateEvent(event_name, event_desc, event_gst_number) {
       this.route.params.subscribe(params => {
          this.bs.updateEvent(event_name, event_desc, event_gst_number, params['id']);
-         this.router.navigate(['event']);
+         this.router.navigate(['admin']);
    });
   }
 

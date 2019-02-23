@@ -1,9 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {NoopAnimationsModule} from '@angular/platform-browser/animations';
-import {MatButtonModule, MatCheckboxModule} from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule, MatCheckboxModule } from '@angular/material';
 import { SlimLoadingBarModule } from 'ng2-slim-loading-bar';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -24,34 +24,35 @@ import { GstGetComponent } from './admin/gst-get/gst-get.component';
 import { GstEditComponent } from './admin/gst-edit/gst-edit.component';
 
 const appRoutes: Routes = [
- { path : 'home' , component: HomeComponent },
- {
-   path: 'admin',
-   component: AdminComponent
- },
- {
-  path: 'admin/event/create',
-  component: GstAddComponent
-},
-{
-  path: 'admin/event/edit',
-  component: GstEditComponent
-},
-{
-  path: 'edit/:id',
-  component: GstEditComponent
-},
-{
-  path: 'event',
-  component: GstGetComponent
-},
- { path : 'home-detail/:id' , component: HomeDetailComponent},
- { path : 'gallery' , component: GalleryComponent },
- { path : '' ,
+  { path: 'home', component: HomeComponent },
+  {
+    path: 'admin',
+    component: AdminComponent
+  },
+  {
+    path: 'admin/event/create',
+    component: GstAddComponent
+  },
+  {
+    path: 'admin/event/edit',
+    component: GstEditComponent
+  },
+  {
+    path: 'edit/:id',
+    component: GstEditComponent
+  },
+  {
+    path: 'event',
+    component: GstGetComponent
+  },
+  { path: 'home-detail/:id', component: HomeDetailComponent },
+  { path: 'gallery', component: GalleryComponent },
+  {
+    path: '',
     redirectTo: '/home',
     pathMatch: 'full'
   },
- { path : '**' , component: HomeComponent } ]
+  { path: '**', component: HomeComponent }];
 
 @NgModule({
   declarations: [

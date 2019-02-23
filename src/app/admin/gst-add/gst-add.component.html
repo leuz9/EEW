@@ -1,38 +1,95 @@
-<div class="card">
-  <div class="card-body">
-    <form [formGroup]="angForm" novalidate>
-      <div class="form-group">
-        <label class="col-md-4">Event Name</label>
-        <input type="text" class="form-control" formControlName="event_name" #event_name />
-      </div>
-      <div *ngIf="angForm.controls['event_name'].invalid && (angForm.controls['event_name'].dirty || angForm.controls['event_name'].touched)" class="alert alert-danger">
-        <div *ngIf="angForm.controls['event_name'].errors.required">
-          Event Name is required.
+<div class="contain">
+  <div class="card">
+      <div class="card-header">
+          Create Event
         </div>
-      </div>
-      <div class="form-group">
-        <label class="col-md-4">Event Description </label>
-        <input type="text" class="form-control" formControlName="event_desc" #event_desc />
-      </div>
-      <div *ngIf="angForm.controls['event_desc'].invalid && (angForm.controls['event_desc'].dirty || angForm.controls['event_desc'].touched)" class="alert alert-danger">
-        <div *ngIf="angForm.controls['event_desc'].errors.required">
-          Event Description is required.
+    <div class="card-body">
+      <form [formGroup]="angForm" novalidate>
+        <div class="form-group">
+          <label class="col-md-4">Event Name</label>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="event_name"
+            #event_name
+          />
         </div>
-      </div>
-      <div class="form-group">
-        <label class="col-md-4">Event GST Number </label>
-        <input type="text" class="form-control" formControlName="event_gst_number" #event_gst_number />
-      </div>
-      <div *ngIf="angForm.controls['event_gst_number'].invalid && (angForm.controls['event_gst_number'].dirty || angForm.controls['event_gst_number'].touched)" class="alert alert-danger">
-        <div *ngIf="angForm.controls['event_gst_number'].errors.required">
-          Event GST Number is required.
+        <div
+          *ngIf="
+            angForm.controls['event_name'].invalid &&
+            (angForm.controls['event_name'].dirty ||
+              angForm.controls['event_name'].touched)
+          "
+          class="alert alert-danger"
+        >
+          <div *ngIf="angForm.controls['event_name'].errors.required">
+            Event Name is required.
+          </div>
         </div>
-      </div>
-      <div class="form-group">
-        <button (click)="addEvent(event_name.value, event_desc.value, event_gst_number.value)"
-        [disabled]="angForm.pristine || angForm.invalid"
-        class="btn btn-primary">Add Event</button>
-      </div>
-    </form>
+        <div class="form-group">
+          <label class="col-md-4">Event Description </label>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="event_desc"
+            #event_desc
+          />
+        </div>
+        <div
+          *ngIf="
+            angForm.controls['event_desc'].invalid &&
+            (angForm.controls['event_desc'].dirty ||
+              angForm.controls['event_desc'].touched)
+          "
+          class="alert alert-danger"
+        >
+          <div *ngIf="angForm.controls['event_desc'].errors.required">
+            Event Description is required.
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-md-4">Event GST Number </label>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="event_gst_number"
+            #event_gst_number
+          />
+        </div>
+        <div
+          *ngIf="
+            angForm.controls['event_gst_number'].invalid &&
+            (angForm.controls['event_gst_number'].dirty ||
+              angForm.controls['event_gst_number'].touched)
+          "
+          class="alert alert-danger"
+        >
+          <div *ngIf="angForm.controls['event_gst_number'].errors.required">
+            Event GST Number is required.
+          </div>
+        </div>
+        <div class="form-group">
+          <button
+            (click)="
+              addEvent(
+                event_name.value,
+                event_desc.value,
+                event_gst_number.value
+              )
+            "
+            [disabled]="angForm.pristine || angForm.invalid"
+            class="btn btn-primary"
+          >
+            Add Event
+          </button>
+          <button
+          routerLink="/admin"
+            class="btn space btn-warning"
+          >
+            Cancel
+          </button>
+        </div>
+      </form>
+    </div>
   </div>
 </div>
