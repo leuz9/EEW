@@ -50,6 +50,28 @@
           </div>
         </div>
         <div class="form-group">
+          <label class="col-md-4">Event Other descripltion </label>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="event_desc_other"
+            #event_desc_other
+            [(ngModel)]="event.event_desc_other"
+          />
+        </div>
+        <div
+          *ngIf="
+            angForm.controls['event_desc_other'].invalid &&
+            (angForm.controls['event_desc_other'].dirty ||
+              angForm.controls['event_desc_other'].touched)
+          "
+          class="alert alert-danger"
+        >
+          <div *ngIf="angForm.controls['event_desc_other'].errors.required">
+            Event other description is required.
+          </div>
+        </div>
+        <div class="form-group">
           <label class="col-md-4">Event GST Number </label>
           <input
             type="text"
@@ -100,6 +122,7 @@
               updateEvent(
                 event_name.value,
                 event_desc.value,
+                event_desc_other.value,
                 event_gst_number.value,
                 event_gst_date.value
               )

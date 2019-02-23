@@ -20,13 +20,14 @@ export class GstAddComponent implements OnInit {
     this.angForm = this.fb.group({
       event_name: ['', Validators.required ],
       event_desc: ['', Validators.required ],
+      event_desc_other: ['', Validators.required ],
       event_gst_number: ['', Validators.required ],
       event_gst_date: ['', Validators.required ]
     });
   }
 
-  addEvent(event_name, event_desc, event_gst_number, event_gst_date) {
-    this.bs.addEvent(event_name, event_desc, event_gst_number, event_gst_date);
+  addEvent(event_name, event_desc, event_desc_other, event_gst_number, event_gst_date) {
+    this.bs.addEvent(event_name, event_desc, event_desc_other, event_gst_number, event_gst_date);
   }
 
   ngOnInit() {

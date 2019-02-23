@@ -11,10 +11,11 @@ export class EventService {
 
   constructor(private http: HttpClient) { }
 
-  addEvent(event_name, event_desc, event_gst_number, event_gst_date) {
+  addEvent(event_name, event_desc, event_desc_other, event_gst_number, event_gst_date) {
     const obj = {
       event_name: event_name,
       event_desc: event_desc,
+      event_desc_other: event_desc_other,
       event_gst_number: event_gst_number,
       event_gst_date: event_gst_date
     };
@@ -35,11 +36,12 @@ export class EventService {
             .get(`${this.uri}/edit/${id}`);
     }
 
-    updateEvent(event_name, event_desc, event_gst_number, event_gst_date, id) {
+    updateEvent(event_name, event_desc, event_desc_other, event_gst_number, event_gst_date, id) {
 
       const obj = {
         event_name: event_name,
         event_desc: event_desc,
+        event_desc_other: event_desc_other,
         event_gst_number: event_gst_number,
         event_gst_date: event_gst_date
         };

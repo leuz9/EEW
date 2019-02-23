@@ -1,10 +1,10 @@
 <div class="contain">
   <div class="d-flex flex-column">
     <div class="navbar-nav  d-flex flex-row-reverse">
-      <a (click)="deleteEvent(event._id)"  class="btn btn-danger btn-sm">
+      <a routerLink="/admin" (click)="deleteEvent(event._id)"  class="btn btn-danger btn-sm">
         DELETE
       </a>
-      <a  [routerLink]="['/edit', event._id]" class="space btn btn-warning btn-sm">
+      <a [routerLink]="['/edit', event._id]" class="space btn btn-warning btn-sm">
         EDIT
       </a>
       <a  routerLink="/admin" class="space btn btn-light btn-sm">
@@ -18,8 +18,10 @@
       <div class="card" style="width: 50%;">
         <div class="card-body">
           <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
+              {{ event.event_name | uppercase}}
+          </p>
+          <p class="card-text">
+             {{ event.event_gst_date | date:'fullDate' | uppercase}}
           </p>
         </div>
       </div>
@@ -30,16 +32,11 @@
       </div>
       <ul class="list-group list-group-flush">
         <li class="list-group-item">
-          The standard Lorem Ipsum passage, used since the 1500s. Lorem ipsum
-          dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip.
+            {{ event.event_desc}}
         </li>
         <li class="list-group-item">
-          Section 1.10.32 of "de Finibus Bonorum et Malorum written by Cicero in
-          45 BC Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
-          ab illo inventore veritatis et quasi architecto beatae vitae dicta.
+            {{ event.event_desc}}
+            {{ event.event_desc}}
         </li>
       </ul>
     </div>
