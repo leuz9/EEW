@@ -1,11 +1,14 @@
 <div class="contain">
   <div class="d-flex flex-column">
     <div class="navbar-nav  d-flex flex-row-reverse">
-      <a routerLink="event/create" class="btn btn-danger btn-sm">
+      <a (click)="deleteEvent(event._id)"  class="btn btn-danger btn-sm">
         DELETE
       </a>
-      <a routerLink="event/create" class="space btn btn-warning btn-sm">
+      <a  [routerLink]="['/edit', event._id]" class="space btn btn-warning btn-sm">
         EDIT
+      </a>
+      <a  routerLink="/admin" class="space btn btn-light btn-sm">
+       BACK TO DASHBOARD
       </a>
     </div>
     <div class="d-flex justify-content-between">

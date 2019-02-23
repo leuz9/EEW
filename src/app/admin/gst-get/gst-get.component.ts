@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import Event from '../../Event';
 import { EventService } from '../../event.service';
 
@@ -10,8 +11,9 @@ import { EventService } from '../../event.service';
 export class GstGetComponent implements OnInit {
 
   events: Event[];
+  event: any = {};
 
-  constructor(private bs: EventService) { }
+  constructor(private route: ActivatedRoute, private bs: EventService) { }
 
   deleteEvent(id) {
     this.bs.deleteEvent(id).subscribe(res => {
@@ -25,6 +27,11 @@ export class GstGetComponent implements OnInit {
       .subscribe((data: Event[]) => {
         this.events = data;
     });
+    this.route.params.subscribe(params => {
+      this.bs.editEvent(params['id']).subscribe(res => {
+        this.event = res;
+    });
+  });
   }
 
 }

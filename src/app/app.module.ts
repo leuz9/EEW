@@ -42,7 +42,7 @@ const appRoutes: Routes = [
     component: GstEditComponent
   },
   {
-    path: 'event',
+    path: 'event/:id',
     component: GstGetComponent
   },
   { path: 'home-detail/:id', component: HomeDetailComponent },
