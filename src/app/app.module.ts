@@ -22,7 +22,6 @@ import { AdminComponent } from './admin/admin.component';
 import { GstAddComponent } from './admin/gst-add/gst-add.component';
 import { GstGetComponent } from './admin/gst-get/gst-get.component';
 import { GstEditComponent } from './admin/gst-edit/gst-edit.component';
-import { UploadFormComponent } from './uploads/upload-form/upload-form.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -67,7 +66,6 @@ const appRoutes: Routes = [
     GstAddComponent,
     GstGetComponent,
     GstEditComponent,
-    UploadFormComponent
   ],
   imports: [
     BrowserAnimationsModule,
