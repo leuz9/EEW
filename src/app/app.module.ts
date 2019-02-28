@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireStorageModule } from 'angularfire2/storage';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
@@ -13,8 +15,6 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeDetailComponent } from './home-detail/home-detail.component';
 
-import { AngularFireModule } from '@angular/fire';
-import { environment } from '../environments/environment';
 import { HomeComponent } from './home/home.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { Routes, RouterModule } from '@angular/router';
@@ -76,7 +76,15 @@ const appRoutes: Routes = [
 
     MatButtonModule, MatCheckboxModule,
     BrowserModule,
-    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireModule.initializeApp({
+      apiKey: 'AIzaSyAPue_PTa03pBBRZqmLMLvTxwt_nJEvxIc',
+      authDomain: 'goorgoorlu-eaf88.firebaseapp.com',
+      databaseURL: 'https://goorgoorlu-eaf88.firebaseio.com',
+      projectId: 'goorgoorlu-eaf88',
+      storageBucket: 'goorgoorlu-eaf88.appspot.com',
+      messagingSenderId: '869688170119'
+    }),
+    AngularFireStorageModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [EventService],

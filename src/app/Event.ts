@@ -1,4 +1,5 @@
 export default class Event {
+  event_imgHome: File;
   event_name: String;
   event_desc: String;
   event_desc_other: String;

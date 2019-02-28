@@ -17,7 +17,7 @@
     <tbody>
       <tr *ngFor="let event of events">
         <td class="link" [routerLink]="['/event', event._id]">{{ event.event_name }}</td>
-        <td>{{ event.event_gst_date | date:'fullDate' | uppercase}}</td>
+        <td>{{ event.event_gst_date | date:'yyyy-MM-dd' | uppercase}}</td>
         <td>
           <a [routerLink]="['/edit', event._id]" class="link"
             ><img src="../../assets/images/icon/edit.png" alt="edit"

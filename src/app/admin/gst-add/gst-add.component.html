@@ -1,10 +1,37 @@
 <div>
   <div class="card">
-      <div class="card-header">
-          Create Event
-        </div>
+    <div class="card-header">
+      Create Event
+    </div>
     <div class="card-body">
       <form [formGroup]="angForm" novalidate>
+        <div class="form-group">
+          <label class="col-md-4">Home image</label>
+          <input
+            type="file"
+            class="form-control"
+            (change)="upload($event)"
+            accept=".png,.jpg"
+            formControlName="event_imgHome"
+            #event_imgHome
+          />
+        </div>
+        <div
+          *ngIf="
+            angForm.controls['event_imgHome'].invalid &&
+            (angForm.controls['event_imgHome'].dirty ||
+              angForm.controls['event_imgHome'].touched)
+          "
+          class="alert alert-danger"
+        >
+          <div *ngIf="angForm.controls['event_imgHome'].errors.required">
+            Event Home Image is required.
+          </div>
+        </div>
+        <div>
+        <progress max="100" [value]="(uploadProgress | async)"></progress>
+        {{ uploadProgress | async }}%
+        </div>
         <div class="form-group">
           <label class="col-md-4">Event Name</label>
           <input
@@ -112,8 +139,10 @@
         </div>
         <div class="form-group">
           <button
+          [routerLink]="['/admin']"
             (click)="
               addEvent(
+                event_imgHome.value,
                 event_name.value,
                 event_desc.value,
                 event_desc_other.value,
@@ -126,10 +155,7 @@
           >
             Add Event
           </button>
-          <button
-          routerLink="/admin"
-            class="btn space btn-warning"
-          >
+          <button [routerLink]="['/admin']" class="btn space btn-warning">
             Cancel
           </button>
         </div>
