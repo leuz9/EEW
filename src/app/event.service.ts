@@ -1,60 +1,29 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
-
 export class EventService {
 
-  uri = 'http://localhost:4000/event';
+  constructor(private http: HttpClient) {}
 
-  constructor(private http: HttpClient) { }
-
-  addEvent(event_imgHome, event_name, event_desc, event_desc_other, event_gst_number, event_gst_date) {
-    const obj = {
-      event_imgHome: event_imgHome,
-      event_name: event_name,
-      event_desc: event_desc,
-      event_desc_other: event_desc_other,
-      event_gst_number: event_gst_number,
-      event_gst_date: event_gst_date
-    };
-    console.log(obj);
-    this.http.post(`${this.uri}/add`, obj)
-        .subscribe(res => console.log('Done'));
+  addEvent(event) {
+    return this.http.post('http://localhost:3000/api/v1/event', event);
   }
 
   getEvents() {
-    return this
-           .http
-           .get(`${this.uri}`);
+    return this.http.get('http://localhost:3000/api/v1/event');
+  }
+  getPublishedEvents() {
+    return this.http.get('http://localhost:3000/api/v1/event/published');
+  }
+  getEvent(id) {
+    return this.http.get(`http://localhost:3000/api/v1/event/${id}`);
   }
 
-  editEvent(id) {
-    return this
-            .http
-            .get(`${this.uri}/edit/${id}`);
-    }
+  editEvent(event) {
+    return this.http.post(`http://localhost:3000/api/v1/event/${event._id}`, event);
+  }
 
-    updateEvent(event_imgHome, event_name, event_desc, event_desc_other, event_gst_number, event_gst_date, id) {
-
-      const obj = {
-        event_imgHome: event_imgHome,
-        event_name: event_name,
-        event_desc: event_desc,
-        event_desc_other: event_desc_other,
-        event_gst_number: event_gst_number,
-        event_gst_date: event_gst_date
-        };
-      this
-        .http
-        .post(`${this.uri}/update/${id}`, obj)
-        .subscribe(res => console.log('Done'));
-    }
-    deleteEvent(id) {
-      return this
-                .http
-                .get(`${this.uri}/delete/${id}`);
-    }
 }

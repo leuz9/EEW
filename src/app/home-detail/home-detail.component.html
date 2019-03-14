@@ -2,7 +2,7 @@
   <!-- BREADCRUMB-->
   <div class="flex-containeri">
     <div>
-      <img src="{{event.img}}" alt="Event" width="100%">
+      <img src="{{event.image}}" alt="Event" width="100%">
     </div>
     <!--  <div class="centerm">
         <div class="design-thinking-olym ">
@@ -145,57 +145,30 @@
     <div *ngIf="event.nbrfacilitator >= '1'" id="Facil" class="facilitators tex-center" style="margin-top: 10%">
       <p>Facilitators</p>
     </div>
-    <div *ngFor="let facilitator of event.facilitator; let j=index">
+    <div>
       <div class="statistic">
         <div class="container">
           <div class="row">
-            <div class="col-md-6" style="margin-bottom: 10% !important;width: 100% !important">
+            <div *ngFor="let facilitator of event.facilitator; let j=index" class="col-md-6" style="margin-bottom: 10% !important;width: 100% !important">
               <div class="centrer">
                 <div class="conteneur">
                   <div class="d20">
-                    <img src="{{facilitator.img1}}" alt="" width="auto" height="100%">
+                    <img src="{{facilitator.image}}" alt="" width="auto" height="100%">
                   </div>
                   <div class="apercu">
                     <p class="text-left" style="font-size: 17px;">
-                      {{ facilitator.feel1 }}
+                      {{ facilitator.feel }}
                     </p>
-                    <a id="social2" style="float: left ;" href="{{facilitator.twt1}}"></a>
-                    <a id="social3" style="float: left;" href="{{facilitator.lkn1}}"></a>
-                    <a id="social5" style="float: left ;" href="{{facilitator.fcb1}}"></a>
+                    <a id="social2" style="float: left ;" href="{{facilitator.twitter}}"></a>
+                    <a id="social3" style="float: left;" href="{{facilitator.linkedin}}"></a>
+                    <a id="social5" style="float: left ;" href="{{facilitator.facebook}}"></a>
                   </div>
                   <div class="text-center">
-                    <a style="font-size: 22px;">{{facilitator.name1 }}</a>
+                    <a style="font-size: 22px;">{{facilitator.name }}</a>
                   </div>
                   <div class="text-center">
-                    <a>{{facilitator.job1}}</a>
+                    <a>{{facilitator.job}}</a>
                   </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6" *ngIf="event.nbrfacilitator > '1'">
-              <div class="centrer">
-                <div class="conteneur">
-                  <div class="d21">
-                    <img src="{{facilitator.img2}}" alt="" width="auto" height="100%">
-                  </div>
-                  <div class="apercu">
-                    <p class="text-left" style="font-size: 17px;">
-                      {{facilitator.feel2}}
-                    </p>
-                    <a id="social2" style="float: left;" href="{{facilitator.twt2}}"></a>
-                    <a id="social3" style="float: left;" href="{{facilitator.lkn2}}"></a>
-                    <a id="social5" style="float: left;" href="{{facilitator.fcb2}}"></a>
-                  </div>
-                  <div class="text-center">
-                    <a style="font-size: 22px;">{{facilitator.name2}}
-                    </a>
-                  </div>
-                  <div class="text-center">
-                    <a>{{facilitator.job2}}</a>
-                  </div>
-                </div>
-                <div>
-
                 </div>
               </div>
             </div>
@@ -250,7 +223,7 @@
       <div class="flex-container3">
         <div *ngFor="let partner of event.partner">
           <a class="slideimg" href="{{partner.website}}" target="_blank">
-            <img src="{{partner.img}}" alt="partner" width="100%" height="auto" />
+            <img src="{{partner.image}}" alt="partner" width="100%" height="auto" />
           </a>
         </div>
       </div>

@@ -1,7 +1,7 @@
 <div class="contain">
   <div class="d-flex flex-column">
     <div class="navbar-nav  d-flex flex-row-reverse">
-      <a routerLink="/admin" (click)="deleteEvent(event._id)"  class="btn btn-danger btn-sm">
+      <a routerLink="/admin" (click)="deleteEvent(event)"  class="btn btn-danger btn-sm">
         DELETE
       </a>
       <a [routerLink]="['/edit', event._id]" class="space btn btn-warning btn-sm">
@@ -13,15 +13,15 @@
     </div>
     <div class="d-flex justify-content-between">
       <div class="card" style="width: 50%;">
-        <img class="card-img-top" [src]="['event.event_imgHome']" alt="Card image cap" />
+        <img class="card-img-top" [src]="[event?.image]" alt="Card image cap" />
       </div>
       <div class="card" style="width: 50%;">
         <div class="card-body">
           <p class="card-text">
-              {{ event.event_name | uppercase}}
+              {{ event?.title | uppercase}}
           </p>
           <p class="card-text">
-             {{ event.event_gst_date | date:'fullDate' | uppercase}}
+             {{ event?.date | date:'fullDate' | uppercase}}
           </p>
         </div>
       </div>
@@ -32,10 +32,13 @@
       </div>
       <ul class="list-group list-group-flush">
         <li class="list-group-item">
-            {{ event.event_desc }}
+            {{ event?.description?.short }}
         </li>
         <li class="list-group-item">
-            {{ event.event_desc_other }}
+          {{ event?.description?.short1 }}
+      </li>
+        <li class="list-group-item">
+            {{ event?.description?.long }}
         </li>
       </ul>
     </div>

@@ -1,4 +1,4 @@
-<div>
+<div class="contain">
   <div class="card">
     <div class="card-header">
       Create Event
@@ -16,140 +16,267 @@
             #event_imgHome
           />
         </div>
-        <div
-          *ngIf="
-            angForm.controls['event_imgHome'].invalid &&
-            (angForm.controls['event_imgHome'].dirty ||
-              angForm.controls['event_imgHome'].touched)
-          "
-          class="alert alert-danger"
-        >
-          <div *ngIf="angForm.controls['event_imgHome'].errors.required">
-            Event Home Image is required.
-          </div>
-        </div>
         <div>
-        <progress max="100" [value]="(uploadProgress | async)"></progress>
-        {{ uploadProgress | async }}%
+          <progress max="100" [value]="uploadProgress | async"></progress>
+          {{ uploadProgress | async }}%
+          <img [src]="downloadURL" alt="" height="200px" />
         </div>
         <div class="form-group">
           <label class="col-md-4">Event Name</label>
           <input
             type="text"
             class="form-control"
+            [(ngModel)]="event.title"
             formControlName="event_name"
             #event_name
           />
         </div>
-        <div
-          *ngIf="
-            angForm.controls['event_name'].invalid &&
-            (angForm.controls['event_name'].dirty ||
-              angForm.controls['event_name'].touched)
-          "
-          class="alert alert-danger"
-        >
-          <div *ngIf="angForm.controls['event_name'].errors.required">
-            Event Name is required.
-          </div>
-        </div>
         <div class="form-group">
-          <label class="col-md-4">Event Description </label>
+          <label class="col-md-4">Event Name Short</label>
           <input
             type="text"
             class="form-control"
-            formControlName="event_desc"
-            #event_desc
+            [(ngModel)]="event.titleshort"
+            formControlName="event_name_short"
+            #event_name_short
           />
         </div>
-        <div
-          *ngIf="
-            angForm.controls['event_desc'].invalid &&
-            (angForm.controls['event_desc'].dirty ||
-              angForm.controls['event_desc'].touched)
-          "
-          class="alert alert-danger"
-        >
-          <div *ngIf="angForm.controls['event_desc'].errors.required">
-            Event Description is required.
-          </div>
-        </div>
         <div class="form-group">
-          <label class="col-md-4">Event Other Description </label>
+          <label class="col-md-4">Event Place</label>
           <input
             type="text"
             class="form-control"
-            formControlName="event_desc_other"
-            #event_desc_other
+            [(ngModel)]="event.lieu"
+            formControlName="event_lieu"
+            #event_lieu
           />
-        </div>
-        <div
-          *ngIf="
-            angForm.controls['event_desc_other'].invalid &&
-            (angForm.controls['event_desc_other'].dirty ||
-              angForm.controls['event_desc_other'].touched)
-          "
-          class="alert alert-danger"
-        >
-          <div *ngIf="angForm.controls['event_desc_other'].errors.required">
-            Event Other Description is required.
-          </div>
-        </div>
-        <div class="form-group">
-          <label class="col-md-4">Event GST Number </label>
-          <input
-            type="text"
-            class="form-control"
-            formControlName="event_gst_number"
-            #event_gst_number
-          />
-        </div>
-        <div
-          *ngIf="
-            angForm.controls['event_gst_number'].invalid &&
-            (angForm.controls['event_gst_number'].dirty ||
-              angForm.controls['event_gst_number'].touched)
-          "
-          class="alert alert-danger"
-        >
-          <div *ngIf="angForm.controls['event_gst_number'].errors.required">
-            Event GST Number is required.
-          </div>
         </div>
         <div class="form-group">
           <label class="col-md-4">Event Date </label>
           <input
             type="date"
             class="form-control"
+            [(ngModel)]="event.date"
             formControlName="event_gst_date"
             #event_gst_date
           />
         </div>
-        <div
-          *ngIf="
-            angForm.controls['event_gst_date'].invalid &&
-            (angForm.controls['event_gst_date'].dirty ||
-              angForm.controls['event_gst_date'].touched)
-          "
-          class="alert alert-danger"
-        >
-          <div *ngIf="angForm.controls['event_gst_date'].errors.required">
-            Event date is required.
+        <div class="form-group">
+          <label class="col-md-4">Event Link Evenbride</label>
+          <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="event.evenbride"
+            formControlName="event_evenbride"
+            #event_evenbride
+          />
+        </div>
+        <div class="form-group">
+          <label class="col-md-4">Event first Description </label>
+          <textarea
+            type="text"
+            class="form-control"
+            [(ngModel)]="event.description.short"
+            formControlName="event_desc"
+            #event_desc
+          >
+          </textarea>
+        </div>
+        <div class="form-group">
+          <label class="col-md-4">Event second Description </label>
+          <textarea
+            type="text"
+            class="form-control"
+            [(ngModel)]="event.description.short1"
+            formControlName="event_desc_other"
+            #event_desc_other
+          >
+          </textarea>
+        </div>
+        <div class="form-group">
+          <label class="col-md-4">Event long Description </label>
+          <textarea
+            type="text"
+            class="form-control"
+            [(ngModel)]="event.description.long"
+            formControlName="event_desc_long"
+            #event_desc_other
+          >
+          </textarea>
+        </div>
+        <div class="d-flex justify-content-between flex-wrap">
+          <div
+            class="card"
+            *ngFor="let facilitator of event.facilitator; let index = index"
+          >
+            <div class="d-flex flex-column">
+              <div class="form-group">
+                <label class="col-md-4">Facilitator image</label>
+                <input
+                  type="file"
+                  class="form-control"
+                  (change)="uploadF($event)"
+                  accept=".png,.jpg"
+                  formControlName="event_imgFacilitator"
+                  #event_imgFacilitator
+                />
+              </div>
+              <div>
+                <progress max="100" [value]="uploadProgressF[index] | async"></progress>
+                {{ uploadProgressF[index] | async }}%
+                <img [src]="downloadURLF[index]" alt="" height="200px" />
+              </div>
+              <div class="form-group">
+                <label class="">Facilitator name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  [(ngModel)]="facilitator.name"
+                  formControlName="event_faclitator_name"
+                  #event_faclitator_name
+                />
+              </div>
+              <div class="form-group">
+                <label class="">Facilitator job</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  [(ngModel)]="facilitator.job"
+                  formControlName="event_faclitator_job"
+                  #event_faclitator_job
+                />
+              </div>
+              <div class="form-group">
+                <label class="">Facilitator feel</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  [(ngModel)]="facilitator.feel"
+                  formControlName="event_faclitator_feel"
+                  #event_faclitator_feel
+                />
+              </div>
+              <div class="form-group">
+                <label class="">Facilitator twitter</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  [(ngModel)]="facilitator.twitter"
+                  formControlName="event_faclitator_twitter"
+                  #event_faclitator_twitter
+                />
+              </div>
+              <div class="form-group">
+                <label class="">Facilitator facebook</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  [(ngModel)]="facilitator.facebook"
+                  formControlName="event_faclitator_facebook"
+                  #event_faclitator_facebook
+                />
+              </div>
+              <div class="form-group">
+                <label class="">Facilitator linkedin</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  [(ngModel)]="facilitator.linkedin"
+                  formControlName="event_faclitator_linkedin"
+                  #event_faclitator_linkedin
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form__row">
+          <div class="form__add-another">
+            <button (click)="addFacilitatorInfos()">
+              <span>+</span
+              >Add Facilitator
+            </button>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between flex-wrap">
+          <div
+            class="card"
+            *ngFor="let schedule of event.schedule; let index = index"
+          >
+            <div class="d-flex flex-column">
+              <div class="form-group">
+                <label class="">schedule name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  [(ngModel)]="schedule.name"
+                  formControlName="event_schedule_name"
+                  #event_schedule_name
+                />
+              </div>
+              <div class="form-group">
+                <label class="">schedule date</label>
+                <input
+                  type="date"
+                  class="form-control"
+                  [(ngModel)]="schedule.date"
+                  formControlName="event_schedule_date"
+                  #event_schedule_date
+                />
+              </div>
+              <div class="form-group">
+                <div class="d-flex justify-content-between flex-wrap">
+                  <div
+                    class="card"
+                    *ngFor="let program of schedule.program; let index = index"
+                  >
+                    <div class="d-flex flex-column">
+                      <div class="form-group">
+                        <label class="">Program hour</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          [(ngModel)]="program.hour"
+                          formControlName="schedule_program_hour"
+                          #schedule_program_hour
+                        />
+                      </div>
+                      <div class="form-group">
+                        <label class="">Program name</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          [(ngModel)]="program.text"
+                          formControlName="schedule_program_name"
+                          #schedule_program_name
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                    <div class="form__row">
+                      <div class="form__add-another">
+                        <button (click)="addActivityInfos(index)">
+                          <span>+</span
+                          >Add Activity
+                        </button>
+                      </div>
+                    </div>
+            </div>
+          </div>
+        </div>
+        <div class="form__row">
+          <div class="form__add-another">
+            <button (click)="addScheduleInfos()">
+              <span>+</span
+              >Add Schedule infos
+            </button>
           </div>
         </div>
         <div class="form-group">
           <button
-          [routerLink]="['/admin']"
-            (click)="
-              addEvent(
-                event_imgHome.value,
-                event_name.value,
-                event_desc.value,
-                event_desc_other.value,
-                event_gst_number.value,
-                event_gst_date.value
-              )
-            "
+            [routerLink]="['/admin']"
+            (click)="addEvent()"
             [disabled]="angForm.pristine || angForm.invalid"
             class="btn btn-primary"
           >

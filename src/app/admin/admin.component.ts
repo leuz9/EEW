@@ -15,12 +15,24 @@ import { NavigationCancel,
 })
 export class AdminComponent implements OnInit {
   title = 'event_website';
-  events: Event[];
-  constructor(private _loadingBar: SlimLoadingBarService, private _router: Router, private bs: EventService) {
+  events: any;
+  constructor(private _loadingBar: SlimLoadingBarService, private _router: Router, private eventService: EventService) {
+    // override the route reuse strategy
+    this._router.routeReuseStrategy.shouldReuseRoute = function() {
+      return false;
+   };
+
+   this._router.events.subscribe((evt) => {
+      if (evt instanceof NavigationEnd) {
+         // trick the Router into believing it's last link wasn't previously loaded
+         this._router.navigated = false;
+      }
+  });
   }
 
-  deleteEvent(id) {
-    this.bs.deleteEvent(id).subscribe(res => {
+  deleteEvent(event) {
+    event.status = 'archived';
+    this.eventService.editEvent(event).subscribe(res => {
       console.log('Deleted');
     });
   }
@@ -40,7 +52,7 @@ export class AdminComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.bs
+    this.eventService
       .getEvents()
       .subscribe((data: Event[]) => {
         this.events = data;

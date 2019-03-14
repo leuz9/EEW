@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import Event from '../../Event';
 import { EventService } from '../../event.service';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-gst-get',
@@ -10,28 +10,29 @@ import { EventService } from '../../event.service';
 })
 export class GstGetComponent implements OnInit {
 
-  events: Event[];
+  events: any;
   event: any = {};
+  refresh: Subject<any> = new Subject();
 
-  constructor(private route: ActivatedRoute, private bs: EventService) { }
+  constructor(private route: ActivatedRoute, private eventService: EventService) { }
 
-  deleteEvent(id) {
-    this.bs.deleteEvent(id).subscribe(res => {
-      console.log('Deleted');
+  deleteEvent(event) {
+    event.status = 'archived';
+    this.eventService.editEvent(event).subscribe(res => {
+      console.log('archived');
     });
+    this.refresh.next();
   }
 
   ngOnInit() {
-    this.bs
-      .getEvents()
-      .subscribe((data: Event[]) => {
-        this.events = data;
-    });
     this.route.params.subscribe(params => {
-      this.bs.editEvent(params['id']).subscribe(res => {
-        this.event = res;
+      this.eventService
+        .getEvent(params['id'])
+        .subscribe((data) => {
+          console.log(data);
+          this.event = data;
+      });
     });
-  });
   }
 
 }
