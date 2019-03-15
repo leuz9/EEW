@@ -30,7 +30,6 @@
             formControlName="event_name"
             #event.title
             [(ngModel)]="event.title"
-            placeholder="{{ event.title }}"
           />
         </div>
         <div class="form-group">
@@ -41,7 +40,6 @@
             formControlName="event_name_short"
             #event.title
             [(ngModel)]="event.titleshort"
-            placeholder="{{ event.titleshort }}"
           />
         </div>
         <div class="form-group">
@@ -50,7 +48,6 @@
             type="text"
             class="form-control"
             [(ngModel)]="event.lieu"
-            placeholder="{{ event.lieu }}"
             formControlName="event_lieu"
             #event.lieu
           />
@@ -62,7 +59,6 @@
             class="form-control"
             [(ngModel)]="event.date"
             formControlName="event_gst_date"
-            placeholder="{{ event.date | date:'yyyy-MM-dd' | uppercase}}"
             #event.date
           />
         </div>
@@ -73,19 +69,16 @@
             class="form-control"
             [(ngModel)]="event.evenbride"
             formControlName="event_evenbride"
-            placeholder="{{ event.evenbride }}"
             #event.evenbride
           />
         </div>
         <div class="form-group">
-          <label class="col-md-4">Event first descripltion </label>
+          <label class="col-md-4">Event first descripltion</label>
           <textarea
             type="text"
             class="form-control"
             formControlName="event_desc"
-            #event.description.short
             [(ngModel)]="event.description.short"
-            placeholder="{{ event.description.short }}"
           ></textarea>
         </div>
         <div class="form-group">
@@ -96,7 +89,6 @@
             formControlName="event_desc_other"
             #event.description.short1
             [(ngModel)]="event.description.short1"
-            placeholder="{{ event.description.short1 }}"
           ></textarea>
         </div>
         <div class="form-group">
@@ -107,24 +99,12 @@
             formControlName="event_desc_long"
             #event.description.long
             [(ngModel)]="event.description.long"
-            placeholder="{{ event.description.long }}"
           ></textarea>
-        </div>
-        <div class="form-group">
-          <label class="col-md-4">Facilitator number</label>
-          <input
-            type="number"
-            class="form-control"
-            [(ngModel)]="event.facilitator.length"
-            formControlName="event_faclitator_length"
-            #event.facilitator.length
-            placeholder="{{ event.facilitator.length }}"
-          />
         </div>
         <div class="d-flex justify-content-between flex-wrap">
           <div
             class="card"
-            *ngFor="let facilitator of event.facilitator; let i = index"
+            *ngFor="let facilitator of event.facilitator; let indexF = index"
           >
             <div class="d-flex flex-column">
               <div class="form-group">
@@ -132,15 +112,13 @@
                 <input
                   type="file"
                   class="form-control"
-                  (change)="uploadF($event)"
+                  (change)="uploadF($event, indexF)"
                   accept=".png,.jpg"
                   formControlName="event_imgFacilitator"
                   #event_imgFacilitator
                 />
               </div>
               <div>
-                <progress max="100" [value]="uploadProgress | async"></progress>
-                {{ uploadProgress | async }}%
                 <img [src]="[facilitator.image]" alt="" height="200px" />
               </div>
               <div class="form-group">
@@ -151,7 +129,6 @@
                   [(ngModel)]="facilitator.name"
                   formControlName="event_faclitator_name"
                   #facilitator.name
-                  placeholder="{{ facilitator.name }}"
                 />
               </div>
               <div class="form-group">
@@ -162,7 +139,6 @@
                   [(ngModel)]="facilitator.job"
                   formControlName="event_faclitator_job"
                   #facilitator.job
-                  placeholder="{{ facilitator.job }}"
                 />
               </div>
               <div class="form-group">
@@ -173,60 +149,42 @@
                   [(ngModel)]="facilitator.feel"
                   formControlName="event_faclitator_feel"
                   #facilitator.feel
-                  placeholder="{{ facilitator.feel }}"
                 />
               </div>
               <div class="form-group">
                 <label class="">Facilitator twitter</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  [(ngModel)]="facilitator.twitter"
-                  formControlName="event_faclitator_twitter"
-                  #facilitator.twitter
-                  placeholder="{{ facilitator.twitter }}"
-                />
+                <input type="text" class="form-control"
+                [(ngModel)]="facilitator.twitter"
+                formControlName="event_faclitator_twitter" #facilitator.twitter />
               </div>
               <div class="form-group">
                 <label class="">Facilitator facebook</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  [(ngModel)]="facilitator.facebook"
-                  formControlName="event_faclitator_facebook"
-                  #facilitator.facebook
-                  placeholder="{{ facilitator.facebook }}"
-                />
+                <input type="text" class="form-control"
+                [(ngModel)]="facilitator.facebook"
+                formControlName="event_faclitator_facebook"
+                #facilitator.facebook />
               </div>
               <div class="form-group">
                 <label class="">Facilitator linkedin</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  [(ngModel)]="facilitator.linkedin"
-                  formControlName="event_faclitator_linkedin"
-                  #facilitator.linkedin
-                  placeholder="{{ facilitator.linkedin }}"
-                />
+                <input type="text" class="form-control"
+                [(ngModel)]="facilitator.linkedin"
+                formControlName="event_faclitator_linkedin"
+                #facilitator.linkedin />
               </div>
             </div>
           </div>
         </div>
-        <div class="form-group">
-          <label class="col-md-4">Schedule: day number</label>
-          <input
-            type="number"
-            class="form-control"
-            [(ngModel)]="event.schedule.length"
-            formControlName="event_schedule_length"
-            #event.schedule.length
-            placeholder="{{ event.schedule.length }}"
-          />
+        <div class="form__row">
+          <div class="form__add-another">
+            <button (click)="addFacilitatorInfos()">
+              <span>+</span>Add Facilitator
+            </button>
+          </div>
         </div>
         <div class="d-flex justify-content-between flex-wrap">
           <div
             class="card"
-            *ngFor="let schedule of event.schedule; let index = index"
+            *ngFor="let schedule of event.schedule; let indexS = index"
           >
             <div class="d-flex flex-column">
               <div class="form-group">
@@ -237,7 +195,6 @@
                   [(ngModel)]="schedule.name"
                   formControlName="event_schedule_name"
                   #schedule.name
-                  placeholder="{{ schedule.name }}"
                 />
               </div>
               <div class="form-group">
@@ -248,24 +205,11 @@
                   [(ngModel)]="schedule.date"
                   formControlName="event_schedule_date"
                   #schedule.date
-                  placeholder="{{ schedule.date }}"
                 />
               </div>
               <div class="form-group">
-                <label class="col-md-4">Schedule: program number</label>
-                <input
-                  type="number"
-                  class="form-control"
-                  [(ngModel)]="schedule.program.length"
-                  formControlName="schedule_program_length"
-                  #schedule.program.length
-                  placeholder="{{ schedule.program.length }}"
-                />
                 <div class="d-flex justify-content-between flex-wrap">
-                  <div
-                    class="card"
-                    *ngFor="let program of schedule.program; let index = index"
-                  >
+                  <div class="card" *ngFor="let program of schedule.program">
                     <div class="d-flex flex-column">
                       <div class="form-group">
                         <label class="">Program hour</label>
@@ -275,7 +219,6 @@
                           [(ngModel)]="program.hour"
                           formControlName="schedule_program_hour"
                           #program.hour
-                          placeholder="{{ program.hour }}"
                         />
                       </div>
                       <div class="form-group">
@@ -286,7 +229,6 @@
                           [(ngModel)]="program.text"
                           formControlName="schedule_program_name"
                           #program.name
-                          placeholder="{{ program.name }}"
                         />
                       </div>
                     </div>
@@ -294,6 +236,20 @@
                 </div>
               </div>
             </div>
+            <div class="form__row">
+              <div class="form__add-another">
+                <button (click)="addActivityInfos(indexS)">
+                  <span>+</span>Add Activity
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form__row">
+          <div class="form__add-another">
+            <button (click)="addScheduleInfos()">
+              <span>+</span>Add Schedule infos
+            </button>
           </div>
         </div>
         <div class="form-group">

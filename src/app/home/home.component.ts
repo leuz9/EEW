@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { EVENTS } from '../services/event';
+import { EventService } from '../event.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,11 +8,27 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  public events = EVENTS;
+  events: any;
+  event: any = {};
+  constructor(private router: Router, private eventService: EventService) {}
 
-  constructor(private router: Router) { }
+  CheckDate(d: Date) {
+    const Today = new Date();
+    const newDate = new Date(d);
+
+    console.log('date today', +Today);
+    console.log('date event', +newDate);
+    console.log('date today comparaison', +Today);
+    console.log('date event comparaison', +d);
+    console.log('date probleme');
+
+    return (Today > newDate);
+  }
 
   ngOnInit() {
+    this.eventService.getEvents().subscribe((data: Event[]) => {
+      this.events = data;
+    });
   }
 
   onSelect(event) {

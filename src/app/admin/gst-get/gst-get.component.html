@@ -1,14 +1,21 @@
 <div class="contain">
   <div class="d-flex flex-column">
     <div class="navbar-nav  d-flex flex-row-reverse">
-      <a routerLink="/admin" (click)="deleteEvent(event)"  class="btn btn-danger btn-sm">
+      <a
+        routerLink="/admin"
+        (click)="deleteEvent(event)"
+        class="btn btn-danger btn-sm"
+      >
         DELETE
       </a>
-      <a [routerLink]="['/edit', event._id]" class="space btn btn-warning btn-sm">
+      <a
+        [routerLink]="['/edit', event._id]"
+        class="space btn btn-warning btn-sm"
+      >
         EDIT
       </a>
-      <a  routerLink="/admin" class="space btn btn-light btn-sm">
-       BACK TO DASHBOARD
+      <a routerLink="/admin" class="space btn btn-light btn-sm">
+        BACK TO DASHBOARD
       </a>
     </div>
     <div class="d-flex justify-content-between">
@@ -18,10 +25,13 @@
       <div class="card" style="width: 50%;">
         <div class="card-body">
           <p class="card-text">
-              {{ event?.title | uppercase}}
+            {{ event?.title | uppercase }}
           </p>
           <p class="card-text">
-             {{ event?.date | date:'fullDate' | uppercase}}
+            {{ event?.date | date: "fullDate" | uppercase }}
+          </p>
+          <p class="card-text">
+            {{ event?.lieu | uppercase }}
           </p>
         </div>
       </div>
@@ -32,13 +42,13 @@
       </div>
       <ul class="list-group list-group-flush">
         <li class="list-group-item">
-            {{ event?.description?.short }}
+          {{ event?.description?.short }}
         </li>
         <li class="list-group-item">
           {{ event?.description?.short1 }}
-      </li>
+        </li>
         <li class="list-group-item">
-            {{ event?.description?.long }}
+          {{ event?.description?.long }}
         </li>
       </ul>
     </div>
@@ -46,34 +56,35 @@
       <div class="card-header">
         Facilitator
       </div>
-      <div class="card-body">
-        <p class="card-text">
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </p>
-      </div>
-      <div class="d-flex justify-content-between">
-        <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="..." alt="Card image cap" />
+      <div class="d-flex justify-content-around">
+        <div
+          class="card"
+          style="width: 18rem;"
+          *ngFor="let facilitator of event.facilitator"
+        >
+          <img
+            class="card-img-top"
+            [src]="[facilitator?.image]"
+            alt="Card image cap"
+          />
           <div class="card-body">
             <p class="card-text">
-              facilitator
+              {{facilitator.name}}
             </p>
-          </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="..." alt="Card image cap" />
-          <div class="card-body">
             <p class="card-text">
-              facilitator
+              {{facilitator.job}}
             </p>
-          </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="..." alt="Card image cap" />
-          <div class="card-body">
             <p class="card-text">
-              facilitator
+              {{facilitator.feel}}
+            </p>
+            <p class="card-text">
+              {{facilitator.twitter}}
+            </p>
+            <p class="card-text">
+              {{facilitator.facebook}}
+            </p>
+            <p class="card-text">
+              {{facilitator.linkedin}}
             </p>
           </div>
         </div>
@@ -84,7 +95,7 @@
         Schedule
       </div>
       <div class="card-body">
-        <table class="table table-striped">
+        <table class="table table-striped table-hover" *ngFor="let schedule of event.schedule ">
           <thead class="thead-dark">
             <tr>
               <td>Time</td>
@@ -93,49 +104,12 @@
           </thead>
 
           <tbody>
-            <tr *ngFor="let event of events">
-              <td>{{ event.event_name }}</td>
-              <td>{{ event.event_desc }}</td>
+            <tr *ngFor="let program of schedule.program">
+              <td>{{ program.hour }}</td>
+              <td>{{ program.text }}</td>
             </tr>
           </tbody>
         </table>
-      </div>
-    </div>
-    <div class="card" style="width: 100%;">
-      <div class="card-header">
-        partner
-      </div>
-      <div class="card-body">
-        <p class="card-text">
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </p>
-      </div>
-      <div class="d-flex justify-content-between">
-        <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="..." alt="Card image cap" />
-          <div class="card-body">
-            <p class="card-text">
-              partner
-            </p>
-          </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="..." alt="Card image cap" />
-          <div class="card-body">
-            <p class="card-text">
-              partner
-            </p>
-          </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="..." alt="Card image cap" />
-          <div class="card-body">
-            <p class="card-text">
-              partner
-            </p>
-          </div>
-        </div>
       </div>
     </div>
   </div>

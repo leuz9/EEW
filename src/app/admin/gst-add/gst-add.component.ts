@@ -28,37 +28,43 @@ export class GstAddComponent implements OnInit {
     image: '',
     title: '',
     titleshort: '',
-    description:  {
+    description: {
       short: '',
       short1: '',
       long: ''
     },
     lieu: '',
     date: '',
-    facilitator: [{
-      image: '',
-      name: '',
-      job: '',
-      feel: '',
-      twitter: '',
-      linkedin: '',
-      facebook: ''
-    }],
+    facilitator: [
+      {
+        image: '',
+        name: '',
+        job: '',
+        feel: '',
+        twitter: '',
+        linkedin: '',
+        facebook: ''
+      }
+    ],
     evenbride: '',
-    schedule: [{
-      name: '',
-      date: '',
-      program: [
-        {
-          hour: '',
-          text: ''
-        }
-      ]
-    }],
-    partner: [{
-      website: '',
-      img: ''
-    }]
+    schedule: [
+      {
+        name: '',
+        date: '',
+        program: [
+          {
+            hour: '',
+            text: ''
+          }
+        ]
+      }
+    ],
+    partner: [
+      {
+        website: '',
+        img: ''
+      }
+    ]
   };
   uploadProgressF: any;
   constructor(
@@ -93,22 +99,47 @@ export class GstAddComponent implements OnInit {
       event_schedule_date: ['', ''],
       schedule_program_length: ['', ''],
       schedule_program_hour: ['', ''],
-      schedule_program_name: ['', ''],
+      schedule_program_name: ['', '']
     });
   }
 
   addEvent() {
+    console.log(this.event);
     this.eventService.addEvent(this.event).subscribe(res => console.log(res));
   }
 
   addFacilitatorInfos(): void {
+    /* this.event.facilitator.push({
+      image: '',
+      name: '',
+      job: '',
+      feel: '',
+      twitter: '',
+      linkedin: '',
+      facebook: ''
+    }); */
     this.event.facilitator.length = this.event.facilitator.length + 1;
   }
   addScheduleInfos(): void {
+    /* this.event.schedule.push({
+      name: '',
+      date: '',
+      program: [
+        {
+          hour: '',
+          text: ''
+        }
+      ]
+    }); */
     this.event.schedule.length = this.event.schedule.length + 1;
   }
   addActivityInfos(i): void {
-    this.event.schedule[i].program.length = this.event.schedule[i].program.length  + 1;
+    /* this.event.schedule[i].program.push({
+      hour: '',
+      text: ''
+    }); */
+    this.event.schedule[i].program.length =
+      this.event.schedule[i].program.length + 1;
   }
 
   ngOnInit() {}
@@ -137,7 +168,7 @@ export class GstAddComponent implements OnInit {
         this.uploadProgress = this.task.percentageChanges();
       });
   }
-  uploadF(event,i) {
+  uploadF(event, i) {
     const randomId = Math.random()
       .toString(36)
       .substring(2);
@@ -147,7 +178,7 @@ export class GstAddComponent implements OnInit {
     this.snapshot
       .pipe(
         finalize(() => {
-          this.ref.getDownloadURLF().subscribe(url => {
+          this.ref.getDownloadURL().subscribe(url => {
             this.event.facilitator[i].image = url;
             this.downloadURLF[i] = url;
             this.name = event.target.files[0].name;

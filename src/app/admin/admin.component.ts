@@ -16,19 +16,7 @@ import { NavigationCancel,
 export class AdminComponent implements OnInit {
   title = 'event_website';
   events: any;
-  constructor(private _loadingBar: SlimLoadingBarService, private _router: Router, private eventService: EventService) {
-    // override the route reuse strategy
-    this._router.routeReuseStrategy.shouldReuseRoute = function() {
-      return false;
-   };
-
-   this._router.events.subscribe((evt) => {
-      if (evt instanceof NavigationEnd) {
-         // trick the Router into believing it's last link wasn't previously loaded
-         this._router.navigated = false;
-      }
-  });
-  }
+  constructor(private _loadingBar: SlimLoadingBarService, private _router: Router, private eventService: EventService) {}
 
   deleteEvent(event) {
     event.status = 'archived';

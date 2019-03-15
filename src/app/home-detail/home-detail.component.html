@@ -2,7 +2,7 @@
   <!-- BREADCRUMB-->
   <div class="flex-containeri">
     <div>
-      <img src="{{event.image}}" alt="Event" width="100%">
+      <img [src]="[event.image]" alt="Event" width="100%">
     </div>
     <!--  <div class="centerm">
         <div class="design-thinking-olym ">
@@ -30,7 +30,7 @@
               </div>
             </div>
             <div class="col-8" style="margin: auto;">
-              <div class=" date">{{event.date}}
+              <div class=" date">{{event.date | date: "fullDate"}}
               </div>
             </div>
             <div class="separation" style="margin-left: 7%"></div>
@@ -75,7 +75,7 @@
       </div>
       <div class="col-4 ext-end">
         <a class="datem">
-          {{event.date}}
+          {{event.date | date: "fullDate"}}
         </a>
       </div>
     </div>
@@ -142,7 +142,7 @@
 
     <!-- FACILITATORS-->
 
-    <div *ngIf="event.nbrfacilitator >= '1'" id="Facil" class="facilitators tex-center" style="margin-top: 10%">
+    <div id="Facil" class="facilitators tex-center" style="margin-top: 10%">
       <p>Facilitators</p>
     </div>
     <div>
@@ -221,9 +221,9 @@
         <p>Our Partners</p>
       </div>
       <div class="flex-container3">
-        <div *ngFor="let partner of event.partner">
-          <a class="slideimg" href="{{partner.website}}" target="_blank">
-            <img src="{{partner.image}}" alt="partner" width="100%" height="auto" />
+        <div *ngFor="let partnariat of part.partnariat">
+          <a class="slideimg" href="{{partnariat.website}}" target="_blank">
+            <img src="{{partnariat.image}}" alt="partner" width="100%" height="auto" />
           </a>
         </div>
       </div>

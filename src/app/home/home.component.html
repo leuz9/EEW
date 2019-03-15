@@ -1,8 +1,8 @@
 <div *ngFor="let event of events; let i = index">
-  <div *ngIf="event.etat === '1'">
+  <div *ngIf="!CheckDate(event.date)">
     <div class="flex-container1">
       <div id="gauche">
-        <img src="https://i.ibb.co/19yMpm4/168.png" alt="next event" width="100%" height="100%">
+        <img [src]="[event.image]" alt="next event" width="100%" height="100%">
       </div>
       <div class="rectangle-5">
         <div class="content">
@@ -10,7 +10,7 @@
             Attend the next EDACY Event
           </p>
           <p class="lorem-ipsum-dolor-si">{{ event.description.short1 }}</p>
-          <a routerLink="/home-detail/{{i}}">
+          <a [routerLink]="['/home-detail', event._id]">
             <div class="rectangle-9">
               <p class="view-details">VIEW DETAILS</p>
             </div>
@@ -24,7 +24,7 @@
 <div style="width: 80%; margin: auto">
   <div class="key-events"><p>PREVIOUS EVENTS</p></div>
   <div *ngFor="let event of events; let i = index">
-    <div *ngIf="event.etat === '2'">
+    <div *ngIf="CheckDate(event.date) && i < 1">
       <div class="flex-container4">
         <div id="rectangle-14">
           <img
@@ -66,7 +66,7 @@
 
   <div class="flex-container3">
     <div *ngFor="let event of events; let i = index">
-      <div *ngIf="event.etat === '0'">
+      <div *ngIf="CheckDate(event.date) && i > 0">
           <div class="flex-container4">
             <div id="rectangle-14">
               <img
@@ -107,11 +107,11 @@
       </div>
     </div>
   </div>
-  <a routerLink="/home">
+ <!--  <a routerLink="/home">
   <div class="rectangle-9-copy-2">
     <p class="older-post">
       OLDER POST
     </p>
   </div>
-  </a>
+  </a> -->
 </div>

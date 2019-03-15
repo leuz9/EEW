@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { EVENTS } from '../services/event';
+import { PARTS } from '../services/part';
+import { EventService } from '../event.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -8,16 +9,21 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./home-detail.component.css']
 })
 export class HomeDetailComponent  implements OnInit {
-  public events = EVENTS;
-  public event;
-  constructor(private route: ActivatedRoute) {
+  events: any;
+  public parts = PARTS;
+  public part;
+  event: any = {};
+  constructor(private route: ActivatedRoute, private eventService: EventService) {
    }
 
   ngOnInit() {
-    this.route.paramMap.subscribe(params => {
-      const index = params.get('id');
-      this.event = this.events[index];
-      console.log(this.event);
+    this.route.params.subscribe(params => {
+      this.eventService
+        .getEvent(params['id'])
+        .subscribe((data) => {
+          console.log(data);
+          this.event = data;
+      });
     });
   }
 
