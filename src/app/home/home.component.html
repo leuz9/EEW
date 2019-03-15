@@ -1,5 +1,5 @@
 <div *ngFor="let event of events; let i = index">
-  <div *ngIf="!CheckDate(event.date)">
+  <div *ngIf="!CheckDate(event.date) && event.status !== 'archived'">
     <div class="flex-container1">
       <div id="gauche">
         <img [src]="[event.image]" alt="next event" width="100%" height="100%">
@@ -24,7 +24,7 @@
 <div style="width: 80%; margin: auto">
   <div class="key-events"><p>PREVIOUS EVENTS</p></div>
   <div *ngFor="let event of events; let i = index">
-    <div *ngIf="CheckDate(event.date) && i < 1">
+    <div *ngIf="CheckDate(event.date) && i < 1 && event.status !== 'archived'">
       <div class="flex-container4">
         <div id="rectangle-14">
           <img
@@ -66,7 +66,7 @@
 
   <div class="flex-container3">
     <div *ngFor="let event of events; let i = index">
-      <div *ngIf="CheckDate(event.date) && i > 0">
+      <div *ngIf="CheckDate(event.date) && i > 0 && event.status !== 'archived'">
           <div class="flex-container4">
             <div id="rectangle-14">
               <img
