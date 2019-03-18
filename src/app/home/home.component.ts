@@ -16,12 +16,6 @@ export class HomeComponent implements OnInit {
     const Today = new Date();
     const newDate = new Date(d);
 
-    console.log('date today', +Today);
-    console.log('date event', +newDate);
-    console.log('date today comparaison', +Today);
-    console.log('date event comparaison', +d);
-    console.log('date probleme');
-
     return (Today > newDate);
   }
 

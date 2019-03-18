@@ -14,18 +14,23 @@ import { finalize } from 'rxjs/operators';
 })
 export class GstEditComponent implements OnInit {
   events: any;
-  event: any = {};
+  event?: any = {};
   angForm: FormGroup;
   ref: any;
+  refF: any;
   task: any;
+  taskF: any;
   uploadProgress: any;
   uploadProgressF: any;
   downloadURL: any;
   downloadURLF: any;
   snapshot: any;
+  snapshotF: any;
   url: any;
+  urlF: any;
   index: any;
   name: any;
+  nameF: any;
 
   constructor(
     private route: ActivatedRoute,
@@ -40,11 +45,14 @@ export class GstEditComponent implements OnInit {
   createForm() {
     this.angForm = this.fb.group({
       event_imgHome: ['', ''],
+      event_name: ['', ''],
       event_name_short: ['', ''],
+      event_gst_date: ['', ''],
       event_lieu: ['', ''],
       event_evenbride: ['', ''],
+      event_desc: ['', ''],
+      event_desc_other: ['', ''],
       event_desc_long: ['', ''],
-      event_faclitator_length: ['', ''],
       event_imgFacilitator: ['', ''],
       event_faclitator_name: ['', ''],
       event_faclitator_job: ['', ''],
@@ -52,14 +60,8 @@ export class GstEditComponent implements OnInit {
       event_faclitator_twitter: ['', ''],
       event_faclitator_facebook: ['', ''],
       event_faclitator_linkedin: ['', ''],
-      event_name: ['', ''],
-      event_desc: ['', ''],
-      event_desc_other: ['', ''],
-      event_gst_date: ['', ''],
-      event_schedule_length: ['', ''],
       event_schedule_name: ['', ''],
       event_schedule_date: ['', ''],
-      schedule_program_length: ['', ''],
       schedule_program_hour: ['', ''],
       schedule_program_name: ['', '']
     });
@@ -72,7 +74,7 @@ export class GstEditComponent implements OnInit {
   }
 
   addFacilitatorInfos(): void {
-    /* this.event.facilitator.push({
+    this.event.facilitator.push({
       image: '',
       name: '',
       job: '',
@@ -80,11 +82,11 @@ export class GstEditComponent implements OnInit {
       twitter: '',
       linkedin: '',
       facebook: ''
-    }); */
-    this.event.facilitator.length = this.event.facilitator.length + 1;
+    });
+    /* this.event.facilitator.length = this.event.facilitator.length + 1; */
   }
   addScheduleInfos(): void {
-    /* this.event.schedule.push({
+    this.event.schedule.push({
       name: '',
       date: '',
       program: [
@@ -93,15 +95,15 @@ export class GstEditComponent implements OnInit {
           text: ''
         }
       ]
-    }); */
-    this.event.schedule.length = this.event.schedule.length + 1;
+    });
+    /*  this.event.schedule.length = this.event.schedule.length + 1; */
   }
   addActivityInfos(i): void {
-    /* this.event.schedule[i].program.push({
+    this.event.schedule[i].program.push({
       hour: '',
       text: ''
-    }); */
-    this.event.schedule[i].program.length = this.event.schedule[i].program.length  + 1;
+    });
+    /* this.event.schedule[i].program.length = this.event.schedule[i].program.length  + 1; */
   }
 
   ngOnInit() {
@@ -124,6 +126,7 @@ export class GstEditComponent implements OnInit {
       .pipe(
         finalize(() => {
           this.ref.getDownloadURL().subscribe(url => {
+            this.event.image = url;
             this.downloadURL = url;
             this.name = event.target.files[0].name;
             console.log(this.downloadURL);
@@ -148,16 +151,16 @@ export class GstEditComponent implements OnInit {
         finalize(() => {
           this.ref.getDownloadURL().subscribe(url => {
             this.event.facilitator[i].image = url;
-            this.downloadURLF[i] = url;
+            this.downloadURL = url;
             this.name = event.target.files[0].name;
-            console.log(this.downloadURLF);
+            console.log(this.downloadURL);
             console.log(this.name);
           });
         })
       )
       .subscribe(res => {
         this.task = this.ref.put(event.target.files[0]);
-        this.uploadProgressF = this.task.percentageChanges();
+        this.uploadProgress = this.task.percentageChanges();
       });
   }
 }

@@ -13,14 +13,13 @@
             (change)="upload($event)"
             accept=".png,.jpg"
             formControlName="event_imgHome"
-            #event.image
-            [(ngModel)]="event.image"
+            #event_imgHome
           />
         </div>
         <div>
           <progress max="100" [value]="uploadProgress | async"></progress>
           {{ uploadProgress | async }}%
-          <img [src]="[event?.image]" alt="" height="200px" />
+          <img [src]="[event?.image]" alt="{{ event?.image }}" height="200px" />
         </div>
         <div class="form-group">
           <label class="col-md-4">event Name</label>
@@ -28,7 +27,7 @@
             type="text"
             class="form-control"
             formControlName="event_name"
-            #event.title
+            #event_name
             [(ngModel)]="event.title"
           />
         </div>
@@ -38,7 +37,7 @@
             type="text"
             class="form-control"
             formControlName="event_name_short"
-            #event.title
+            #event_name_short
             [(ngModel)]="event.titleshort"
           />
         </div>
@@ -49,7 +48,7 @@
             class="form-control"
             [(ngModel)]="event.lieu"
             formControlName="event_lieu"
-            #event.lieu
+            #event_lieu
           />
         </div>
         <div class="form-group">
@@ -59,7 +58,7 @@
             class="form-control"
             [(ngModel)]="event.date"
             formControlName="event_gst_date"
-            #event.date
+            #event_gst_date
           />
         </div>
         <div class="form-group">
@@ -69,7 +68,7 @@
             class="form-control"
             [(ngModel)]="event.evenbride"
             formControlName="event_evenbride"
-            #event.evenbride
+            #event_evenbride
           />
         </div>
         <div class="form-group">
@@ -79,6 +78,7 @@
             class="form-control"
             formControlName="event_desc"
             [(ngModel)]="event.description.short"
+            #event_desc
           ></textarea>
         </div>
         <div class="form-group">
@@ -87,7 +87,7 @@
             type="text"
             class="form-control"
             formControlName="event_desc_other"
-            #event.description.short1
+            #event_desc_other
             [(ngModel)]="event.description.short1"
           ></textarea>
         </div>
@@ -97,79 +97,95 @@
             type="text"
             class="form-control"
             formControlName="event_desc_long"
-            #event.description.long
+            #event_desc_long
             [(ngModel)]="event.description.long"
           ></textarea>
         </div>
         <div class="d-flex justify-content-between flex-wrap">
           <div
             class="card"
-            *ngFor="let facilitator of event.facilitator; let indexF = index"
+            *ngFor="let facilitator of event?.facilitator; let indexF = index"
           >
             <div class="d-flex flex-column">
               <div class="form-group">
-                <label class="col-md-4">Facilitator image</label>
+                <label class="col-md-4">Facilitator {{ indexF }} image </label>
                 <input
                   type="file"
                   class="form-control"
                   (change)="uploadF($event, indexF)"
+                  [(ngModel)]="facilitator.image"
                   accept=".png,.jpg"
                   formControlName="event_imgFacilitator"
                   #event_imgFacilitator
                 />
               </div>
               <div>
-                <img [src]="[facilitator.image]" alt="" height="200px" />
+                <progress
+                  max="100"
+                  [value]="uploadProgressF | async"
+                ></progress>
+                {{ uploadProgressF | async }}%
+                <img [src]="[facilitator?.image]" alt="" height="200px" />
               </div>
               <div class="form-group">
-                <label class="">Facilitator name</label>
+                <label class="">Facilitator {{ indexF }} name</label>
                 <input
                   type="text"
                   class="form-control"
                   [(ngModel)]="facilitator.name"
                   formControlName="event_faclitator_name"
-                  #facilitator.name
+                  #event_faclitator_name
                 />
               </div>
               <div class="form-group">
-                <label class="">Facilitator job</label>
+                <label class="">Facilitator {{ indexF }} job</label>
                 <input
                   type="text"
                   class="form-control"
                   [(ngModel)]="facilitator.job"
                   formControlName="event_faclitator_job"
-                  #facilitator.job
+                  #event_faclitator_job
                 />
               </div>
               <div class="form-group">
-                <label class="">Facilitator feel</label>
+                <label class="">Facilitator {{ indexF }} feel</label>
                 <input
                   type="text"
                   class="form-control"
                   [(ngModel)]="facilitator.feel"
                   formControlName="event_faclitator_feel"
-                  #facilitator.feel
+                  #event_faclitator_feel
                 />
               </div>
               <div class="form-group">
-                <label class="">Facilitator twitter</label>
-                <input type="text" class="form-control"
-                [(ngModel)]="facilitator.twitter"
-                formControlName="event_faclitator_twitter" #facilitator.twitter />
+                <label class="">Facilitator {{ indexF }} twitter</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  [(ngModel)]="facilitator.twitter"
+                  formControlName="event_faclitator_twitter"
+                  #event_faclitator_twitter
+                />
               </div>
               <div class="form-group">
-                <label class="">Facilitator facebook</label>
-                <input type="text" class="form-control"
-                [(ngModel)]="facilitator.facebook"
-                formControlName="event_faclitator_facebook"
-                #facilitator.facebook />
+                <label class="">Facilitator {{ indexF }} facebook</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  [(ngModel)]="facilitator.facebook"
+                  formControlName="event_faclitator_facebook"
+                  #event_faclitator_facebook
+                />
               </div>
               <div class="form-group">
-                <label class="">Facilitator linkedin</label>
-                <input type="text" class="form-control"
-                [(ngModel)]="facilitator.linkedin"
-                formControlName="event_faclitator_linkedin"
-                #facilitator.linkedin />
+                <label class="">Facilitator {{ indexF }} linkedin</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  [(ngModel)]="facilitator.linkedin"
+                  formControlName="event_faclitator_linkedin"
+                  #event_faclitator_linkedin
+                />
               </div>
             </div>
           </div>
@@ -194,7 +210,7 @@
                   class="form-control"
                   [(ngModel)]="schedule.name"
                   formControlName="event_schedule_name"
-                  #schedule.name
+                  #event_schedule_name
                 />
               </div>
               <div class="form-group">
@@ -204,12 +220,12 @@
                   class="form-control"
                   [(ngModel)]="schedule.date"
                   formControlName="event_schedule_date"
-                  #schedule.date
+                  #event_schedule_date
                 />
               </div>
               <div class="form-group">
                 <div class="d-flex justify-content-between flex-wrap">
-                  <div class="card" *ngFor="let program of schedule.program">
+                  <div class="card" *ngFor="let program of schedule?.program">
                     <div class="d-flex flex-column">
                       <div class="form-group">
                         <label class="">Program hour</label>
@@ -217,7 +233,7 @@
                           type="text"
                           class="form-control"
                           [(ngModel)]="program.hour"
-                          formControlName="schedule_program_hour"
+                          formControlName="program.hour"
                           #program.hour
                         />
                       </div>
@@ -228,7 +244,7 @@
                           class="form-control"
                           [(ngModel)]="program.text"
                           formControlName="schedule_program_name"
-                          #program.name
+                          #schedule_program_name
                         />
                       </div>
                     </div>

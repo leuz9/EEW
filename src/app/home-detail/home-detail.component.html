@@ -129,12 +129,12 @@
 
       <!-- TEXT-->
       <div class="days-of-quality">
-        <p>{{ event.description.short }} </p>
+        <p>{{ event.description?.short }} </p>
       </div>
       <!-- END TEXT-->
 
       <div class="sed-ut-perspiciatis">
-        <p>{{ event.description.long }}
+        <p>{{ event.description?.long }}
         </p>
       </div>
     </div>
@@ -184,25 +184,25 @@
       </div>
     </div>
     <nav class="accordion arrows">
-      <div *ngFor="let schedule of event.schedule">
-        <input type="radio" name="accordion" id="{{schedule.id}}" />
+      <div *ngFor="let schedule of event?.schedule; let i = index">
+        <input type="radio" name="accordion" id="i" />
         <section class="box">
-          <label class="day-1" for="{{schedule.id}}">
-            <p class="day-b"> {{schedule.name}}</p>
-            <p class="date1 text-left">{{schedule.date}}</p>
+          <label class="day-1" for="i">
+            <p class="day-b"> {{schedule?.name}}</p>
+            <p class="date1 text-left">{{schedule?.date}}</p>
           </label>
 
           <label class="box-close" for="acc-close"></label>
           <div class="box-content">
             <div class="date12">
-              <div *ngFor="let program of schedule.program">
+              <div *ngFor="let program of schedule?.program">
                 <a style="color: #9B9B9B; width: 100%">
                   <div class="flex-container2">
                     <div>
-                      {{program.hour}}
+                      {{program?.hour}}
                     </div>
                     <div>
-                      {{program.text | uppercase}}
+                      {{program?.text | uppercase}}
                     </div>
                   </div>
                 </a>
@@ -221,11 +221,56 @@
         <p>Our Partners</p>
       </div>
       <div class="flex-container3">
-        <div *ngFor="let partnariat of part.partnariat">
-          <a class="slideimg" href="{{partnariat.website}}" target="_blank">
-            <img src="{{partnariat.image}}" alt="partner" width="100%" height="auto" />
+        <div>
+          <a class="slideimg" href="" target="_blank">
+            <img src="https://i.ibb.co/5Yrbmc6/galsenai.jpg" alt="partner" width="100%" height="auto" />
           </a>
         </div>
+        <div>
+            <a class="slideimg" href="https://www.unicef.org/fr" target="_blank">
+              <img src="https://i.ibb.co/D8QgD8s/unicef.png" alt="partner" width="100%" height="auto" />
+            </a>
+          </div>
+          <div>
+              <a class="slideimg" href="http://www.expressotelecom.sn/" target="_blank">
+                <img src="https://i.ibb.co/mGdxjZy/expresso-logo.png" alt="partner" width="100%" height="auto" />
+              </a>
+            </div>
+            <div>
+                <a class="slideimg" href="https://www.gainde2000.com/" target="_blank">
+                  <img src="https://i.ibb.co/xhBJvXM/gainde-logo.png" alt="partner" width="100%" height="auto" />
+                </a>
+              </div>
+              <div>
+                  <a class="slideimg" href="http://www.cofinasenegal.com/" target="_blank">
+                    <img src="https://i.ibb.co/3zRzPVL/cofina.png" alt="partner" width="100%" height="auto" />
+                  </a>
+                </div>
+                <div>
+                    <a class="slideimg" href="https://www.childfund.org/Senegal/" target="_blank">
+                      <img src="https://i.ibb.co/9ZrTqLF/child.jpg" alt="partner" width="100%" height="auto" />
+                    </a>
+                  </div>
+                  <div>
+                      <a class="slideimg" href="http://www.asprh.com/" target="_blank">
+                        <img src="https://i.ibb.co/z2GrtN6/asprh.jpg" alt="partner" width="100%" height="auto" />
+                      </a>
+                    </div>
+                    <div>
+                        <a class="slideimg" href="https://www.edacy.com" target="_blank">
+                          <img src="https://i.ibb.co/P6XfghV/dto.jpg" alt="partner" width="100%" height="auto" />
+                        </a>
+                      </div>
+                      <div>
+                          <a class="slideimg" href="https://www.supinfo.sn/" target="_blank">
+                            <img src="https://i.ibb.co/XWjV8Cb/sup.jpg" alt="partner" width="100%" height="auto" />
+                          </a>
+                        </div>
+                        <div>
+                            <a class="slideimg" href="https://www.auchan.sn/fr" target="_blank">
+                              <img src="https://i.ibb.co/CMXZcWL/auchan.png" alt="partner" width="100%" height="auto" />
+                            </a>
+                          </div>
       </div>
     </section>
     <a href="https://www.edacy.com/partner/register" target="blank">

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { EventService } from '../../event.service';
-import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-gst-get',
@@ -12,7 +11,6 @@ export class GstGetComponent implements OnInit {
 
   events: any;
   event: any = {};
-  refresh: Subject<any> = new Subject();
 
   constructor(private route: ActivatedRoute, private eventService: EventService) { }
 
@@ -21,7 +19,6 @@ export class GstGetComponent implements OnInit {
     this.eventService.editEvent(event).subscribe(res => {
       console.log('archived');
     });
-    this.refresh.next();
   }
 
   ngOnInit() {

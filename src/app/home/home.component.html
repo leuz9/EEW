@@ -64,13 +64,13 @@
     </div>
   </div>
 
-  <div class="flex-container3">
+  <div class="flex-container3" style="margin-top: 50px">
     <div *ngFor="let event of events; let i = index">
-      <div *ngIf="CheckDate(event.date) && i > 0 && event.status !== 'archived'">
+      <div *ngIf="CheckDate(event.date) && event.status !== 'archived'">
           <div class="flex-container4">
             <div id="rectangle-14">
               <img
-                src="../../assets/images/Bitmap4.png"
+                src="{{ event.image }}"
                 alt="{{ event.title }}"
                 border="0"
                 width="100%"

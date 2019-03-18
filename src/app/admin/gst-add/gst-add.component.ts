@@ -66,7 +66,12 @@ export class GstAddComponent implements OnInit {
       }
     ]
   };
+  events: any;
   uploadProgressF: any;
+  refF: any;
+  taskF: any;
+  snapshotF: any;
+  nameF: any;
   constructor(
     private fb: FormBuilder,
     private eventService: EventService,
@@ -106,10 +111,13 @@ export class GstAddComponent implements OnInit {
   addEvent() {
     console.log(this.event);
     this.eventService.addEvent(this.event).subscribe(res => console.log(res));
+    this.eventService.getEvents().subscribe((data: Event[]) => {
+      this.events = data;
+    });
   }
 
   addFacilitatorInfos(): void {
-    /* this.event.facilitator.push({
+    this.event.facilitator.push({
       image: '',
       name: '',
       job: '',
@@ -117,11 +125,11 @@ export class GstAddComponent implements OnInit {
       twitter: '',
       linkedin: '',
       facebook: ''
-    }); */
-    this.event.facilitator.length = this.event.facilitator.length + 1;
+    });
+    // this.event.facilitator.length = this.event.facilitator.length + 1;
   }
   addScheduleInfos(): void {
-    /* this.event.schedule.push({
+    this.event.schedule.push({
       name: '',
       date: '',
       program: [
@@ -130,16 +138,15 @@ export class GstAddComponent implements OnInit {
           text: ''
         }
       ]
-    }); */
-    this.event.schedule.length = this.event.schedule.length + 1;
+    });
+    /* this.event.schedule.length = this.event.schedule.length + 1; */
   }
   addActivityInfos(i): void {
-    /* this.event.schedule[i].program.push({
+    this.event.schedule[i].program.push({
       hour: '',
       text: ''
-    }); */
-    this.event.schedule[i].program.length =
-      this.event.schedule[i].program.length + 1;
+    });
+    /* this.event.schedule[i].program.length = this.event.schedule[i].program.length  + 1; */
   }
 
   ngOnInit() {}
@@ -180,16 +187,16 @@ export class GstAddComponent implements OnInit {
         finalize(() => {
           this.ref.getDownloadURL().subscribe(url => {
             this.event.facilitator[i].image = url;
-            this.downloadURLF[i] = url;
+            this.downloadURL = url;
             this.name = event.target.files[0].name;
-            console.log(this.downloadURLF);
+            console.log(this.downloadURL);
             console.log(this.name);
           });
         })
       )
       .subscribe(res => {
         this.task = this.ref.put(event.target.files[0]);
-        this.uploadProgressF[i] = this.task.percentageChanges();
+        this.uploadProgress = this.task.percentageChanges();
       });
   }
 }
