@@ -113,7 +113,7 @@
           <tbody>
             <tr *ngFor="let program of schedule.program">
               <td>{{ program?.hour }}</td>
-              <td>{{ program?.text }}</td>
+              <td>{{ program?.text | uppercase }}</td>
             </tr>
           </tbody>
         </table>
