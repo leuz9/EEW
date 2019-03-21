@@ -14,7 +14,7 @@ import { finalize } from 'rxjs/operators';
 })
 export class GstEditComponent implements OnInit {
   events: any;
-  event?: any = {};
+  event: any = [{}];
   angForm: FormGroup;
   ref: any;
   refF: any;
@@ -63,7 +63,8 @@ export class GstEditComponent implements OnInit {
       event_schedule_name: ['', ''],
       event_schedule_date: ['', ''],
       schedule_program_hour: ['', ''],
-      schedule_program_name: ['', '']
+      schedule_program_name: ['', ''],
+      gallery_image: ['', '']
     });
   }
   updateEvent() {
@@ -105,12 +106,20 @@ export class GstEditComponent implements OnInit {
     });
     /* this.event.schedule[i].program.length = this.event.schedule[i].program.length  + 1; */
   }
+  addGalleryImage(): void {
+    this.event.gallery.push({
+      image: ''
+    });
+    /* this.event.gallery[i].image.length = this.event.gallery[i].image.length  + 1; */
+  }
 
   ngOnInit() {
     this.route.params.subscribe(params => {
-      this.eventService.getEvent(params['id']).subscribe(data => {
-        console.log(data);
-        this.event = data;
+      this.eventService
+        .getEvent(params['id'])
+        .subscribe((data) => {
+          console.log(data);
+          this.event = data;
       });
     });
   }
@@ -151,6 +160,30 @@ export class GstEditComponent implements OnInit {
         finalize(() => {
           this.ref.getDownloadURL().subscribe(url => {
             this.event.facilitator[i].image = url;
+            this.downloadURL = url;
+            this.name = event.target.files[0].name;
+            console.log(this.downloadURL);
+            console.log(this.name);
+          });
+        })
+      )
+      .subscribe(res => {
+        this.task = this.ref.put(event.target.files[0]);
+        this.uploadProgress = this.task.percentageChanges();
+      });
+  }
+  uploadG(event, i) {
+    const randomId = Math.random()
+      .toString(36)
+      .substring(2);
+    this.ref = this.afStorage.ref(randomId);
+    this.task = this.ref.put(event.target.files[0]);
+    this.snapshot = this.task.snapshotChanges();
+    this.snapshot
+      .pipe(
+        finalize(() => {
+          this.ref.getDownloadURL().subscribe(url => {
+            this.event.gallery[i].image = url;
             this.downloadURL = url;
             this.name = event.target.files[0].name;
             console.log(this.downloadURL);

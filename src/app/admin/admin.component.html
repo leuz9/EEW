@@ -11,7 +11,7 @@
         <td>Event Name</td>
         <td>Date</td>
         <td>Status</td>
-        <td colspan="2">Actions</td>
+        <td colspan="3">Actions</td>
       </tr>
     </thead>
 
@@ -28,6 +28,11 @@
         <td>
           <a (click)="deleteEvent(event)" class="link">
             <img src="../../assets/images/icon/dustbin.png" alt="archieve" />
+          </a>
+        </td>
+        <td>
+          <a (click)="publishEvent(event)" class="link">
+            <img src="../../assets/images/icon/external-link-symbol.png" alt="publish" width="30px"/>
           </a>
         </td>
       </tr>

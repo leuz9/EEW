@@ -5,7 +5,6 @@ import { NavigationCancel,
         NavigationError,
         NavigationStart,
         Router } from '@angular/router';
-        import Event from '../Event';
         import { EventService } from '../event.service';
 
 @Component({
@@ -22,6 +21,12 @@ export class AdminComponent implements OnInit {
     event.status = 'archived';
     this.eventService.editEvent(event).subscribe(res => {
       console.log('Deleted');
+    });
+  }
+  publishEvent(event) {
+    event.status = 'published';
+    this.eventService.editEvent(event).subscribe(res => {
+      console.log('Published');
     });
   }
   private navigationInterceptor(event: Event): void {

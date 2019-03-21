@@ -4,7 +4,6 @@
       Update Event
     </div>
     <div class="card-body">
-      <form [formGroup]="angForm">
         <div class="form-group">
           <label class="col-md-4">Home image</label>
           <input
@@ -12,8 +11,6 @@
             class="form-control"
             (change)="upload($event)"
             accept=".png,.jpg"
-            formControlName="event_imgHome"
-            #event_imgHome
           />
         </div>
         <div>
@@ -21,14 +18,15 @@
           {{ uploadProgress | async }}%
           <img [src]="[event?.image]" alt="{{ event?.image }}" height="200px" />
         </div>
+      <form [formGroup]="angForm">
         <div class="form-group">
           <label class="col-md-4">event Name</label>
           <input
             type="text"
             class="form-control"
+            [(ngModel)]="event.title"
             formControlName="event_name"
             #event_name
-            [(ngModel)]="event.title"
           />
         </div>
         <div class="form-group">
@@ -108,12 +106,11 @@
           >
             <div class="d-flex flex-column">
               <div class="form-group">
-                <label class="col-md-4">Facilitator {{ indexF }} image </label>
+                <label class="col-md-4">Facilitator image {{ indexF + 1 }}</label>
                 <input
                   type="file"
                   class="form-control"
                   (change)="uploadF($event, indexF)"
-                  [(ngModel)]="facilitator.image"
                   accept=".png,.jpg"
                   formControlName="event_imgFacilitator"
                   #event_imgFacilitator
@@ -122,13 +119,13 @@
               <div>
                 <progress
                   max="100"
-                  [value]="uploadProgressF | async"
+                  [value]="uploadProgress | async"
                 ></progress>
                 {{ uploadProgressF | async }}%
                 <img [src]="[facilitator?.image]" alt="" height="200px" />
               </div>
               <div class="form-group">
-                <label class="">Facilitator {{ indexF }} name</label>
+                <label class="">Facilitator name</label>
                 <input
                   type="text"
                   class="form-control"
@@ -138,7 +135,7 @@
                 />
               </div>
               <div class="form-group">
-                <label class="">Facilitator {{ indexF }} job</label>
+                <label class="">Facilitator job</label>
                 <input
                   type="text"
                   class="form-control"
@@ -148,7 +145,7 @@
                 />
               </div>
               <div class="form-group">
-                <label class="">Facilitator {{ indexF }} feel</label>
+                <label class="">Facilitator feel </label>
                 <input
                   type="text"
                   class="form-control"
@@ -158,7 +155,7 @@
                 />
               </div>
               <div class="form-group">
-                <label class="">Facilitator {{ indexF }} twitter</label>
+                <label class="">Facilitator twitter</label>
                 <input
                   type="text"
                   class="form-control"
@@ -168,7 +165,7 @@
                 />
               </div>
               <div class="form-group">
-                <label class="">Facilitator {{ indexF }} facebook</label>
+                <label class="">Facilitator facebook</label>
                 <input
                   type="text"
                   class="form-control"
@@ -178,7 +175,7 @@
                 />
               </div>
               <div class="form-group">
-                <label class="">Facilitator {{ indexF }} linkedin</label>
+                <label class="">Facilitator linkedin</label>
                 <input
                   type="text"
                   class="form-control"
@@ -204,7 +201,7 @@
           >
             <div class="d-flex flex-column">
               <div class="form-group">
-                <label class="">schedule name</label>
+                <label class="">schedule name {{ indexS + 1 }}</label>
                 <input
                   type="text"
                   class="form-control"
@@ -214,7 +211,7 @@
                 />
               </div>
               <div class="form-group">
-                <label class="">schedule date</label>
+                <label class="">schedule date {{ indexS + 1 }}</label>
                 <input
                   type="date"
                   class="form-control"
@@ -225,20 +222,20 @@
               </div>
               <div class="form-group">
                 <div class="d-flex justify-content-between flex-wrap">
-                  <div class="card" *ngFor="let program of schedule?.program">
+                  <div class="card" *ngFor="let program of schedule?.program ; let indexP = index">
                     <div class="d-flex flex-column">
                       <div class="form-group">
-                        <label class="">Program hour</label>
+                        <label class="">Program hour {{ indexP + 1 }}</label>
                         <input
                           type="text"
                           class="form-control"
                           [(ngModel)]="program.hour"
-                          formControlName="program.hour"
-                          #program.hour
+                          formControlName="schedule_program_hour"
+                          #schedule_program_hour
                         />
                       </div>
                       <div class="form-group">
-                        <label class="">Program name</label>
+                        <label class="">Program name {{ indexP + 1 }}</label>
                         <input
                           type="text"
                           class="form-control"
@@ -265,6 +262,41 @@
           <div class="form__add-another">
             <button (click)="addScheduleInfos()">
               <span>+</span>Add Schedule infos
+            </button>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between flex-wrap">
+          <div
+            class="card"
+            *ngFor="let gallery of event.gallery ; let indexG = index"
+          >
+            <div class="d-flex flex-column">
+              <div class="form-group">
+                <label class="col-md-4">Gallery image {{indexG + 1}}</label>
+                <input
+                  type="file"
+                  class="form-control"
+                  (change)="uploadG($event,indexG)"
+                  accept=".png,.jpg"
+                  formControlName="gallery_image"
+                  #gallery_image
+                />
+              </div>
+              <div>
+                <progress
+                  max="100"
+                  [value]="uploadProgress | async"
+                ></progress>
+                {{ uploadProgressF | async }}%
+                <img [src]="[gallery?.image]" alt="" height="200px" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form__row">
+          <div class="form__add-another">
+            <button (click)="addGalleryImage()">
+              <span>+</span>Add Image on Gallery
             </button>
           </div>
         </div>

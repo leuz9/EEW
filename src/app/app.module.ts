@@ -46,7 +46,7 @@ const appRoutes: Routes = [
     component: GstGetComponent
   },
   { path: 'home-detail/:id', component: HomeDetailComponent },
-  { path: 'gallery', component: GalleryComponent },
+  { path: 'gallery/:id', component: GalleryComponent },
   {
     path: '',
     redirectTo: '/home',

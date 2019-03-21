@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { EVENTS } from '../services/event';
+import { EventService } from '../event.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -8,17 +8,19 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./gallery.component.css']
 })
 export class GalleryComponent implements OnInit {
-  public events = EVENTS;
-  public event;
+  events: any;
+  event: any = {};
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute, private eventService: EventService) {}
 
   ngOnInit() {
-    this.route.queryParams.subscribe(params => {
-      console.log(params);
-      const index = params['index'];
-      this.event = this.events[index];
-      console.log(this.event);
+    this.route.params.subscribe(params => {
+      this.eventService
+        .getEvent(params['id'])
+        .subscribe((data) => {
+          console.log(data);
+          this.event = data;
+      });
     });
   }
 }

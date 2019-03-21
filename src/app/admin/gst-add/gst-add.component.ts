@@ -64,14 +64,12 @@ export class GstAddComponent implements OnInit {
         website: '',
         img: ''
       }
-    ]
+    ],
+    gallery: [{
+      image: ''
+    }]
   };
   events: any;
-  uploadProgressF: any;
-  refF: any;
-  taskF: any;
-  snapshotF: any;
-  nameF: any;
   constructor(
     private fb: FormBuilder,
     private eventService: EventService,
@@ -83,11 +81,14 @@ export class GstAddComponent implements OnInit {
   createForm() {
     this.angForm = this.fb.group({
       event_imgHome: ['', ''],
+      event_name: ['', ''],
       event_name_short: ['', ''],
+      event_gst_date: ['', ''],
       event_lieu: ['', ''],
       event_evenbride: ['', ''],
+      event_desc: ['', ''],
+      event_desc_other: ['', ''],
       event_desc_long: ['', ''],
-      event_faclitator_length: ['', ''],
       event_imgFacilitator: ['', ''],
       event_faclitator_name: ['', ''],
       event_faclitator_job: ['', ''],
@@ -95,16 +96,11 @@ export class GstAddComponent implements OnInit {
       event_faclitator_twitter: ['', ''],
       event_faclitator_facebook: ['', ''],
       event_faclitator_linkedin: ['', ''],
-      event_name: ['', Validators.required],
-      event_desc: ['', Validators.required],
-      event_desc_other: ['', Validators.required],
-      event_gst_date: ['', Validators.required],
-      event_schedule_length: ['', ''],
       event_schedule_name: ['', ''],
       event_schedule_date: ['', ''],
-      schedule_program_length: ['', ''],
       schedule_program_hour: ['', ''],
-      schedule_program_name: ['', '']
+      schedule_program_name: ['', ''],
+      gallery_image: ['', '']
     });
   }
 
@@ -148,6 +144,12 @@ export class GstAddComponent implements OnInit {
     });
     /* this.event.schedule[i].program.length = this.event.schedule[i].program.length  + 1; */
   }
+  addGalleryImage(): void {
+    this.event.gallery.push({
+      image: ''
+    });
+    /* this.event.gallery[i].image.length = this.event.gallery[i].image.length  + 1; */
+  }
 
   ngOnInit() {}
 
@@ -187,6 +189,30 @@ export class GstAddComponent implements OnInit {
         finalize(() => {
           this.ref.getDownloadURL().subscribe(url => {
             this.event.facilitator[i].image = url;
+            this.downloadURL = url;
+            this.name = event.target.files[0].name;
+            console.log(this.downloadURL);
+            console.log(this.name);
+          });
+        })
+      )
+      .subscribe(res => {
+        this.task = this.ref.put(event.target.files[0]);
+        this.uploadProgress = this.task.percentageChanges();
+      });
+  }
+  uploadG(event, i) {
+    const randomId = Math.random()
+      .toString(36)
+      .substring(2);
+    this.ref = this.afStorage.ref(randomId);
+    this.task = this.ref.put(event.target.files[0]);
+    this.snapshot = this.task.snapshotChanges();
+    this.snapshot
+      .pipe(
+        finalize(() => {
+          this.ref.getDownloadURL().subscribe(url => {
+            this.event.gallery[i].image = url;
             this.downloadURL = url;
             this.name = event.target.files[0].name;
             console.log(this.downloadURL);

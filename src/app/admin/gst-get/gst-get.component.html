@@ -119,5 +119,24 @@
         </table>
       </div></div>
     </div>
+
+    <div class="card" style="width: 100%;">
+      <div class="card-header">
+        Gallery image
+      </div>
+      <div class="d-flex justify-content-around">
+        <div
+          class="card"
+          style="width: 18rem;"
+          *ngFor="let gallery of event.gallery"
+        >
+          <img
+            class="card-img-top"
+            [src]="[gallery.image]"
+            alt="Card image cap"
+          />
+        </div>
+      </div>
+    </div>
   </div>
 </div>

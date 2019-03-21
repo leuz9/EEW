@@ -111,7 +111,7 @@
           >
             <div class="d-flex flex-column">
               <div class="form-group">
-                <label class="col-md-4">Facilitator image</label>
+                <label class="col-md-4">Facilitator image {{indexF + 1}}</label>
                 <input
                   type="file"
                   class="form-control"
@@ -121,14 +121,6 @@
                   #event_imgFacilitator
                 />
               </div>
-              <!--<div>
-                 <progress
-                  max="100"
-                  [value]="uploadProgressF[indexF] | async"
-                ></progress>
-                {{ uploadProgressF[index] | async }}%
-                <img [src]="[downloadURLF[indexF]]" alt="" height="200px" />
-              </div>-->
               <div class="form-group">
                 <label class="">Facilitator name</label>
                 <input
@@ -206,7 +198,7 @@
           >
             <div class="d-flex flex-column">
               <div class="form-group">
-                <label class="">schedule name</label>
+                <label class="">schedule name {{indexS + 1}}</label>
                 <input
                   type="text"
                   class="form-control"
@@ -216,7 +208,7 @@
                 />
               </div>
               <div class="form-group">
-                <label class="">schedule date</label>
+                <label class="">schedule date {{indexS + 1}}</label>
                 <input
                   type="date"
                   class="form-control"
@@ -229,11 +221,11 @@
                 <div class="d-flex justify-content-between flex-wrap">
                   <div
                     class="card"
-                    *ngFor="let program of schedule?.program"
+                    *ngFor="let program of schedule?.program ; let indexP = index"
                   >
                     <div class="d-flex flex-column">
                       <div class="form-group">
-                        <label class="">Program hour</label>
+                        <label class="">Program hour {{indexP + 1}}</label>
                         <input
                           type="text"
                           class="form-control"
@@ -243,7 +235,7 @@
                         />
                       </div>
                       <div class="form-group">
-                        <label class="">Program name</label>
+                        <label class="">Program name {{indexP + 1}}</label>
                         <input
                           type="text"
                           class="form-control"
@@ -270,6 +262,41 @@
           <div class="form__add-another">
             <button (click)="addScheduleInfos()">
               <span>+</span>Add Schedule infos
+            </button>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between flex-wrap">
+          <div
+            class="card"
+            *ngFor="let gallery of event.gallery ; let indexG = index"
+          >
+            <div class="d-flex flex-column">
+              <div class="form-group">
+                <label class="col-md-4">Gallery image {{indexG + 1}}</label>
+                <input
+                  type="file"
+                  class="form-control"
+                  (change)="uploadG($event,indexG)"
+                  accept=".png,.jpg"
+                  formControlName="gallery_image"
+                  #gallery_image
+                />
+              </div>
+              <div>
+                 <progress
+                  max="100"
+                  [value]="uploadProgress | async"
+                ></progress>
+                {{ uploadProgress | async }}%
+                <!-- <img [src]="[downloadURLF[indexF]]" alt="" height="200px" /> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form__row">
+          <div class="form__add-another">
+            <button (click)="addGalleryImage()">
+              <span>+</span>Add Image on Gallery
             </button>
           </div>
         </div>

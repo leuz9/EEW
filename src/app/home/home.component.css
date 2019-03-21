@@ -28,7 +28,28 @@
     margin-top: 80%;
   }
 }
-
+.nodisplay {
+  display: none
+}
+.adapt {
+width: auto;
+height: 280px;
+}
+@media (max-width: 991px) {
+  .adapt {
+    height: 200px;
+    }
+}
+@media (max-width: 691px) {
+  .adapt {
+    height: 150px;
+    }
+}
+@media (max-width: 491px) {
+  .adapt {
+    height: 100px;
+    }
+}
 .key-events {
   width: 100%;
   color: #000000;
