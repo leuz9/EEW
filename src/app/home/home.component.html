@@ -32,7 +32,7 @@
     [ngClass]="{ nodisplay: !CheckDate(event.date) }"
     *ngFor="let event of events; let i = index"
   >
-    <div *ngIf="CheckDate(event.date) && i < 2 && event.status !== 'archived'">
+    <div *ngIf="CheckDate(event.date) && i < 1 && event.status !== 'archived'">
       <div class="flex-container4">
         <div id="rectangle-14">
           <img
@@ -82,10 +82,10 @@
           class="card-img-top adapt"
         />
         <div class="card-body">
-          <p class="card-text">
+          <p class="card-text edacy-bootcamp-desi">
             {{ event.titleshort | uppercase }}
           </p>
-          <p class="card-text">
+          <p class="card-text lorem-ipsum-dolor-si1">
             {{ event.description.short1 }}
           </p>
           <a [routerLink]="['/gallery', event._id]">
