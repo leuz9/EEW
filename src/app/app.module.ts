@@ -30,11 +30,11 @@ const appRoutes: Routes = [
     component: AdminComponent
   },
   {
-    path: 'admin/event/create',
+    path: 'adminEDACY@2019aspirefarther@/event/create',
     component: GstAddComponent
   },
   {
-    path: 'admin/event/edit',
+    path: 'adminEDACY@2019aspirefarther@/event/edit',
     component: GstEditComponent
   },
   {
