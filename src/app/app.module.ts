@@ -26,7 +26,7 @@ import { GstEditComponent } from './admin/gst-edit/gst-edit.component';
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
   {
-    path: 'admin',
+    path: 'adminEDACY@2019aspirefarther@',
     component: AdminComponent
   },
   {
