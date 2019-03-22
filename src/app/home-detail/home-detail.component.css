@@ -267,7 +267,7 @@
 .date {
     color: rgb(0, 0, 0) !important;
     font-family: "Proxima Nova";
-    font-size: 21px;
+    font-size: 18px;
     text-align: left;
     position: relative;
     z-index: 1;
@@ -827,6 +827,7 @@ input:checked + label{
 
 .flex-container2 > div {
     margin: 2%;
+    margin-left: 7%;
     font-size: 20px;
 }
 @media (max-width: 621px) {
