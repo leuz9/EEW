@@ -821,12 +821,12 @@ input:checked + label{
     display: flex;
     flex-wrap: wrap;
     justify-content: left;
-    flex-direction: row;
+    flex-direction: column;
     border: 2px solid #ffffff;
 }
 
 .flex-container2 > div {
-    margin: 4%;
+    margin: 2%;
     font-size: 20px;
 }
 @media (max-width: 621px) {
@@ -917,4 +917,63 @@ input:checked + section.box .box-title:before {
 .flex-container3 > div {
     margin: 5%;
     font-size: 20px;
+}
+
+.img-wrapper {
+  overflow: hidden;
+}
+
+img:hover {
+  cursor: pointer;
+  transform: scale(1.4, 1.4);
+}
+
+img:hover .overlay {
+  height: 10%;
+}
+
+img {
+  transition: all 1s ease-in-out;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+}
+
+.container:hover .overlay {
+  height: 25%;
+  bottom: -13%;
+  left: -5%;
+  transform: rotate(10deg);
+  width: 120%;
+}
+
+.container:hover .text {
+  left: 8%;
+  font-size: 20px;
+  transition-delay: .3s;
+}
+
+.text {
+  transform: rotate(-9deg);
+  color: black;
+  font-size: 10px;
+  position: absolute;
+  overflow: hidden;
+  top: 22%;
+  left: 5%;
+  transition: all 1s cubic-bezier(0.6,.1,.3,.8);
 }
