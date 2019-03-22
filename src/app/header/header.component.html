@@ -1,54 +1,102 @@
 <div class="nav-lg">
-    <div class="ed-container-fluid menu">
-      <div class="menu-lg">
-        <div class="logo">
-          <a routerLink="/">
-            <img src="../../assets/images/icon/edacylogo.png" alt="Edacy">
-          </a>
-        </div>
-        <div class="links">
-          <a class="link" href="https://www.edacy.com/programs" >PROGRAMS</a>
-          <a class="link" href="https://www.edacy.com/students" >STUDENTS</a>
-          <a class="link" href="https://www.edacy.com/enterprises" >ENTERPRISE</a>
-          <div class="static-btn static-btn-signup">
-            <a class="link link-btn" href="https://www.edacy.com/programs?modal=modal" >SIGN UP</a>
-          </div>
-          <div class="static-btn static-btn-login">
-            <a class="link link-btn" href="https://appv2.edacy.com/users/signin">LOGIN</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="nav-small">
-    <div class="ed-container-fluid header">
+  <div class="ed-container-fluid menu">
+    <div class="menu-lg">
       <div class="logo">
-        <a routerLink="/" (click)="toggler = false">
-          <img src="../../assets/images/icon/edacylogo.png" alt="Edacy">
+        <a routerLink="/">
+          <img src="../../assets/images/icon/edacylogo.png" alt="Edacy" />
         </a>
       </div>
-
-      <div class="toggler">
-
-        <div class="toggle-btn">
-          <a (click)="toggler = !toggler">
-            <img src="../../assets/images/icon/menu.svg">
-          </a>
+      <div class="links">
+        <div class="dropdown" style="margin-left: 90px !important">
+          <a class="link" href="https://www.edacy.com/programs">PROGRAMS</a>
+          <div class="dropdown-content">
+            <a href="https://www.edacy.com/programs" class="submenu"
+              >WorkLearning</a
+            >
+            <a
+              href="https://www.edacy.com/programs?option=OpenLearning"
+              class="submenu"
+              >OpenLearning</a
+            >
+          </div>
+        </div>
+        <a class="link" href="https://www.edacy.com/students">STUDENTS</a>
+        <a class="link" href="https://www.edacy.com/enterprises">ENTERPRISE</a>
+        <div class="static-btn static-btn-signup">
+          <a
+            class="link link-btn"
+            href="https://www.edacy.com/programs?modal=modal"
+            >SIGN UP</a
+          >
+        </div>
+        <div class="static-btn static-btn-login">
+          <a class="link link-btn" href="https://appv2.edacy.com/users/signin"
+            >LOGIN</a
+          >
         </div>
       </div>
     </div>
-    <div class="ed-container-fluid body" *ngIf="toggler" >
-      <div class="wrapper-link">
-        <a class="link" routerLink="/programs/" routerLinkActive="active" (click)="toggler = !toggler">PROGRAMS</a>
-        <a class="link" routerLink="/students/" routerLinkActive="active" (click)="toggler = !toggler">STUDENTS</a>
-        <a class="link" routerLink="/enterprises/" routerLinkActive="active" (click)="toggler = !toggler">ENTERPRISE</a>
-      </div>
-      <div class="static-btn static-btn-signup">
-        <a class="static-btn-link" (click)="toggler = !toggler" routerLink="/programs/" >SIGN UP</a>
-      </div>
-      <div class="static-btn static-btn-login">
-        <a class="static-btn-link" href="https://appv2.edacy.com/users/signin">LOGIN</a>
+  </div>
+</div>
+
+<div class="nav-small">
+  <div class="ed-container-fluid header">
+    <div class="logo">
+      <a routerLink="/" (click)="toggler = false">
+        <img src="../../assets/images/icon/edacylogo.png" alt="Edacy" />
+      </a>
+    </div>
+
+    <div class="toggler">
+      <div class="toggle-btn">
+        <a (click)="toggler = !toggler">
+          <img src="../../assets/images/icon/menu.svg" />
+        </a>
       </div>
     </div>
   </div>
+  <div class="ed-container-fluid body" *ngIf="toggler">
+    <div class="wrapper-link">
+      <div class="dropdown">
+        <a class="link" href="https://www.edacy.com/programs">PROGRAMS</a>
+        <div class="dropdown-content">
+          <a href="https://www.edacy.com/programs" class="submenu"
+            >WorkLearning</a
+          >
+          <a
+            href="https://www.edacy.com/programs?option=OpenLearning"
+            class="submenu"
+            >OpenLearning</a
+          >
+        </div>
+      </div>
+      <a
+        class="link"
+        routerLink="/students/"
+        routerLinkActive="active"
+        (click)="toggler = !toggler"
+        >STUDENTS</a
+      >
+      <a
+        class="link"
+        routerLink="/enterprises/"
+        routerLinkActive="active"
+        (click)="toggler = !toggler"
+        >ENTERPRISE</a
+      >
+    </div>
+    <div class="static-btn static-btn-signup">
+      <a
+        class="static-btn-link"
+        (click)="toggler = !toggler"
+        routerLink="/programs/"
+        >SIGN UP</a
+      >
+    </div>
+    <div class="static-btn static-btn-login">
+      <a class="static-btn-link" href="https://appv2.edacy.com/users/signin"
+        >LOGIN</a
+      >
+    </div>
+  </div>
+</div>
