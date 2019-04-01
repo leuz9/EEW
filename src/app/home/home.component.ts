@@ -22,6 +22,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.eventService.getEvents().subscribe((data: Event[]) => {
       this.events = data;
+      console.log( 'le nombre d"event est ', this.events.length )
     });
   }
 

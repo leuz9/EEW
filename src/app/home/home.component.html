@@ -32,7 +32,7 @@
     [ngClass]="{ nodisplay: !CheckDate(event.date) }"
     *ngFor="let event of events; let i = index"
   >
-    <div *ngIf="CheckDate(event.date) && i < 1 && event.status !== 'archived'">
+    <div *ngIf="CheckDate(event.date) && (i === this.events.length - 1) && event.status !== 'archived'">
       <div class="flex-container4">
         <div id="rectangle-14">
           <img
@@ -74,7 +74,7 @@
 
   <div class="d-flex flex-wrap justify-content-between">
     <div [ngClass]="{nodisplay: !CheckDate(event.date)}" *ngFor="let event of events; let i = index" style="margin-top: 50px">
-      <div class="card" *ngIf="CheckDate(event.date) && event.status !== 'archived'" style="max-width:500px">
+      <div class="card" *ngIf="CheckDate(event.date)&& i < this.events.length -1 && event.status !== 'archived'" style="max-width:500px">
         <img
           src="{{ event.image }}"
           alt="{{ event.title }}"
